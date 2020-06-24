@@ -1,0 +1,905 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<title>Purple Lantern Studio | Checkout</title>
+<link rel="icon" href="images/favico.ico" type="image/x-icon" />
+
+<!-- CSS Framework -->
+<link rel="stylesheet" href="css/framework/standard.css" type="text/css" />
+<!--[if lt IE 7 ]>
+<link rel="stylesheet" href="/css/framework/ie.css" type="text/css" />
+<link rel="stylesheet" href="/css/framework/ie6.css" type="text/css" />
+<![endif]--> 
+<!--[if IE 7 ]>
+<link rel="stylesheet" href="/css/framework/ie.css" type="text/css" />
+<link rel="stylesheet" href="/css/framework/ie7.css" type="text/css" />
+<![endif]--> 
+<!--[if IE 8 ]>
+<link rel="stylesheet" href="/css/framework/ie.css" type="text/css" />
+<link rel="stylesheet" href="/css/framework/ie8.css" type="text/css" />
+<![endif]-->
+
+<!-- CSS Layout -->
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="css/layout.css" type="text/css" />
+
+<!-- Scripts -->
+<!-- jquery + tools -->
+<script type="text/javascript" src="publisher/scripts/jquery/tools/jquery_tools.js"></script>
+<!-- jcarousel -->
+<link rel="stylesheet" href="publisher/scripts/jquery/jcarousel/defaultskin.css" type="text/css" media="screen" />
+<script type="text/javascript" src="publisher/scripts/jquery/jcarousel/jcarousel.js"></script>
+<!-- jscroll -->
+<link rel="stylesheet" href="publisher/scripts/jquery/jscroll/jscroll.css" type="text/css" media="screen" />
+<script type="text/javascript" src="publisher/scripts/jquery/jscroll/jscroll.js"></script>
+<!-- thickbox -->
+<link rel="stylesheet" href="publisher/scripts/jquery/thickbox/thickbox.css" type="text/css" media="screen" />
+<script src="publisher/scripts/jquery/thickbox/thickbox.js" type="text/javascript"></script>
+<!-- ie6 update -->
+<!--[if lt IE 7 ]><link rel="stylesheet" href="http://www.alove4pixels.com/library/js/ie6update/1/ie6update.css" type="text/css" media="screen" /><script src="http://www.alove4pixels.com/library/js/ie6update/1/ie6update.js" type="text/javascript"></script><![endif]--> 
+<!-- swftitles -->
+<script src="scripts/jquery/swftitles/swftitles.js.html" type="text/javascript"></script>
+<!-- slideshow -->
+<script type="text/javascript" src="publisher/scripts/jquery/cycle/core.js"></script>
+<!-- init -->
+<script type="text/javascript">
+$(document).ready(function() {
+	
+// MSIE Fixes
+	if ($.browser.msie) {
+		// IE6
+		if (jQuery.browser.version==6) {
+		// IE7
+		} else if (jQuery.browser.version==7) {
+		// IE8
+		} else {
+		}
+		
+// Other Fixes
+	} else {
+		// Safari fix
+		if ($.browser.safari) {
+			// style
+			$('head').append('<link rel="stylesheet" href="/css/framework_safari.css" type="text/css" id="stylesheet_safari" />'); //$("#stylesheet_safari").remove();
+		// Chrome fix
+		} else if ($.browser.crome) {
+			// style
+			$('head').append('<link rel="stylesheet" href="/css/framework_safari.css" type="text/css" id="stylesheet_safari" />'); //$("#stylesheet_safari").remove();
+		}
+	}
+	
+// Preload Images
+	$.preloadImages = function() {
+	  for(var i = 0; i<arguments.length; i++) {
+		$("<img>").attr("src", arguments[i]);
+	  }
+	}
+	
+// Slideshow
+		// Manual
+	$('.slideshow_thumb').click(function(){
+		$('.slide').hide();
+		$('.' + $(this).attr('id') ).fadeIn('slow');
+	});
+	 
+	
+// Hide Messages
+	setTimeout('$(\'#message\').fadeOut("slow");$(\'#error\').fadeOut("slow");',9000);
+
+// Vertical Scroll
+	$('.vscroll').each(function (i) {
+		$(this).jScrollPane({scrollbarWidth:45,dragMinHeight:46,dragMaxHeight:46,scrollbarMargin:0,showArrows:true,scrollbarOnLeft:true,animateTo:true});
+	});
+
+// Horizontal Scroll
+	$('.hscroll').jcarousel();
+
+});
+$(window).load(function() {
+						
+// Preload images
+	$.preloadImages();
+	
+});
+</script>
+</head>
+
+<!--[if lt IE 7 ]><body class="ie ie6 ie67 ie678 interactive inside"><![endif]--> 
+<!--[if IE 7 ]><body class="ie ie7 ie67 ie78 ie678 interactive inside"><![endif]--> 
+<!--[if IE 8 ]><body class="ie ie8 ie78 ie678 interactive inside"><![endif]-->
+<!--[if !IE]>--><body class="notie interactive inside"><!--<![endif]-->
+<table cellpadding="0" cellspacing="0" class="page"><tbody class="page_tbody"><tr class="page_tr"><td valign="middle" class="page_td"><div class="page_i1">
+
+
+<!-- LOGIN -->
+<div id="loginbox" class="loginbox">
+	<div class="loginbox_i1">
+	<h2>Login</h2>
+		<!-- MESSAGE -->
+		
+	<!-- LOGIN -->
+		
+		<form name="login" action="publisher/core/users/visitor%20login.php.html" method="post">
+		<p><input type="text" id="" name="user" /></p>
+		<p><input type="password" id="" name="pass" /></p>
+		<p class="margintop"><input type="submit" value="Submit" class="button" />
+			 
+			<input type="button" value="Cancel" class="button" onclick="$('#loginbox').hide('slow');" />
+					</p>
+		<p>&nbsp;</p>
+		</form>	</div>
+</div>
+
+<!-- TOP -->
+<div class="top full">
+	<div class="left">
+		<ul class="contact nav">
+		<li><a class="contact_phone" href="contact.html">914-804-1866</a></li>
+		<li><a class="contact_email" href="contact.html">raynasas@gmail.com</a></li>
+		</ul>
+	</div>
+	<div class="right">
+		<ul class="menu nav">
+		
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+            				<a class="page_contact" href="contact.html"><span>contact</span></a>
+						
+					</li>
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+                        	<a class="page_blog" href="http://purplelanternstudio.wordpress.com/" target="_blank">blog</a></li>
+            			
+					</li>
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+            				<a class="page_parties" href="parties.html"><span>parties</span></a>
+						
+					</li>
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+            				<a class="page_gallery" href="gallery.html"><span>gallery</span></a>
+						
+						<ul>
+												<li><a href="gallery/book%20projects.html">Book Projects</a></li>
+																<li><a href="gallery/portfolio.html">Portfolio</a></li>
+											</ul>
+					</li>
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+            				<a class="page_bio" href="bio.html"><span>bio</span></a>
+						
+					</li>
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+            				<a class="page_home" href="home.html"><span>home</span></a>
+						
+						<ul>
+												<li><a href="home/portfolio.html">Portfolio</a></li>
+																<li><a href="home/thought%20bubble.html">Thought Bubble</a></li>
+											</ul>
+					</li>
+				</ul>
+	</div>
+</div>
+
+<!-- logo -->
+<div class="logo full">
+	<h1>Rayna Sassano Purple Lantern Studio</h1>
+</div>
+<!-- RESULTS -->
+
+
+<!-- CONTENT -->
+<div class="content full">
+	
+	<!-- TEXT -->
+	<div class="text text1">
+	
+	<p>This is the checkout page! Buy my artwork using your trusted Paypal account.</p>
+	</div>
+	
+	<!-- LEFT -->
+	<div class="leftcol left">
+	<div class="leftcol_i1">
+	<div class="leftcol_i2">
+        
+		<!-- MESSAGE -->
+		<!-- MESSAGE -->
+		
+		<!-- TEXT -->
+		<div class="text text2">
+		
+		<p>dfsfaddfas d fasd fassd fad fasd fasd fsasd fad fsa fda f f a</p>
+		</div>
+		
+		<!-- SHOPPING CART -->
+		
+<div class="shoppingcart">
+<div class="shoppingcart_description">
+	<h3>Shopping Bag</h3>
+	<p>(20 items)</p>
+			<p><b>Scribe of Lumine`</b> <br />$75</p>
+			<p><b>Drive through it</b> <br />$75</p>
+			<p><b>The Elves of Shady Elm: 'Many Hands Make Light Work' (Book cover)</b> <br />$75</p>
+			<p><b>The Elves of Shady Elm: 'Cooking for the Teacher'</b> <br />$75</p>
+			<p><b>The Elves of Shady Elm: 'Coming Home'</b> <br />$75</p>
+			<p><b>The Elves of Shady Elm: 'Cleanup in Isle 5'</b> <br />$75</p>
+			<p><b>The Elves of Shady Elm: 'Chaos in the Cloakroom'</b> <br />$75</p>
+			<p><b>The Elves of Shady Elm: 'The Elf Class'</b> <br />$75</p>
+			<p><b>The Elves of Shady Elm: 'The Colonial Washstand Ball'</b> <br />$75</p>
+			<p><b>Lumine` Circus</b> <br />$75</p>
+			<p><b>Lumine` Sol-Name Day</b> <br />$75</p>
+			<p><b>Lumine` Star Festival Day</b> <br />$75</p>
+			<p><b>The Storyteller</b> <br />$75</p>
+			<p><b>Splashy summer</b> <br />$65</p>
+			<p><b>Circus of dreams</b> <br />$65</p>
+			<p><b>I want a coming of age ceremony!</b> <br />$65</p>
+			<p><b>Grooming Dekker</b> <br />$65</p>
+			<p><b>...it could stay that way.</b> <br />$75</p>
+			<p><b>Silly mermaid...</b> <br />$75</p>
+			<p><b>Ollie-ollie oxen free!</b> <br />$75</p>
+	</div>
+<div class="shoppingcart_checkout">
+	<a href="checkout.html">Checkout</a>
+</div>
+</div>
+		
+	</div>
+	</div>
+	</div>
+	
+	<!-- MAIN -->
+	<div class="middlecol right">
+	<div class="middlecol_i1">
+	<div class="middlecol_i2">
+		
+		<!-- TITLE -->
+		<h2>Checkout</h2>
+		
+		<!-- FORM -->
+		<!-- MESSAGE -->
+
+<!-- RESULTS -->
+
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image742-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>Scribe of Lumine`</b>
+				<p>
+		<form name="cart742" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=742&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart742.submit();">
+				<option value="1" selected="selected"> - $75</option>
+				</select>
+		<input type="hidden" name="item" value="742" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart742.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="742" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image771-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>Drive through it</b>
+		<br />Learning how to drive inspired this personal piece....		<p>
+		<form name="cart771" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=771&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart771.submit();">
+				<option value="1" selected="selected"> - $75</option>
+				</select>
+		<input type="hidden" name="item" value="771" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart771.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="771" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image777-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>The Elves of Shady Elm: 'Many Hands Make Light Work' (Book cover)</b>
+				<p>
+		<form name="cart777" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=777&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart777.submit();">
+				<option value="1" selected="selected"> - $75</option>
+				</select>
+		<input type="hidden" name="item" value="777" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart777.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="777" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image776-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>The Elves of Shady Elm: 'Cooking for the Teacher'</b>
+				<p>
+		<form name="cart776" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=776&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart776.submit();">
+				<option value="1" selected="selected">From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery, available on Amazon and Barnes & Noble. - $75</option>
+				</select>
+		<input type="hidden" name="item" value="776" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart776.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="776" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image778-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>The Elves of Shady Elm: 'Coming Home'</b>
+				<p>
+		<form name="cart778" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=778&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart778.submit();">
+				<option value="1" selected="selected">From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery, available on Amazon and Barnes & Noble. - $75</option>
+				</select>
+		<input type="hidden" name="item" value="778" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart778.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="778" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image774-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>The Elves of Shady Elm: 'Cleanup in Isle 5'</b>
+				<p>
+		<form name="cart774" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=774&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart774.submit();">
+				<option value="1" selected="selected">From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery, available on Amazon and Barnes & Noble. - $75</option>
+				</select>
+		<input type="hidden" name="item" value="774" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart774.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="774" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image775-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>The Elves of Shady Elm: 'Chaos in the Cloakroom'</b>
+				<p>
+		<form name="cart775" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=775&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart775.submit();">
+				<option value="1" selected="selected">From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery, available on Amazon and Barnes & Noble. - $75</option>
+				</select>
+		<input type="hidden" name="item" value="775" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart775.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="775" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image773-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>The Elves of Shady Elm: 'The Elf Class'</b>
+				<p>
+		<form name="cart773" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=773&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart773.submit();">
+				<option value="1" selected="selected">From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery, available on Amazon and Barnes & Noble. - $75</option>
+				</select>
+		<input type="hidden" name="item" value="773" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart773.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="773" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image772-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>The Elves of Shady Elm: 'The Colonial Washstand Ball'</b>
+		<br />From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery,&nbsp;available on...		<p>
+		<form name="cart772" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=772&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart772.submit();">
+				<option value="1" selected="selected"> - $75</option>
+				</select>
+		<input type="hidden" name="item" value="772" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart772.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="772" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image760-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>Lumine` Circus</b>
+				<p>
+		<form name="cart760" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=760&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart760.submit();">
+				<option value="1" selected="selected"> - $75</option>
+				</select>
+		<input type="hidden" name="item" value="760" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart760.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="760" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image730-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>Lumine` Sol-Name Day</b>
+				<p>
+		<form name="cart730" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=730&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart730.submit();">
+				<option value="1" selected="selected">Lumine` land of the lost series. - $75</option>
+				</select>
+		<input type="hidden" name="item" value="730" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart730.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="730" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image731-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>Lumine` Star Festival Day</b>
+				<p>
+		<form name="cart731" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=731&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart731.submit();">
+				<option value="1" selected="selected">Lumine` land of the lost series. - $75</option>
+				</select>
+		<input type="hidden" name="item" value="731" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart731.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="731" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image732-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>The Storyteller</b>
+				<p>
+		<form name="cart732" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=732&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart732.submit();">
+				<option value="1" selected="selected"> - $75</option>
+				</select>
+		<input type="hidden" name="item" value="732" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart732.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="732" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image733-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>Splashy summer</b>
+				<p>
+		<form name="cart733" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=733&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart733.submit();">
+				<option value="1" selected="selected"> - $65</option>
+				</select>
+		<input type="hidden" name="item" value="733" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart733.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="733" />
+		adjust qty
+		</form>
+		</p>
+		<p>$65 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image734-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>Circus of dreams</b>
+				<p>
+		<form name="cart734" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=734&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart734.submit();">
+				<option value="1" selected="selected"> - $65</option>
+				</select>
+		<input type="hidden" name="item" value="734" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart734.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="734" />
+		adjust qty
+		</form>
+		</p>
+		<p>$65 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image736-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>I want a coming of age ceremony!</b>
+				<p>
+		<form name="cart736" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=736&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart736.submit();">
+				<option value="1" selected="selected"> - $65</option>
+				</select>
+		<input type="hidden" name="item" value="736" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart736.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="736" />
+		adjust qty
+		</form>
+		</p>
+		<p>$65 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image735-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>Grooming Dekker</b>
+				<p>
+		<form name="cart735" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=735&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart735.submit();">
+				<option value="1" selected="selected"> - $65</option>
+				</select>
+		<input type="hidden" name="item" value="735" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart735.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="735" />
+		adjust qty
+		</form>
+		</p>
+		<p>$65 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image739-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>...it could stay that way.</b>
+				<p>
+		<form name="cart739" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=739&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart739.submit();">
+				<option value="1" selected="selected"> - $75</option>
+				</select>
+		<input type="hidden" name="item" value="739" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart739.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="739" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image738-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>Silly mermaid...</b>
+				<p>
+		<form name="cart738" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=738&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart738.submit();">
+				<option value="1" selected="selected"> - $75</option>
+				</select>
+		<input type="hidden" name="item" value="738" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart738.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="738" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		<table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td align="left" valign="top">
+		<p style="padding:2px 8px 12px 0;"><img src="images/uploads/image737-1.png" width="120px" /></p>
+		</td>
+		<td align="left" valign="top">
+		<p><b>Ollie-ollie oxen free!</b>
+				<p>
+		<form name="cart737" action="publisher/plugins/shoppingcart/visitor%20addtocart.php-item=737&amp;page=&amp;var=.html" method="post">
+		<select name="var" onchange="document.cart737.submit();">
+				<option value="1" selected="selected"> - $75</option>
+				</select>
+		<input type="hidden" name="item" value="737" />
+		</p>
+		<p>
+		<select name="qty" onchange="document.cart737.submit();">
+				<option value="0" >0</option>
+				<option value="1" selected="selected">1</option>
+				</select>
+		<input type="hidden" name="item" value="737" />
+		adjust qty
+		</form>
+		</p>
+		<p>$75 total</p>
+		<p>&nbsp;</p>
+		</td>
+	  </tr>
+	</table>
+	
+		
+	<p>&nbsp;</p>
+	
+	<h1>Total</h1>
+	<p>Price: <b>$1460</b></p>
+	<p>Shipping: <b>$0</b></p>
+	<p>Total: <b>$1460</b></p>
+	
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	
+	
+	<div class="checkout_paypal" onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+	<p><a href="javascript:document.paypalcheckout.submit();" class="button">
+	<span>The world's most trusted way to pay.</span>
+	</a></p>
+	<p><a href="https://www.paypal.com/" target="_blank"><img src="images/layout/paypal_verified.png" /></a></p>
+</div>
+
+<form name="paypalcheckout" action="https://www.paypal.com/cgi-bin/webscr" method="post" style="padding:0;margin:0;">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="raynasas@gmail.com">
+<input type="hidden" name="item_name" value="Order: Scribe of Lumine`, Drive through it, The Elves of Shady Elm: 'Many Hands Make Light Work' (Book cover), The Elves of Shady Elm: 'Cooking for the Teacher', The Elves of Shady Elm: 'Coming Home', The Elves of Shady Elm: 'Cleanup in Isle 5', The Elves of Shady Elm: 'Chaos in the Cloakroom', The Elves of Shady Elm: 'The Elf Class', The Elves of Shady Elm: 'The Colonial Washstand Ball', Lumine` Circus, Lumine` Sol-Name Day, Lumine` Star Festival Day, The Storyteller, Splashy summer, Circus of dreams, I want a coming of age ceremony!, Grooming Dekker, ...it could stay that way., Silly mermaid..., Ollie-ollie oxen free!">
+<input type="hidden" name="item_number" value=", , , From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery, available on Amazon and Barnes & Noble., From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery, available on Amazon and Barnes & Noble., From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery, available on Amazon and Barnes & Noble., From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery, available on Amazon and Barnes & Noble., From The Elves of Shady Elm, Mrs. Beneficial's Tiny Discovery, available on Amazon and Barnes & Noble., , , Lumine` land of the lost series., Lumine` land of the lost series., , , , , , , , ">
+<input type="hidden" name="amount" value="1460">
+<input type="hidden" name="note" value="item notes">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="return" value="http://www.juliaforrest.com/thankyou">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="bn" value="PP-BuyNowBF">
+<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" style="position:relative;z-index:10;">
+</form>
+        
+        <!-- TEXT -->
+		<div class="text text3">
+        
+        
+		</div>
+		
+	</div>
+	</div>
+	</div>
+	
+</div>
+    
+<div class="follownavb">
+<span><img src="images/follow.gif" /></span>
+<a href="http://purplelanternstudio.tumblr.com/"><img src="images/follow_tumblr.gif" /></a>
+<a href="https://www.facebook.com/pages/Purple-Lantern-Studio/143290875751091"><img src="images/follow_facebook.gif" /></a>
+</div>
+
+<!-- COPYRIGHT -->
+<div class="copyright full">
+	<p><a href="contact.html">Site copyright 2009 Rayna Sassano</a> - <a href="http://www.artspaces.net" target="_blank">published by Artspaces.net</a> - <a href="join%20mailinglist.html">join mailinglist</a> - <a href="javascript:void(0);" onclick="$('#loginbox').show('slow');">login</a> - <a class="thickbox" href="http://www.addthis.com/bookmark.php?KeepThis=true&amp;url=http://www.purplelanternstudio.com/checkout?category=&amp;item=&amp;TB_iframe=true&amp;height=500&amp;width=465">share this page</a></p>
+</div>
+
+<br />
+
+</div></td></tr></tbody></table>
+</body>
+</html>
+<!-- statistics -->
+<script type="text/javascript" src="http://abcstatistics.com/save.php?account=paulshorey&amp;site=purplelanternstudio.com&amp;category=interactive&amp;url=%2Fcheckout&amp;user=67.139.187.132"></script>

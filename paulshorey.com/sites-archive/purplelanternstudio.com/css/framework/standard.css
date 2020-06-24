@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* Standardized default settings, to be overwritten by other css files */
+
+/* Structure */
+html, body {width:100%;height:100%;position:relative;margin:0;padding:0;z-index:1;text-align:left;}
+p, hr, h1, h2, h3, h4, h5, pre, div, ul, li {position:relative;z-index:10;}
+p, hr, h1, h2, h3, h4, h5, pre {display:block;}
+h1, h2, h3, h4, h5 {margin:5px 0;}
+p {margin:7px 0;}
+li {margin:5px;}
+hr {margin:5px 0;}
+table, tr, td {margin:0;padding:0;text-align:left;vertical-align:middle;}
+div {float:none;clear:none;}
+br {float:none !important;clear:both !important;}
+	
+	/* Page */
+	.page {width:100%;height:100%;}
+	.page, .page_tbody, .page_tr, .page_td {width:100%;height:100%;}
+	.page_i1 {width:977px;margin:0 auto;}
+	
+	/* Nav */
+	.nav {margin:0;padding:0;float:left;clear:left;z-index:100;overflow:visible;}
+	.nav li {margin:0;padding:0;float:left;clear:none;z-index:100;overflow:visible;}
+	.nav li ul {position:absolute;display:none;width:200px;background:url('../../images/layout/bg.jpg');padding:30px 0 0 1px;}
+	.nav li.hover ul {display:block;}
+	.nav li ul {float:none;clear:both;}
+	.nav li ul li {float:none;clear:both;margin:0;padding:5px;display:block;text-indent:0;text-align:left;}
+	.nav li ul li a {text-indent:0;overflow:visible;}
+	.nav li ul li.hover a {text-decoration:underline;}
+	.right .nav {float:right;clear:right;}
+	.right .nav li {float:right;clear:none;}
+	.right .nav li ul {float:none;clear:both;}
+	.right .nav li ul li {float:none;clear:both;}
+	.right .nav li ul li a {}
+	.right .nav li ul li.hover a {}
+	
+	/* Content */
+	.left {float:left;clear:left;display:block;}
+	.middle {float:left;clear:none;display:block;}
+	.right {float:right;clear:right;display:block;}
+	.full {float:none;clear:both;width:100%;display:block;}
+	.center {float:none;clear:both;margin-left:auto !important;margin-right:auto !important;display:block;}
+	.inline {display:inline-block;}
+	.block {display:block;}
+	
+	/* Login */
+	.loginbox {display:none;position:absolute;margin:300px 0 0 300px;z-index:99;width:353px;height:290px;background:url('../../images/layout/bg.jpg') top right;border:solid 1px #666666;z-index:10000;}
+	.loginbox_i1 {padding:30px;}
+
+/* Styles */
+p, hr, h1, h2, h3, h4, h5, pre, a, ul, li, div, img {font-family:Arial, Helvetica, sans-serif;font-size:14px;color:#333333;background:none;border:none;}
+p {color:#666666;font-size:14px;}
+h1 {font-size:30px;}
+h2 {font-size:26px;}
+h3 {font-size:22px;}
+h4 {font-size:18px;}
+h5 {font-size:14px;}
+ul, li {list-style:none;}
+hr {height:1px;background:#999999;}
+input {border:solid 1px #999999;}
+input[type=button], input[type=submit] {background:#ffffff;}

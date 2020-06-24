@@ -1,0 +1,28 @@
+{
+  "name": "packages-to-string",
+  "version": "1.0.0",
+  "description": "INPUT: array of packages and their dependencies... OUTPUT: comma-separated string of packages in order of which to load first so as to not break anything",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulshorey/packages-to-string"
+  },
+  "keywords": [],
+  "author": "Paul Shorey",
+  "license": "open",
+  "bugs": {
+    "url": "https://github.com/paulshorey/packages-to-string/issues"
+  },
+  "homepage": "https://github.com/paulshorey/packages-to-string#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "simple-test-framework": "^0.1.7"
+  },
+  "files": [
+    "index.js"
+  ]
+}

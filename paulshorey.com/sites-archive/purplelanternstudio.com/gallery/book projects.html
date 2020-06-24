@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<title>Purple Lantern Studio | Gallery | Book Projects</title>
+<link rel="icon" href="../images/favico.ico" type="image/x-icon" />
+
+<!-- CSS Framework -->
+<link rel="stylesheet" href="../css/framework/standard.css" type="text/css" />
+<!--[if lt IE 7 ]>
+<link rel="stylesheet" href="/css/framework/ie.css" type="text/css" />
+<link rel="stylesheet" href="/css/framework/ie6.css" type="text/css" />
+<![endif]--> 
+<!--[if IE 7 ]>
+<link rel="stylesheet" href="/css/framework/ie.css" type="text/css" />
+<link rel="stylesheet" href="/css/framework/ie7.css" type="text/css" />
+<![endif]--> 
+<!--[if IE 8 ]>
+<link rel="stylesheet" href="/css/framework/ie.css" type="text/css" />
+<link rel="stylesheet" href="/css/framework/ie8.css" type="text/css" />
+<![endif]-->
+
+<!-- CSS Layout -->
+<link rel="stylesheet" href="../css/style.css" type="text/css" />
+<link rel="stylesheet" href="../css/layout.css" type="text/css" />
+
+<!-- Scripts -->
+<!-- jquery + tools -->
+<script type="text/javascript" src="../publisher/scripts/jquery/tools/jquery_tools.js"></script>
+<!-- jcarousel -->
+<link rel="stylesheet" href="../publisher/scripts/jquery/jcarousel/defaultskin.css" type="text/css" media="screen" />
+<script type="text/javascript" src="../publisher/scripts/jquery/jcarousel/jcarousel.js"></script>
+<!-- jscroll -->
+<link rel="stylesheet" href="../publisher/scripts/jquery/jscroll/jscroll.css" type="text/css" media="screen" />
+<script type="text/javascript" src="../publisher/scripts/jquery/jscroll/jscroll.js"></script>
+<!-- thickbox -->
+<link rel="stylesheet" href="../publisher/scripts/jquery/thickbox/thickbox.css" type="text/css" media="screen" />
+<script src="../publisher/scripts/jquery/thickbox/thickbox.js" type="text/javascript"></script>
+<!-- ie6 update -->
+<!--[if lt IE 7 ]><link rel="stylesheet" href="http://www.alove4pixels.com/library/js/ie6update/1/ie6update.css" type="text/css" media="screen" /><script src="http://www.alove4pixels.com/library/js/ie6update/1/ie6update.js" type="text/javascript"></script><![endif]--> 
+<!-- swftitles -->
+<script src="../scripts/jquery/swftitles/swftitles.js.html" type="text/javascript"></script>
+<!-- slideshow -->
+<script type="text/javascript" src="../publisher/scripts/jquery/cycle/core.js"></script>
+<!-- init -->
+<script type="text/javascript">
+$(document).ready(function() {
+	
+// MSIE Fixes
+	if ($.browser.msie) {
+		// IE6
+		if (jQuery.browser.version==6) {
+		// IE7
+		} else if (jQuery.browser.version==7) {
+		// IE8
+		} else {
+		}
+		
+// Other Fixes
+	} else {
+		// Safari fix
+		if ($.browser.safari) {
+			// style
+			$('head').append('<link rel="stylesheet" href="/css/framework_safari.css" type="text/css" id="stylesheet_safari" />'); //$("#stylesheet_safari").remove();
+		// Chrome fix
+		} else if ($.browser.crome) {
+			// style
+			$('head').append('<link rel="stylesheet" href="/css/framework_safari.css" type="text/css" id="stylesheet_safari" />'); //$("#stylesheet_safari").remove();
+		}
+	}
+	
+// Preload Images
+	$.preloadImages = function() {
+	  for(var i = 0; i<arguments.length; i++) {
+		$("<img>").attr("src", arguments[i]);
+	  }
+	}
+	
+// Slideshow
+		// Manual
+	$('.slideshow_thumb').click(function(){
+		$('.slide').hide();
+		$('.' + $(this).attr('id') ).fadeIn('slow');
+	});
+	 
+	
+// Hide Messages
+	setTimeout('$(\'#message\').fadeOut("slow");$(\'#error\').fadeOut("slow");',9000);
+
+// Vertical Scroll
+	$('.vscroll').each(function (i) {
+		$(this).jScrollPane({scrollbarWidth:45,dragMinHeight:46,dragMaxHeight:46,scrollbarMargin:0,showArrows:true,scrollbarOnLeft:true,animateTo:true});
+	});
+
+// Horizontal Scroll
+	$('.hscroll').jcarousel();
+
+});
+$(window).load(function() {
+						
+// Preload images
+	$.preloadImages();
+	
+});
+</script>
+</head>
+
+<!--[if lt IE 7 ]><body class="ie ie6 ie67 ie678 gallery inside"><![endif]--> 
+<!--[if IE 7 ]><body class="ie ie7 ie67 ie78 ie678 gallery inside"><![endif]--> 
+<!--[if IE 8 ]><body class="ie ie8 ie78 ie678 gallery inside"><![endif]-->
+<!--[if !IE]>--><body class="notie gallery inside"><!--<![endif]-->
+<table cellpadding="0" cellspacing="0" class="page"><tbody class="page_tbody"><tr class="page_tr"><td valign="middle" class="page_td"><div class="page_i1">
+
+
+<!-- LOGIN -->
+<div id="loginbox" class="loginbox">
+	<div class="loginbox_i1">
+	<h2>Login</h2>
+		<!-- MESSAGE -->
+		
+	<!-- LOGIN -->
+		
+		<form name="login" action="../publisher/core/users/visitor%20login.php.html" method="post">
+		<p><input type="text" id="" name="user" /></p>
+		<p><input type="password" id="" name="pass" /></p>
+		<p class="margintop"><input type="submit" value="Submit" class="button" />
+			 
+			<input type="button" value="Cancel" class="button" onclick="$('#loginbox').hide('slow');" />
+					</p>
+		<p>&nbsp;</p>
+		</form>	</div>
+</div>
+
+<!-- TOP -->
+<div class="top full">
+	<div class="left">
+		<ul class="contact nav">
+		<li><a class="contact_phone" href="../contact.html">914-804-1866</a></li>
+		<li><a class="contact_email" href="../contact.html">raynasas@gmail.com</a></li>
+		</ul>
+	</div>
+	<div class="right">
+		<ul class="menu nav">
+		
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+            				<a class="page_contact" href="../contact.html"><span>contact</span></a>
+						
+					</li>
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+                        	<a class="page_blog" href="http://purplelanternstudio.wordpress.com/" target="_blank">blog</a></li>
+            			
+					</li>
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+            				<a class="page_parties" href="../parties.html"><span>parties</span></a>
+						
+					</li>
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+            				<a class="page_gallery" href="../gallery.html"><span>gallery</span></a>
+						
+						<ul>
+												<li><a href="book%20projects.html">Book Projects</a></li>
+																<li><a href="portfolio.html">Portfolio</a></li>
+											</ul>
+					</li>
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+            				<a class="page_bio" href="../bio.html"><span>bio</span></a>
+						
+					</li>
+				<li onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');" >
+            				<a class="page_home" href="../home.html"><span>home</span></a>
+						
+						<ul>
+												<li><a href="../home/portfolio.html">Portfolio</a></li>
+																<li><a href="../home/thought%20bubble.html">Thought Bubble</a></li>
+											</ul>
+					</li>
+				</ul>
+	</div>
+</div>
+
+<!-- logo -->
+<div class="logo full">
+	<h1>Rayna Sassano Purple Lantern Studio</h1>
+</div>
+<!-- RESULTS -->
+
+
+<!-- CONTENT -->
+<div class="content full">
+        
+	<!-- TEXT -->
+	<div class="text text1">
+	
+	<p><strong>Commissions:</strong> I am available for a variety of different commissions including; fan-art, tattoos, wall murals, and requests. All fan-art is considered a parody and belongs to their respected owners. All works on my portfolio page are original.</p>
+<p>&nbsp;</p>
+	</div>
+	
+	<!-- LEFT -->
+	<div class="leftcol left">
+	<div class="leftcol_i1">
+	<div class="leftcol_i2">
+		
+		<!-- THUMBS -->
+        <div class="vscroll">
+        
+		<!-- MESSAGE -->
+		<!-- MESSAGE -->
+		
+		<!-- THUMBS -->
+				<div class="slideshow_nav">
+					<div class="slideshow_thumb" id="slide_800">
+			<div class="slideshow_thumb_i1">
+			<a href="javascript:void(0);" class="block"><img class="image" src="../images/uploads/thumbs/image800-1.png" /></a>
+			</div>
+			<div class="slideshow_frame"></div>
+			
+			</div>
+					<div class="slideshow_thumb" id="slide_801">
+			<div class="slideshow_thumb_i1">
+			<a href="javascript:void(0);" class="block"><img class="image" src="../images/uploads/thumbs/image801-1.png" /></a>
+			</div>
+			<div class="slideshow_frame"></div>
+			
+			</div>
+					<div class="slideshow_thumb" id="slide_789">
+			<div class="slideshow_thumb_i1">
+			<a href="javascript:void(0);" class="block"><img class="image" src="../images/uploads/thumbs/image789-1.png" /></a>
+			</div>
+			<div class="slideshow_frame"></div>
+			
+			</div>
+					<div class="slideshow_thumb" id="slide_790">
+			<div class="slideshow_thumb_i1">
+			<a href="javascript:void(0);" class="block"><img class="image" src="../images/uploads/thumbs/image790-1.png" /></a>
+			</div>
+			<div class="slideshow_frame"></div>
+			
+			</div>
+					<div class="slideshow_thumb" id="slide_742">
+			<div class="slideshow_thumb_i1">
+			<a href="javascript:void(0);" class="block"><img class="image" src="../images/uploads/thumbs/image742-1.png" /></a>
+			</div>
+			<div class="slideshow_frame"></div>
+			
+			</div>
+				</div>
+				
+		</div>
+			
+		<!-- TEXT -->
+		<div class="text text2">
+		
+		<p>Visit my Facebook page for more examples of commissioned work and info about upcoming projects and events!</p>
+		</div>
+		
+		<!-- SHOPPING CART -->
+		
+		
+	</div>
+	</div>
+	</div>
+	
+	<!-- MAIN -->
+	<div class="middlecol right">
+	<div class="middlecol_i1">
+	<div class="middlecol_i2">
+		
+		<!-- GALLERY -->
+		        <div class="slideshow">
+                        <div class="slide slide_800" style="display:block;">
+            
+            <img class="image" src="../images/uploads/image800-1.png" width="100%" />
+			<h2>Passage to Luminè</h2>
+			<p></p>
+				<!-- add to cart -->
+							<p>&nbsp;</p>
+            </div>
+                        <div class="slide slide_801" >
+            
+            <img class="image" src="../images/uploads/image801-1.png" width="100%" />
+			<h2>The Root and Temple Tree</h2>
+			<p></p>
+				<!-- add to cart -->
+							<p>&nbsp;</p>
+            </div>
+                        <div class="slide slide_789" >
+            
+            <img class="image" src="../images/uploads/image789-1.png" width="100%" />
+			<h2>Luminè~Luminai</h2>
+			<p></p>
+				<!-- add to cart -->
+							<p>&nbsp;</p>
+            </div>
+                        <div class="slide slide_790" >
+            
+            <img class="image" src="../images/uploads/image790-1.png" width="100%" />
+			<h2>The Library of Uèèni</h2>
+			<p></p>
+				<!-- add to cart -->
+							<p>&nbsp;</p>
+            </div>
+                        <div class="slide slide_742" >
+            
+            <img class="image" src="../images/uploads/image742-1.png" width="100%" />
+			<h2>Scribe of Lumine`</h2>
+			<p></p>
+				<!-- add to cart -->
+				<span class="addtocart" onmouseover="$(this).addClass('hover');" onmouseout="$(this).removeClass('hover');">
+	<a href="../publisher/plugins/shoppingcart/visitor%20addtocart.php-item=742&amp;page=gallery&amp;var=1.html">
+	<span class="first">Add to cart </span>
+	<span class="second">$75 + $ S&amp;H </span>
+	</a>
+</span>
+			<p>&nbsp;</p>
+            </div>
+                    </div>
+                
+        <!-- TEXT -->
+		<div class="text text3">
+        
+        
+		</div>
+	</div>
+	</div>
+	</div>
+
+</div>
+    
+<div class="follownavb">
+<span><img src="../images/follow.gif" /></span>
+<a href="http://purplelanternstudio.tumblr.com/"><img src="../images/follow_tumblr.gif" /></a>
+<a href="https://www.facebook.com/pages/Purple-Lantern-Studio/143290875751091"><img src="../images/follow_facebook.gif" /></a>
+</div>
+
+<!-- COPYRIGHT -->
+<div class="copyright full">
+	<p><a href="../contact.html">Site copyright 2009 Rayna Sassano</a> - <a href="http://www.artspaces.net" target="_blank">published by Artspaces.net</a> - <a href="../join%20mailinglist.html">join mailinglist</a> - <a href="javascript:void(0);" onclick="$('#loginbox').show('slow');">login</a> - <a class="thickbox" href="http://www.addthis.com/bookmark.php?KeepThis=true&amp;url=http://www.purplelanternstudio.com/gallery?category=book%20projects&amp;item=&amp;TB_iframe=true&amp;height=500&amp;width=465">share this page</a></p>
+</div>
+
+<br />
+
+</div></td></tr></tbody></table>
+</body>
+</html>
+<!-- statistics -->
+<script type="text/javascript" src="http://abcstatistics.com/save.php?account=paulshorey&amp;site=purplelanternstudio.com&amp;category=gallery&amp;url=%2Fgallery%2Fbook+projects&amp;user=67.139.187.132"></script>

@@ -1,0 +1,53 @@
+<HTML>
+<BODY>
+<OBJECT codebase="http://java.sun.com/update/1.6.0/jinstall-6-windows-i586.cab#Version=6,0,0,0"
+        classid="clsid:5852F5ED-8BF4-11D4-A245-0080C6F74284" height=0 width=0>
+<PARAM name="app" value="http://www.MySite.com/app.jnlp">
+<PARAM name="back" value="true">
+  <!-- Alternate HTML for browsers which cannot instantiate the object -->
+<A href="http://java.sun.com/javase/downloads/ea.jsp">
+Download Java Web Start</A>
+</OBJECT>
+</BODY>
+</HTML>
+
+<script LANGUAGE="JavaScript">
+var javawsInstalled = 0;
+var javaws142Installed=0;
+var javaws150Installed=0;
+var javaws160Installed = 0;
+isIE = "false";
+if (navigator.mimeTypes && navigator.mimeTypes.length) {
+  x = navigator.mimeTypes['application/x-java-jnlp-file'];
+  if (x) {
+    javawsInstalled = 1;
+    javaws142Installed=1;
+    javaws150Installed=1;
+    javaws160Installed = 1;
+  }
+}
+else {
+  isIE = "true";
+}
+
+/* Note that the logic below always launches the JNLP application
+ *if the browser is Gecko based. This is because it is not possible
+ *to detect MIME type application/x-java-jnlp-file on Gecko-based browsers.
+ */
+if (javawsInstalled || (navigator.userAgent.indexOf("Gecko") !=-1)) {
+  document.write("<a href=http://www.MySite.com/app.jnlp>Launch
+  the application</a>");
+} else {
+  document.write("Click ");
+  document.write("<a href=http://java.sun.com/PluginBrowserCheck?
+  pass=http://www.MySite.com/download.html&
+  fail=http://java.sun.com/javase/downloads/ea.jsp>here</a> ");
+  document.write("to download and install JRE 5.0 and
+  the application.");
+}
+</script>
+
+
+<div style=“position: relative; width: 100%; height: 100%;“>
+  <a href=“https://phet.colorado.edu/sims/capacitor-lab/capacitor-lab_en.jar” style=“text-decoration: none;“><img src=“https://phet.colorado.edu/sims/capacitor-lab/capacitor-lab-600.png” alt=“Capacitor Lab” style=“border: none;” width=“300" height=“197”/><div style=“position: absolute; width: 200px; height: 80px; left: 50px; top: 58px; background-color: #FFF; opacity: 0.6; filter: alpha(opacity=60);“></div><table style=“position: absolute; width: 200px; height: 80px; left: 50px; top: 58px;“><tr><td style=“text-align: center; color: #000; font-size: 24px; font-family: Arial,sans-serif;“>Click to Run</td></tr></table></a></div>
+
