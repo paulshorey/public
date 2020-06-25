@@ -1,0 +1,11 @@
+{
+  "name": "srv-fe",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Serve front-end files for multiple websites, using Nginx. Watch for changes (pull and restart server) using Nodejs.",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {}
+}
