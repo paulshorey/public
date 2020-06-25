@@ -1,0 +1,17 @@
+# cd /www/fe;
+
+#
+# SSH - first, `scp ~/.ssh/newssh root@18.217.8.193:~/.ssh/newssh`
+#
+eval $(ssh-agent -s);
+ssh-add ~/.ssh/newssh;
+
+#
+# hints
+#
+echo '
+    NGINX:
+    ne /etc/nginx/sites-available/default
+    service nginx restart
+';
+
