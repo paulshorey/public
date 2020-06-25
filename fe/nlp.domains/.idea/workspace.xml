@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5bc37996-ecaa-4219-b19c-79f8ac373a1b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+        <option value="$PROJECT_DIR$/.idea/fe.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
+        <option value="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bWQ767qkpeLqq3k5UnHpVgGXht" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="IgnoreLang" />
+    <property name="javascript.nodejs.core.library.configured.version" value="13.9.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scripts" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/scripts" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/src/components/Search/InputTld" />
+      <recent name="$PROJECT_DIR$/src/style" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages" />
+      <recent name="$PROJECT_DIR$/src/containers" />
+      <recent name="$PROJECT_DIR$/src/components" />
+      <recent name="$PROJECT_DIR$/_startup" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bc37996-ecaa-4219-b19c-79f8ac373a1b" name="Default Changelist" comment="" />
+      <created>1584576620289</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584576620289</updated>
+      <workItem from="1584576621432" duration="128363000" />
+      <workItem from="1585536429635" duration="2088000" />
+      <workItem from="1585592740493" duration="2851000" />
+      <workItem from="1585689045868" duration="176000" />
+      <workItem from="1585690816361" duration="26306000" />
+      <workItem from="1586113726078" duration="8033000" />
+      <workItem from="1586208268193" duration="9301000" />
+      <workItem from="1586616029379" duration="100488000" />
+      <workItem from="1587686625869" duration="25110000" />
+      <workItem from="1587947661517" duration="2563000" />
+      <workItem from="1588116055082" duration="22261000" />
+      <workItem from="1588367223321" duration="4637000" />
+      <workItem from="1588520897728" duration="19307000" />
+      <workItem from="1588714673023" duration="6547000" />
+      <workItem from="1588745203382" duration="1043000" />
+      <workItem from="1588788815393" duration="37000" />
+      <workItem from="1588788876728" duration="4407000" />
+      <workItem from="1588794552162" duration="612000" />
+      <workItem from="1588795184864" duration="6182000" />
+      <workItem from="1588964865477" duration="21070000" />
+      <workItem from="1589491152799" duration="50594000" />
+      <workItem from="1590093683001" duration="4788000" />
+      <workItem from="1590345350699" duration="4000" />
+      <workItem from="1590345410769" duration="17194000" />
+      <workItem from="1590847277656" duration="1971000" />
+      <workItem from="1590856170859" duration="18000" />
+      <workItem from="1590856200711" duration="1719000" />
+      <workItem from="1591038339825" duration="4099000" />
+      <workItem from="1591085137684" duration="13902000" />
+      <workItem from="1591903301608" duration="10943000" />
+      <workItem from="1592448630906" duration="2687000" />
+      <workItem from="1592542412770" duration="30271000" />
+      <workItem from="1592790508275" duration="14216000" />
+      <workItem from="1593036993332" duration="591000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="441" y="271" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592608221540">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="441" y="271" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877/-567.-1057.2560.1057@0.23.1440.877" timestamp="1592429597141" />
+    <state x="441" y="271" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.877@0.23.1440.877" timestamp="1592608221540" />
+    <state x="453" y="307" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1588796446128">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="453" y="307" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.23.1440.877/-567.-1057.2560.1057@0.23.1440.877" timestamp="1588796446128" />
+    <state x="491" y="-846" width="1466" height="722" key="SettingsEditor" timestamp="1589659113664">
+      <screen x="-567" y="-1057" width="2560" height="1057" />
+    </state>
+    <state x="491" y="-846" width="1466" height="722" key="SettingsEditor/0.23.1440.877/-567.-1057.2560.1057@0.23.1440.877" timestamp="1589659113664" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1589492589806">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.877/-567.-1057.2560.1057@0.23.1440.877" timestamp="1589492589806" />
+    <state x="511" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589836102947">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="511" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/-567.-1057.2560.1057@0.23.1440.877" timestamp="1589836102947" />
+    <state x="0" y="23" width="1080" height="877" maximized="true" key="dock-window-1" timestamp="1590856256279">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="0" y="23" width="1080" height="877" maximized="true" key="dock-window-1/0.23.1440.877/-567.-1057.2560.1057@0.23.1440.877" timestamp="1590856256279" />
+    <state x="422" y="218" width="596" height="544" key="find.popup" timestamp="1592695126347">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="379" y="22" width="1061" height="878" key="find.popup/0.23.1440.877/-567.-1057.2560.1057@0.23.1440.877" timestamp="1592630234178" />
+    <state x="422" y="218" width="596" height="544" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1592695126347" />
+    <state x="385" y="112" width="670" height="676" key="search.everywhere.popup" timestamp="1592695156779">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="112" width="670" height="676" key="search.everywhere.popup/0.23.1440.877/-567.-1057.2560.1057@0.23.1440.877" timestamp="1589824498335" />
+    <state x="385" y="112" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1592695156779" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Search/Search.styled.js</url>
+          <line>99</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
