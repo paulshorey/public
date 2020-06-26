@@ -1,4 +1,9 @@
-# cd /www/fe;
+#
+# Node Version Manager
+#
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #
 # SSH - first, `scp ~/.ssh/newssh root@18.217.8.193:~/.ssh/newssh`
