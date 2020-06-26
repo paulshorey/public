@@ -1,6 +1,9 @@
+# NOTE: run this file using "sudo"
+
 #
 # New server setup...
 #
+killall apt apt-get
 cd /tmp
 apt update
 apt install ne -y
@@ -26,6 +29,12 @@ npm install -g pm2 -y
 apt install nginx -y
 apt install ufw -y
 ufw allow 'Nginx Full'
+
+#
+# Editing over SSH
+#
+wget -O /usr/local/bin/rsub https://raw.github.com/aurora/rmate/master/rmate
+chmod a+x /usr/local/bin/rsub
 
 #
 # Last item, because it may require a "Y" input from user

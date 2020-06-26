@@ -16,7 +16,8 @@ ssh-add ~/.ssh/newssh;
 #
 echo '
     NGINX:
-    ne /etc/nginx/sites-available/default
+    ls /etc/nginx/sites-available
+    ne ...
     service nginx restart
 ';
 
