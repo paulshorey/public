@@ -1,0 +1,5 @@
+####
+###
+##
+# ADD this line to the END of /etc/crontab
+@reboot root bash /srv/fe/_startup/start.sh
