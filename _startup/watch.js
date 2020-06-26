@@ -16,7 +16,7 @@ app.all('/_deploy', function (req, res) {
   })
 
   // apply
-  spawn('bash', ['/srv/fe/_startup/start.sh'])
+  spawn('bash', ['~/www/_startup/start.sh'])
 
 })
 

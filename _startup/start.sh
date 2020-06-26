@@ -11,14 +11,14 @@
 
 # authenticate GIT
 eval "$(ssh-agent -s)"
-ssh-add ~.ssh/newssh
+ssh-add ~/.ssh/newssh
 
 
 ####
 ###
 ##
 # install dependencies
-cd /srv/fe
+cd ~/www
 rm package-lock.json
 git reset HEAD --hard
 git pull
@@ -29,4 +29,4 @@ npm install --prune
 ###
 ##
 # watch for changes
-pm2 start /srv/fe/_startup/watch.js --node-args="--experimental-specifier-resolution=node"
+pm2 start ~/www/_startup/watch.js --node-args="--experimental-specifier-resolution=node"
