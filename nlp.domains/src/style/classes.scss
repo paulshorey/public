@@ -1,0 +1,240 @@
+/*
+ *
+ * UI
+ *
+ */
+button.color-bad {
+  color: var(--color-bad);
+  border-color: var(--color-bad);
+
+  &:hover {
+    color: var(--color-bad);
+    border-color: var(--color-bad);
+    opacity: 0.75;
+  }
+
+  &:focus {
+    color: var(--color-bad);
+    border-color: var(--color-bad);
+    opacity: 0.5;
+  }
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-accent-dark);
+}
+
+/*
+ *
+ * COLORS
+ *
+ */
+.color-subtle,
+.color-subtle a {
+  color: var(--color-subtle);
+}
+
+.color-subtle-light,
+.color-subtle-light a {
+  color: var(--color-subtle-light);
+}
+
+.color-subtle-dark,
+.color-subtle-dark a {
+  color: var(--color-subtle-dark);
+}
+
+.color-primary-dark,
+.color-primary-dark a {
+  color: var(--color-primary-dark);
+}
+
+.color-primary,
+.color-primary a {
+  color: var(--color-primary);
+}
+
+.color-accent,
+.color-accent a {
+  color: var(--color-accent);
+}
+
+.color-attention,
+.color-attention a {
+  color: var(--color-attention);
+}
+.color-attention-dark,
+.color-attention-dark a {
+  color: var(--color-attention-dark);
+}
+
+.color-subtle-light,
+.color-subtle-light a {
+  color: var(--color-subtle-light);
+}
+
+.color-black,
+.color-black a {
+  color: black;
+}
+
+.color-dark,
+.color-dark a {
+  color: var(--color-dark);
+}
+
+.color-medium,
+.color-medium a {
+  color: var(--color-medium);
+}
+
+.color-light,
+.color-light a {
+  color: var(--color-light);
+}
+
+.color-accent,
+.color-accent a {
+  color: var(--color-accent);
+}
+
+.color-accent,
+.color-accent a {
+  color: var(--color-accent);
+}
+
+.color-bad,
+.color-bad a {
+  color: var(--color-bad);
+}
+
+.color-white,
+.color-white a {
+  color: var(--color-white);
+}
+
+.color-link,
+.color-link a {
+  color: var(--color-link);
+}
+
+/*
+ *
+ * STYLES
+ *
+ */
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                   supported by Chrome, Opera and Firefox */
+}
+.nowrap {
+  white-space: nowrap;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.greyscale {
+  filter: grayscale(100%) brightness(1.2);
+}
+
+.hmiddle {
+  text-align: center;
+}
+
+.vmiddle,
+.valign {
+  vertical-align: middle;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.opacity75 {
+  opacity: 0.67;
+}
+
+.opacity50 {
+  opacity: 0.5;
+}
+
+.nopointer {
+  pointer-events: none;
+}
+
+.noborder {
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.flexgrow {
+  flex-grow: 1;
+}
+
+.floatright {
+  float: right;
+}
+
+.columns {
+  display: flex;
+  width: 100%;
+
+  .column {
+    flex-grow: 1;
+  }
+}
+
+.font-courier {
+  font-family: "Courier New", courier, sans-serif;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.nn.semibold {
+  font-weight: 500;
+}
+
+.nn.indent {
+  padding-left: 0.8rem;
+}
+
+.underdashed {
+  border-bottom: dashed 1px currentColor;
+  line-height: 1;
+}
+
+.u {
+  text-decoration: underline;
+}
+
+.block {
+  display: block;
+}
+
+.center {
+  text-align: center;
+}

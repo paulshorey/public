@@ -18,6 +18,7 @@ echo '
     NGINX:
     ls /etc/nginx/sites-available
     ne ...
+    ln -s /etc/nginx/sites-available/domain.com /etc/nginx/sites-enabled
     service nginx restart
 ';
 

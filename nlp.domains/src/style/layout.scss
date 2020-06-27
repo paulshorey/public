@@ -1,0 +1,46 @@
+body {
+  min-width: 450px;
+}
+
+.content {
+  position: relative;
+  margin-right: 8vw;
+  margin-left: 8vw;
+
+  @media (max-width: 699px) {
+    margin-right: 1.9rem;
+    margin-left: 2rem;
+  }
+
+  @media (max-width: 599px) {
+    margin-right: 1.4rem;
+    margin-left: 1.5rem;
+  }
+}
+
+.page.content {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+//.fixedBottomRightContent {
+//  position: fixed;
+//  bottom: 0;
+//  right: 8vw;
+//
+//  @media (max-height: 799px) {
+//	border-bottom-left-radius: 0;
+//	border-bottom-right-radius: 0;
+//	bottom: 0;
+//  }
+//
+//  @media (max-width: 699px) {
+//	right: 2.5rem;
+//  }
+//
+//  @media (max-width: 599px) {
+//	right: 1.5rem;
+//	bottom: 0;
+//  }
+//}
+//
