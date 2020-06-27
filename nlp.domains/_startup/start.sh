@@ -21,7 +21,7 @@ ssh-add ~/.ssh/newssh
 ##
 # pull from GIT repository
 git reset HEAD --hard
-#rm -rf /srv/nlp.domains
+#rm -rf /srv/fe/nlp.domains
 git pull
 
 
@@ -30,7 +30,7 @@ git pull
 ##
 # restart all in case server was not running
 pm2 restart all
-pm2 start /srv/nlp.domains/index.js --node-args="--experimental-specifier-resolution=node"
+pm2 start /srv/fe/nlp.domains/index.js --node-args="--experimental-specifier-resolution=node"
 
 
 ####
@@ -38,6 +38,6 @@ pm2 start /srv/nlp.domains/index.js --node-args="--experimental-specifier-resolu
 ##
 # watch for changes:
 npm install express
-pm2 start /srv/nlp.domains/_startup/watch.js --node-args="--experimental-specifier-resolution=node"
+pm2 start /srv/fe/nlp.domains/_startup/watch.js --node-args="--experimental-specifier-resolution=node"
 
 

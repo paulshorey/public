@@ -15,7 +15,7 @@ app.all("/_deploy", function (req, res) {
   })
 
   // apply
-  spawn("bash", ["/srv/nlp.domains/_startup/start.sh"])
+  spawn("bash", ["/srv/fe/nlp.domains/_startup/start.sh"])
 })
 
 http.createServer(app).listen(app.get("port"), function () {
