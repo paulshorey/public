@@ -1,4 +1,5 @@
 #!/bin/bash
+# NOTE: when running this file, first "cd" into this directory, then run the script!
 
 ####
 ###
@@ -18,7 +19,6 @@ ssh-add ~/.ssh/newssh
 ###
 ##
 # install dependencies
-cd ~/www
 rm package-lock.json
 git reset HEAD --hard
 git pull
@@ -28,5 +28,12 @@ npm install --prune
 ####
 ###
 ##
+# serve files
+# this is done by nginx
+
+
+####
+###
+##
 # watch for changes
-pm2 start ~/www/_startup/watch.js --node-args="--experimental-specifier-resolution=node"
+pm2 start _watch.mjs --node-args="--experimental-specifier-resolution=node"

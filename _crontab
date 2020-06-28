@@ -1,0 +1,5 @@
+####
+###
+##
+# ADD this line to the END of /etc/crontab
+@reboot root cd /srv/public && bash _start.sh
