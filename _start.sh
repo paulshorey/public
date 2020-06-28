@@ -1,5 +1,6 @@
 #!/bin/bash
 # NOTE: when running this file, first "cd" into this directory, then run the script!
+cd /srv/public
 
 ####
 ###
@@ -36,4 +37,4 @@ npm install --prune
 ###
 ##
 # watch for changes
-pm2 start _watch.mjs --node-args="--experimental-specifier-resolution=node"
+pm2 start /srv/public/_watch.mjs --node-args="--experimental-specifier-resolution=node"
