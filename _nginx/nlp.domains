@@ -13,6 +13,7 @@ server {
   ssl_certificate /root/.certs/nlp.domains.crt;
   ssl_certificate_key /root/.certs/nlp.domains.key;
 
+  # Pass to Node.js?... no, Nginx is better!
   # location / {
   #   proxy_pass http://localhost:9000;
   #   proxy_http_version 1.1;
@@ -24,7 +25,7 @@ server {
 
   location / {
    root /srv/public/nlp-fe;
-   index domain/index.html;
+   index domain/index.html index.html;
   }
 }
 
