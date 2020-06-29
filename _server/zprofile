@@ -22,3 +22,7 @@ echo '
     service nginx restart
 ';
 
+#
+# node
+#
+pm2 list

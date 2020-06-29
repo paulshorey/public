@@ -14,7 +14,7 @@ server {
   ssl_certificate_key /root/.certs/nlpthesaurus.com.key;
 
   location / {
-    proxy_pass http://localhost:8000;
+    proxy_pass http://localhost:9000;
     proxy_http_version 1.1;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection 'upgrade';
@@ -23,7 +23,7 @@ server {
   }
 
   # location / {
-  #  root /srv/fe/nlp.domains;
+  #  root /srv/nlp-fe;
   #  index index.html;
   # }
 }

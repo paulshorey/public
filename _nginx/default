@@ -3,7 +3,7 @@ server {
   listen [::]:80 default_server;
 
   location / {
-    root /srv/fe/paulshorey.com;
+    root /srv/public/paulshorey.com;
     index index.html;
   }
 }

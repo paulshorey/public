@@ -14,7 +14,7 @@ server {
   ssl_certificate_key /root/.certs/paulshorey.com.key;
 
   location / {
-    root /srv/fe/paulshorey.com;
+    root /srv/public/paulshorey.com;
     index index.html;
   }
 }
