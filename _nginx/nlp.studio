@@ -1,17 +1,17 @@
 server {
   listen 80;
   listen [::]:80;
-  server_name nlpthesaurus.com www.nlpthesaurus.com;
+  server_name nlp.studio www.nlp.studio;
   return 301 https://$server_name$request_uri;
 }
 server {
   listen 443 ssl;
   listen [::]:443;
-  server_name nlpthesaurus.com www.nlpthesaurus.com;
+  server_name nlp.studio www.nlp.studio;
 
   ssl on;
-  ssl_certificate /srv/public/_certs/nlpthesaurus.com.crt;
-  ssl_certificate_key /srv/public/_certs/nlpthesaurus.com.key;
+  ssl_certificate /srv/public/_certs/nlp.studio.crt;
+  ssl_certificate_key /srv/public/_certs/nlp.studio.key;
 
   # Pass to Node.js?... no, Nginx is better!
   # location / {
@@ -25,7 +25,8 @@ server {
 
   location / {
    root /srv/public/nlp-fe;
-   index word/index.html index.html;
+   index domain/index.html index.html;
   }
 }
+
 

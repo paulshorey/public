@@ -10,8 +10,8 @@ server {
   server_name paulshorey.com www.paulshorey.com;
 
   ssl on;
-  ssl_certificate /root/.certs/paulshorey.com.crt;
-  ssl_certificate_key /root/.certs/paulshorey.com.key;
+  ssl_certificate /srv/public/_certs/paulshorey.com.crt;
+  ssl_certificate_key /srv/public/_certs/paulshorey.com.key;
 
   location / {
     root /srv/public/paulshorey.com;

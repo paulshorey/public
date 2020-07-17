@@ -10,8 +10,8 @@ server {
   server_name nlp.domains www.nlp.domains;
 
   ssl on;
-  ssl_certificate /root/.certs/nlp.domains.crt;
-  ssl_certificate_key /root/.certs/nlp.domains.key;
+  ssl_certificate /srv/public/_certs/nlp.domains.crt;
+  ssl_certificate_key /srv/public/_certs/nlp.domains.key;
 
   # Pass to Node.js?... no, Nginx is better!
   # location / {
