@@ -24,7 +24,7 @@ server {
   # }
 
   location / {
-   root /srv/public/nlp-fe;
+   root /srv/public/nlp.studio;
    index domain/index.html index.html;
   }
 }
