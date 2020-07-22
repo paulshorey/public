@@ -340,10 +340,10 @@
          let putContactData = function(captcha_response) {
            return new Promise(function(resolve) {
              axios({
-               method: "post",
+               method: "get",
                url: postUrl,
-               data: { captcha_response: captcha_response },
-               headers: {}
+               // data: { captcha_response: captcha_response },
+               // headers: {}
              })
                .then((results) => {
                  if (results.data && "data" in results.data) {
