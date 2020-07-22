@@ -291,13 +291,6 @@
       -->
       <script>
          /*
-          * Browser support
-          */
-         if (navigator.userAgent.includes('MSIE') || navigator.appVersion.includes('Trident')) {
-           document.writeln('<p>Sorry, these forms do not support Internet Explorer. Please email <a href="mailto:paul@nlp.studio"><b>paul@nlp.studio</b></a></p>')
-         }
-
-         /*
           * Contact data
           */
          let updateContactData = function (key,value) {
@@ -309,7 +302,7 @@
            }
          }
          let contactData = {
-           email:'',
+           email:'only_this_is_required@whatever.com',
            name:'',
            text:'',
            updates_product:'',
@@ -317,55 +310,40 @@
          /*
           * POST Contact data
           */
-         // localhost:1080 OR 142.93.251.57 OR https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts
-         // let postUrl = 'http://142.93.251.57/v1/contacts'
-         // let putContactData = function(captcha_response) {
-         //   let postData = {
-         //     contact: contactData,
-         //     captcha_response
-         //   }
-         //   return fetch(postUrl, {
-         //     "method": "PUT",
-         //     "headers": {
-         //       "content-type": "application/json",
-         //       "accept": "application/json, text/plain, */*"
-         //     },
-         //     "body": JSON.stringify(postData)
-         //   })
-         //     .then(function(response) {
-         //       return response.json();
-         //     })
-         // }
+         let rapidAPIUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
          let rapidAPIHeaders = {
            "content-type": "application/json",
            "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
            "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
            "useQueryString": true
          }
+         // let simpleUrl = 'http://142.93.251.57/v1/contacts'
          // let simpleHeaders = {
          //   "content-type": "application/json",
          // };
-         let postUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
-         let putContactData = function(captcha_response) {
+         let putContactData = function(captcha_response='any_string') {
            return new Promise(function(resolve) {
+             // request
              axios({
                method: "put",
-               url: postUrl,
+               url: rapidAPIUrl,
                headers: rapidAPIHeaders,
                data: {
                  contact: contactData,
-                 captcha_response
+                 captcha_response: captcha_response
                },
              })
                .then((results) => {
+                 // parse data from object
                  if (results.data && "data" in results.data) {
-                   resolve(results.data.data) // correct
+                   resolve(results.data.data)
                  } else {
                    console.warn('server response did not have "data" key')
                    resolve(results.data)
                  }
                })
                .catch((error) => {
+                 // parse error message from object
                  let data = error.response ? error.response.data : error.message ? error.message : error
                  console.log('axios error', data )
                  resolve(typeof data==='object' ? data : {error:data})
