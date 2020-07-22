@@ -43,6 +43,7 @@
         // 	window.searchLocation = ", "+data.region+"|"+data.regionName;
         //   });
     </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
 </head>
 
 <body>
@@ -335,23 +336,28 @@
          //       return response.json();
          //     })
          // }
-         let postUrl = 'http://142.93.251.57/v1/domain_availability?str=hello&tld=earth'
+         let postUrl = 'http://142.93.251.57/v1/domain_suggestions?str=hello&tld=earth'
          let putContactData = function(captcha_response) {
-           let postData = {
-             contact: contactData,
-             captcha_response
-           }
-           return fetch(postUrl, {
-             "method": "POST",
-             "headers": {
-               "content-type": "application/json",
-               "accept": "application/json, text/plain, */*"
-             },
-             "body": JSON.stringify(postData)
-           })
-             .then(function(response) {
-               return response.json();
+           return new Promise(function(resolve) {
+             axios({
+               method: "post",
+               url: postUrl,
+               data: { captcha_response: captcha_response },
+               headers: {}
              })
+               .then((results) => {
+                 if (results.data && "data" in results.data) {
+                   resolve(results.data.data) // correct
+                 } else {
+                   console.warn('server response did not have "data" key')
+                   resolve(results.data)
+                 }
+               })
+               .catch((err) => {
+                 console.log('axios error', err)
+                 resolve({})
+               })
+           })
          }
 
          // "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
