@@ -348,7 +348,7 @@
              axios({
                method: "get",
                url: postUrl,
-               data: { str:"hello", tld:"earth", captcha_response: captcha_response },
+               params: { str:"hello", tld:"earth", captcha_response: captcha_response },
                headers: postHeaders
              })
                .then((results) => {
