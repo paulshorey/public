@@ -10,6 +10,7 @@
       <link href=stylesheets/print.css rel=stylesheet media=print>
       <link href=stylesheets/highlight-monokai.css rel=stylesheet media=screen,print>
       <script src=javascripts/all.js></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
    </head>
    <body class="" data-languages="[&#34;javascript&#34;]">
       <a href=# id=nav-button>
@@ -267,38 +268,60 @@
             }
          }
          let contactData = {
-            email: '',
+            email: 'only_this_is_required@whateveHTMLr.com',
             name: '',
             text: '',
             updates_product: '',
          }
-         /*
-          * POST Contact data
-          */
-         // localhost:1080 OR 142.93.251.57 OR https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts
-         let postUrl = 'http://142.93.251.57/v1/contacts'
-         let putContactData = function(captcha_response)
+         let putUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
+         let putHeaders = {
+            "content-type": "application/json",
+            "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
+            "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
+            "useQueryString": true
+         }
+         // let putUrl = 'http://142.93.251.57/v1/contacts'
+         // let putHeaders = { "content-type": "application/json", };
+         let putContactData = function(captcha_response = 'any_string')
          {
-            let postData = {
-               contact: contactData,
-               captcha_response
-            }
-            return fetch(postUrl,
+            return new Promise(function(resolve)
             {
-               "method": "PUT",
-               "headers":
+               // request
+               axios(
                {
-                  "content-type": "application/json",
-                  "accept": "application/json, text/plain, */*"
-               },
-               "body": JSON.stringify(postData)
-            }).then(function(response)
-            {
-               return response.json();
+                  method: "put",
+                  url: putUrl,
+                  headers: putHeaders,
+                  data:
+                  {
+                     contact: contactData,
+                     captcha_response: captcha_response
+                  },
+               }).then((results) =>
+               {
+                  // parse data from object
+                  if (results.data && "data" in results.data)
+                  {
+                     resolve(results.data.data)
+                  }
+                  else
+                  {
+                     console.warn('server response did not have "data" key')
+                     resolve(results.data)
+                  }
+               }).catch((error) =>
+               {
+                  // parse error message from object
+                  let data = error.response ? error.response.data :
+                  {
+                     error: ""
+                  }
+                  data.error = data.error || error.message ? error.message : error
+                  console.log('axios error', data)
+                  resolve(data)
+               })
             })
          }
-         // "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
-         //   "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
          /*
           * Submit subscribe form
           */
