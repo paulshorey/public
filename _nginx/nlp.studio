@@ -26,6 +26,7 @@ server {
   location / {
    root /srv/public/nlp.studio;
    index domain/index.html index.html;
+   expires -1;
   }
 }
 
