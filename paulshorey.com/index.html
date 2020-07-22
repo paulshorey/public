@@ -57,10 +57,10 @@
     <header>
 			<span class="h-left">
 				<a href="javascript:$('html, body').animate({scrollTop: 100000}, 2000);">
-					<span class="uui-icon icon-happy"></span> Paul Shorey</a> | Javascript Engineer / UI Dev<span class="hide-small">eloper</span></span>
+					<span class="uui-icon icon-happy"></span> Paul Shorey</a> | Javascript Software Engineer / UI Designer / Tinkerer<span class="hide-small">eloper</span></span>
         <span class="h-right">
 				<span class="uui-text">
-					<a href="" target="_blank" secret-mailto="ps@artspaces.net">hidden</a> |
+					<a href="" target="_blank" secret-mailto="paul@nlp.studio">hidden</a> |
 					<a href="" secret-tel secret-tel1="385" secret-tel2="770" secret-tel3="6789">hidden</a>
 				</span>
           <!-- |
@@ -221,9 +221,6 @@
 				<span class="bubble bubble2"></span>
 				<span class="bubbleText">
 					<p style="margin-bottom:1rem;">
-						Here is a beautiful portrait of my face in case you wanted to see it. Unfortunately, I do not have a LinkedIn. I
-						do have
-						a Facebook but it is filled with silly pictures.
 						<a href="http://instagram.com/paul.shorey" target="_blank">Follow me on Instagram @paul.shorey</a>
                       <!-- Check out
                       <a href="http://github.com/paulshorey" target="_blank">my GitHub &raquo;</a> -->
@@ -308,26 +305,24 @@
            updates_product:'',
          }
          /*
-          * POST Contact data
+          * PUT Contact data
           */
-         let rapidAPIUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
-         let rapidAPIHeaders = {
-           "content-type": "application/json",
-           "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
-           "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
-           "useQueryString": true
-         }
-         // let simpleUrl = 'http://142.93.251.57/v1/contacts'
-         // let simpleHeaders = {
+         // let putUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
+         // let putHeaders = {
          //   "content-type": "application/json",
-         // };
+         //   "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
+         //   "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
+         //   "useQueryString": true
+         // }
+         let putUrl = 'http://142.93.251.57/v1/contacts'
+         let putHeaders = { "content-type": "application/json", };
          let putContactData = function(captcha_response='any_string') {
            return new Promise(function(resolve) {
              // request
              axios({
                method: "put",
-               url: rapidAPIUrl,
-               headers: rapidAPIHeaders,
+               url: putUrl,
+               headers: putHeaders,
                data: {
                  contact: contactData,
                  captcha_response: captcha_response
@@ -344,15 +339,14 @@
                })
                .catch((error) => {
                  // parse error message from object
-                 let data = error.response ? error.response.data : error.message ? error.message : error
+                 let data = error.response ? error.response.data : {error:""}
+                 data.error = data.error || error.message ? error.message : error
                  console.log('axios error', data )
-                 resolve(typeof data==='object' ? data : {error:data})
+                 resolve(data)
                })
            })
          }
 
-         // "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
-         //   "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
          /*
           * Submit subscribe form
           */
