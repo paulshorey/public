@@ -275,29 +275,30 @@
          /*
           * POST Contact data
           */
+         // localhost:1080 OR 142.93.251.57 OR https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts
+         let postUrl = 'http://142.93.251.57/v1/contacts'
          let putContactData = function(captcha_response)
          {
             let postData = {
                contact: contactData,
                captcha_response
             }
-            return fetch("http://142.93.251.57/v1/contacts",
-            { //https://subscribe-and-contact-form.p.rapidapi.com
-               "method": "put",
-               "mode": 'cors',
+            return fetch(postUrl,
+            {
+               "method": "PUT",
                "headers":
                {
-                  "content-type": "application/json"
+                  "content-type": "application/json",
+                  "accept": "application/json, text/plain, */*"
                },
                "body": JSON.stringify(postData)
             }).then(function(response)
             {
                return response.json();
             })
-            // "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
-            //   "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
-            //   "accept": "application/json",
          }
+         // "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
+         //   "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
          /*
           * Submit subscribe form
           */
