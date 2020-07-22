@@ -363,9 +363,9 @@
                  }
                })
                .catch((error) => {
-                 let err = error.response ? error.response.data : error.message ? error.message : error
-                 console.log('axios error', err )
-                 resolve({error: err})
+                 let data = error.response ? error.response.data : error.message ? error.message : error
+                 console.log('axios error', data )
+                 resolve(typeof data==='object' ? data : {error:data})
                })
            })
          }
