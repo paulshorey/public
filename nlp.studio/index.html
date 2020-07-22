@@ -271,7 +271,7 @@
             email: 'only_this_is_required@whateveHTMLr.com',
             name: '',
             text: '',
-            updates_product: '',
+            updates_product: 'true',
          }
          let putUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
          let putHeaders = {
@@ -299,7 +299,8 @@
                   },
                }).then((results) =>
                {
-                  // parse data from object
+                  // parse data from response
+                  // output data, NOT object with property "data"
                   if (results.data && "data" in results.data)
                   {
                      resolve(results.data.data)
@@ -311,7 +312,8 @@
                   }
                }).catch((error) =>
                {
-                  // parse error message from object
+                  // parse error text from response
+                  // output object with property "error"
                   let data = error.response ? error.response.data :
                   {
                      error: ""
