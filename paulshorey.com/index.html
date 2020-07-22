@@ -338,18 +338,21 @@
          // }
          let postHeaders = {
            "content-type": "application/json",
-           "x-rapidapi-host": "domain-name-search1.p.rapidapi.com",
+           "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
            "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
            "useQueryString": true
          };
-         let postUrl = 'https://domain-name-search1.p.rapidapi.com/v1/domains_suggestions'
+         let postUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
          let putContactData = function(captcha_response) {
            return new Promise(function(resolve) {
              axios({
-               method: "get",
+               method: "put",
                url: postUrl,
-               params: { str:"hello", tld:"earth", captcha_response: captcha_response },
-               headers: postHeaders
+               headers: postHeaders,
+               data: {
+                 contact: contactData,
+                 captcha_response
+               },
              })
                .then((results) => {
                  if (results.data && "data" in results.data) {
