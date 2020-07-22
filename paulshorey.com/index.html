@@ -362,9 +362,10 @@
                    resolve(results.data)
                  }
                })
-               .catch((err) => {
-                 console.log('axios error', err)
-                 resolve({})
+               .catch((error) => {
+                 let err = error.response ? error.response.data : error.message ? error.message : error
+                 console.log('axios error', err )
+                 resolve({error: err})
                })
            })
          }
