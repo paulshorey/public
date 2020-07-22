@@ -236,9 +236,186 @@
 				</span>
 			</span>
         <a name="scrollToMe"></a>
+
+
+      <!--
+            begin CONTACT FORM
+            -->
+            <div class="contactContent">
+                <form id="submitSubscribeForm">
+                  <h3>Stay informed about new product releases:</h3>
+                  <div class="formContent">
+                     <fieldset>
+                        <input type="text" name="email" placeholder="Your email..." onchange="updateContactData('email',this.value)" />
+                     </fieldset>
+                     <button class="g-recaptcha" type="submit">Subscribe</button>
+                  </div>
+                  <div class="response"><p><sup>We include an instant "unsubscribe" link in all emails.</sup></p></div>
+                </form>
+
+                <form id="submitContactForm">
+                  <h3>Say hello:</h3>
+                  <div class="formContent">
+                     <fieldset>
+                        <input type="text" name="email" placeholder="Your email..." onchange="updateContactData('email',this.value)" />
+                     </fieldset>
+                     <fieldset>
+                        <input type="text" name="name" placeholder="Your name..." onchange="updateContactData('name',this.value)" />
+                     </fieldset>
+                     <fieldset>
+                        <textarea name="text" placeholder="Your message..." onchange="updateContactData('text',this.value)"></textarea>
+                     </fieldset>
+                     <button class="g-recaptcha" type="submit">
+                        <img class="svg" alt="send" src="/images/icon-send.svg" />
+                        <span> Send</span>
+                     </button>
+                  </div>
+                  <div class="response">
+                  </div>
+                </form>
+               <script>document.write('<p><sup>Or email <a href="mailto:paul@nlp.studio">paul@nlp.studio</a></sup></p>')</script>
+            </div>
+      <!--
+       end CONTACT FORM
+       -->
+
+
+
     </article>
 </section>
 
+
+      <!--
+         CONTACT FORM
+      -->
+      <script>
+         /*
+          * Browser support
+          */
+         if (navigator.userAgent.includes('MSIE') || navigator.appVersion.includes('Trident')) {
+           document.writeln('<p>Sorry, these forms do not support Internet Explorer. Please email <a href="mailto:paul@nlp.studio"><b>paul@nlp.studio</b></a></p>')
+         }
+
+         /*
+          * Contact data
+          */
+         let updateContactData = function (key,value) {
+           contactData[key] = value
+           if (key==='email') {
+             Array.from(document.querySelectorAll('form')).forEach(form=> {
+               form['email'].value = value
+             })
+           }
+         }
+         let contactData = {
+           email:'',
+           name:'',
+           text:'',
+           updates_product:'',
+         }
+         /*
+          * POST Contact data
+          */
+         // localhost:1080 OR 142.93.251.57 OR https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts
+         let postUrl = 'http://142.93.251.57/v1/contacts'
+         let putContactData = function(captcha_response) {
+           let postData = {
+             contact: contactData,
+             captcha_response
+           }
+           return fetch(postUrl, {
+             "method": "PUT",
+             "headers": {
+               "content-type": "application/json",
+               "accept": "application/json, text/plain, */*"
+             },
+             "body": JSON.stringify(postData)
+           })
+             .then(function(response) {
+               return response.json();
+             })
+         }
+         // "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
+         //   "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
+         /*
+          * Submit subscribe form
+          */
+         let subscribeForm = document.getElementById('submitSubscribeForm');
+         subscribeForm.addEventListener('submit', function(e) {
+           console.log('submitSubscribeForm',contactData);
+           e.preventDefault();
+           if (!contactData.email) {
+             subscribeForm.querySelector('.response').innerHTML = `
+                  <p class="error">Please enter your email address.</p>
+               `;
+             return
+           }
+           grecaptcha.ready(function() {
+             grecaptcha.execute('6LfSN-MUAAAAAOxMUojSlBxkicjSeX1YLW8ds8C1', { action: 'submit' }).then(function (token) {
+               console.log('captcha_response', token);
+               putContactData(token).then(function(data){
+                 if (data.error) {
+                   subscribeForm.querySelector('.response').innerHTML = `
+                           <p class="error">${data.error || 'Could not send. Something went wrong.'}</p>
+                        `;
+                 } else {
+                   subscribeForm.querySelector('.response').innerHTML = `
+                           <p class="success">Email saved.</p>
+                        `;
+                 }
+                 contactForm.querySelector('.response').innerHTML = ``
+               })
+             });
+           });
+         });
+         /*
+          * Submit contact form
+          */
+         let contactForm = document.getElementById('submitContactForm');
+         contactForm.addEventListener('submit', function(e) {
+           e.preventDefault();
+           if (!contactData.email) {
+             contactForm.querySelector('.response').innerHTML = `
+                  <p class="error">Please enter your email address.</p>
+               `;
+             return
+           }
+           else if (!contactData.text) {
+             contactForm.querySelector('.response').innerHTML = `
+                  <p class="error">Please enter a message.</p>
+               `;
+             return
+           }
+           else if (!contactData.name) {
+             contactForm.querySelector('.response').innerHTML = `
+                  <p class="error">Please enter your name.</p>
+               `;
+             return
+           }
+           grecaptcha.ready(function() {
+             grecaptcha.execute('6LfSN-MUAAAAAOxMUojSlBxkicjSeX1YLW8ds8C1', { action: 'submit' }).then(function (token) {
+               console.log('captcha_response',token);
+               putContactData(token).then(function(data){
+                 if (data.error) {
+                   contactForm.querySelector('.response').innerHTML = `
+                           <p class="error">${data.error || 'Could not send. Something went wrong.'}</p>
+                        `;
+                 } else {
+                   contactForm.querySelector('.response').innerHTML = `
+                           <p class="success">Message sent. Thank you. We'll get back to you soon.</p>
+                        `;
+                 }
+                 subscribeForm.querySelector('.response').innerHTML = ``
+               })
+             });
+           });
+         });
+      </script>
+
+      <script src="https://www.google.com/recaptcha/api.js?render=6LfSN-MUAAAAAOxMUojSlBxkicjSeX1YLW8ds8C1"></script>
+      <!--
+         end CONTACT FORM
+      -->
 
 </body>
 
