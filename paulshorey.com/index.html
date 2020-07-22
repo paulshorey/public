@@ -336,13 +336,13 @@
          //       return response.json();
          //     })
          // }
-         let postUrl = 'http://142.93.251.57/v1/domains_suggestions?str=hello&tld=earth'
+         let postUrl = 'https://domain-name-search1.p.rapidapi.com/v1/domains_suggestions'
          let putContactData = function(captcha_response) {
            return new Promise(function(resolve) {
              axios({
                method: "get",
                url: postUrl,
-               // data: { captcha_response: captcha_response },
+               data: { str:"hello", tld:"earth", captcha_response: captcha_response },
                // headers: {}
              })
                .then((results) => {
