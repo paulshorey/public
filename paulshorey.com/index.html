@@ -336,6 +336,11 @@
          //       return response.json();
          //     })
          // }
+         let postHeaders = {
+           "content-type": "application/json",
+           "x-rapidapi-host": "domain-name-search1.p.rapidapi.com",
+           "x-rapidapi-key": "11dc13858emshc2393c506bb7d52p12d7e3jsnc48d54772625"
+         };
          let postUrl = 'https://domain-name-search1.p.rapidapi.com/v1/domains_suggestions'
          let putContactData = function(captcha_response) {
            return new Promise(function(resolve) {
@@ -343,7 +348,7 @@
                method: "get",
                url: postUrl,
                data: { str:"hello", tld:"earth", captcha_response: captcha_response },
-               // headers: {}
+               headers: postHeaders
              })
                .then((results) => {
                  if (results.data && "data" in results.data) {
