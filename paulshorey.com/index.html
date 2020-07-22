@@ -336,19 +336,22 @@
          //       return response.json();
          //     })
          // }
-         // "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
-         //   "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
-         //   "useQueryString": true
-         let postHeaders = {
+         let rapidAPIHeaders = {
            "content-type": "application/json",
-         };
-         let postUrl = 'http://142.93.251.57/v1/contacts'
+           "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
+           "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
+           "useQueryString": true
+         }
+         // let simpleHeaders = {
+         //   "content-type": "application/json",
+         // };
+         let postUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
          let putContactData = function(captcha_response) {
            return new Promise(function(resolve) {
              axios({
                method: "put",
                url: postUrl,
-               headers: postHeaders,
+               headers: rapidAPIHeaders,
                data: {
                  contact: contactData,
                  captcha_response
