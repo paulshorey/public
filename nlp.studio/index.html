@@ -241,6 +241,18 @@
          {
             window.location.href = '#about';
          }
+         {
+            // add extra anchors to title
+            let h1 = document.querySelector('#products--documentation')
+            let name_prod = document.createElement('span');
+            name_prod.setAttribute('id', 'products')
+            name_prod.setAttribute('class', 'positionHigher')
+            let name_docs = document.createElement('span');
+            name_docs.setAttribute('id', 'documentation')
+            name_docs.setAttribute('class', 'positionHigher')
+            h1.appendChild(name_prod);
+            h1.appendChild(name_docs);
+         }
       </script>
       <!--
          CONTACT FORM
