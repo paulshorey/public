@@ -18,6 +18,7 @@
       </a>
       <div class=tocify-wrapper>
          <a href="/"><img alt=logo class=image-logo src=images/logo.svg></a>
+         <div class="logo-subtitle">API Documentation</div>
          <div class=lang-selector>
             <a href=# data-language-name="javascript">javascript</a>
          </div>
@@ -287,9 +288,18 @@
          </div>
       </div>
       <script>
-         // if (window.location.hash==='') {
-         //    window.location.href='#about';
-         // }
+         if (window.location.hash === '')
+         {
+            // window.location.href='#about';
+            setTimeout(function()
+            {
+               document.getElementById('nav-button').click()
+            }, 200);
+            setTimeout(function()
+            {
+               document.getElementById('nav-button').click()
+            }, 1000);
+         }
          {
             // add extra anchors to title
             let h1 = document.querySelector('#products--documentation')
