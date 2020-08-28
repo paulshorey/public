@@ -272,8 +272,12 @@ section article .description {
     line-height: 1.82rem;
 }
 
+section article p {
+    letter-spacing: 0.125px;
+}
 section article .description p {
     margin-bottom: 0.85rem;
+    letter-spacing: 0.25px;
 }
 
 section article .article {
