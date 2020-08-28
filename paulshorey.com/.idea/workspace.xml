@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e496a6ca-c0cd-463e-951f-5ad5c936871c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gsearch.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-lazy.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index-lazyScript.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
