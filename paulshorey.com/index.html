@@ -145,6 +145,7 @@
     </article>
 
     <a name="scrollToCode"></a>
+  <div id="lazyLoad"> </div>
 
 </section>
 
@@ -207,8 +208,8 @@
     </article> -->
 
     <article>
-        <div class="title" style="text-decoration: line-through">
-            Open to full-time work, contracts, partners...
+        <div class="title">
+            This is a work in progress...
         </div>
         <div class="description">
             <p>
@@ -220,22 +221,15 @@
     </article>
 
     <article class="aboutme">
-        <img class="portrait" src="/assets/photos/me/vintage.jpg"/>
-        <span class="thoughtbubble">
-				<span class="bubble bubble0"></span>
-				<span class="bubble bubble1"></span>
-				<span class="bubble bubble2"></span>
-				<span class="bubbleText">
-					<p style="margin-bottom:1rem;">
+					<p>
 						<a href="http://instagram.com/paul.shorey" target="_blank">Follow me on Instagram @paul.shorey</a>
                       <!-- Check out
                       <a href="http://github.com/paulshorey" target="_blank">my GitHub &raquo;</a> -->
 						More info and projects coming soon!
 					</p>
 					<p style="margin-bottom:1rem;">Besides programming, I enjoy creating other things - like electronics, product
-						design, hydroponic greens (like salad and basil), and fine art. Also am an adventure sports junkie ~
-						enjoying
-						hang gliding, skiing, and hiking/climbing.
+						design, hydroponic greens (like salad and basil), and fine art. Also am an adventure sports junkie -
+						love hang gliding, skiing, and hiking/climbing.
 						<p>
 				</span>
 			</span>
@@ -497,13 +491,13 @@
 <!-- index-lazy.html -->
 <script>
     jQuery.ajax({
-      url: 'index-lazy.html',
+      url: 'lazyLoad.html',
       type: 'GET',
       success: function (data) {
         // load lazy HTML
-        document.getElementById('lazy').innerHTML = data;
+        document.getElementById('lazyLoad').innerHTML = data;
         // load lazy JS
-        jQuery.getScript('index-lazyScript.js');
+        jQuery.getScript('lazyLoad.js');
       },
       async: true
     });

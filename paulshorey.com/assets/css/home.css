@@ -26,6 +26,10 @@
   }
 }
 
+.grecaptcha-badge {
+  display: none !important;
+}
+
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
@@ -90,35 +94,8 @@ html {
   }
 }
 
-.aboutme {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: -2.5rem;
-  margin-bottom: 3rem;
-}
-
-.aboutme .bubble {
-  display: inline-block;
-  border-radius: 50%;
-  overflow: hidden;
-  display: none;
-}
-
-.aboutme img.portrait {
-  height: 7.5rem;
-  width: auto;
-  margin-right: 1rem;
-  border-radius: 50%;
-  display: block;
-}
-
-.aboutme .bubbleText {
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  font-size: 1.1rem;
-  line-height: 1.5rem;
+article.aboutme {
+  margin-bottom: 5rem;
 }
 
 body {
@@ -185,7 +162,7 @@ section article {
 }
 
 section article.full {
-  max-width: 1440px;
+  max-width: 1400px;
 }
 
 section article .video {
