@@ -2,30 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e496a6ca-c0cd-463e-951f-5ad5c936871c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/17362706f82494fb45d1109a5d91fd4dae11c8ff-2200082200fd83d57581.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/17362706f82494fb45d1109a5d91fd4dae11c8ff-2200082200fd83d57581.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/17362706f82494fb45d1109a5d91fd4dae11c8ff-e2059b92d95b3025cafd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/17362706f82494fb45d1109a5d91fd4dae11c8ff-e2059b92d95b3025cafd.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/404/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/404/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/4228befcaf69ae74b7a00b5d001d0f44399b2fc1-3ebaa45cd6b65f0a1fa0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/4228befcaf69ae74b7a00b5d001d0f44399b2fc1-3ebaa45cd6b65f0a1fa0.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/all_domains/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/all_domains/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/domain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/domain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/domains/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/domains/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/edit_domain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/edit_domain/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/edit_word/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/edit_word/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/page-data/app-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/page-data/app-data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/webpack-runtime-2b79ea7d054d12c82617.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/webpack-runtime-2b79ea7d054d12c82617.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/webpack-runtime-6b386e84d5a4ea48876d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/webpack-runtime-6b386e84d5a4ea48876d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/webpack.stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/webpack.stats.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../nlp-fe/word/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/word/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -69,7 +45,7 @@
       <workItem from="1588390485655" duration="391000" />
       <workItem from="1590692309769" duration="1267000" />
       <workItem from="1590695500651" duration="95000" />
-      <workItem from="1598639370731" duration="1103000" />
+      <workItem from="1598639370731" duration="1197000" />
     </task>
     <servers />
   </component>
