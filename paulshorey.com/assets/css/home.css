@@ -184,10 +184,6 @@ section article {
   max-width: 700px;
 }
 
-section article.full {
-  max-width: 1440px;
-}
-
 section article .video {
   position: relative;
   max-width: 720px;

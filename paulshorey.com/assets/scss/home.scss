@@ -218,6 +218,9 @@ section {
     .article {
       font-size: 1.03rem;
       line-height: 1.82rem;
+      &.full {
+        max-width: 1440px;
+      }
     }
   }
 }
