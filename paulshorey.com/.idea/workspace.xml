@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e496a6ca-c0cd-463e-951f-5ad5c936871c" name="Default Changelist" comment="" />
+    <list default="true" id="e496a6ca-c0cd-463e-951f-5ad5c936871c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/345946de71bc35b81c68ee785ec943baf3e97e2c-d1b8c3cce8e3b07be4f2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/345946de71bc35b81c68ee785ec943baf3e97e2c-d1b8c3cce8e3b07be4f2.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/404/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/404/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/about/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/all_domains/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/all_domains/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/contact/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/domain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/domain/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/domains/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/domains/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/edit_domain/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/edit_domain/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/edit_word/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/edit_word/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/page-data/app-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/page-data/app-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/webpack-runtime-32d77d4bc04078192866.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/webpack-runtime-32d77d4bc04078192866.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/webpack.stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/webpack.stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nlp-fe/word/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../nlp-fe/word/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
