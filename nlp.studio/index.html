@@ -14,7 +14,7 @@
    </head>
    <body class="" data-languages="[&#34;javascript&#34;]">
       <a href=# id=nav-button>
-         <span>NAV <img alt=navbar class=image-navbar src=images/navbar.png></span>
+         <span><img alt=navbar class=image-navbar src=images/navbar.png></span>
       </a>
       <div class=tocify-wrapper>
          <!--         <a href="/"><img alt=logo class=image-logo src=images/logo.svg></a>-->
@@ -22,10 +22,12 @@
          <div class=lang-selector>
             <a href=# data-language-name="javascript">javascript</a>
          </div>
-         <div class=search>
-            <input type=text class=search id=input-search placeholder="Search">
+         <div class="search-container">
+            <div class=search>
+               <input type=text class=search id=input-search placeholder="Search">
+            </div>
+            <ul class=search-results></ul>
          </div>
-         <ul class=search-results></ul>
          <div id=toc></div>
          <ul class=toc-footer>
             <li><span>Get notified of:</span></li>
@@ -47,10 +49,10 @@
          <div class=dark-box></div>
          <div class=content>
             <h1 id="api-documentation">API Documentation</h1>
-            <h3 id="text-analysis-tools">Text Analysis Tools:</h3>
-            <p><a href="#text-analysis">Word info + synonyms</a> - synonyms, parts of speech, root word, abbreviations, etc. <br><a href="#word-breaking-chunking">Word breaking (chunking)</a> - parse a long string of characters without spaces</p>
             <h3 id="domain-name-tools">Domain Name Tools:</h3>
             <p><a href="#domain-name-suggestions">Domain Name Suggestions</a> - generate hundreds of domain name alternatives <br><a href="#domain-name-availability">Domain Name Availability</a> - check domain availability/expiration <br> <br><a href="#tlds-supported">TLDs supported</a> - which TLDs you support, sort from most to least popular <br><a href="#tlds-promoted">TLDs promoted</a> - which TLDs you own, and which you want to promote (or demote)<br><a href="#default-brand-tlds">Default Brand TLDs</a> - when users&#39;s input mentions a possible brand name <br><a href="#default-name-tlds">Default Name TLDs</a> - when user&#39;s input includes a person&#39;s name <br><a href="#default-tech-tlds">Default Tech TLDs</a> - when search term is tech-related <br><a href="#default-tlds">Default TLDs</a> - when input is not a brand, name or tech</p>
+            <h3 id="text-analysis-tools">Text Analysis Tools:</h3>
+            <p><a href="#text-analysis">Word info + synonyms</a> - synonyms, parts of speech, root word, abbreviations, etc. <br><a href="#word-breaking-chunking">Word breaking (chunking)</a> - parse a long string of characters without spaces</p>
             <h1 id="domain-name-tools">Domain Name Tools</h1>
             <h2 id="domain-name-suggestions">Domain Name Suggestions</h2>
             <pre class="highlight javascript"><code>{
