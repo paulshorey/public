@@ -29,6 +29,15 @@ npm install -g pm2 -y
 apt install nginx -y
 apt install ufw -y
 ufw allow 'Nginx Full'
+# Nginx config
+ln -s /srv/public/_nginx/default /etc/nginx/sites-enabled
+ln -s /srv/public/_nginx/docs.besta.domains /etc/nginx/sites-enabled
+ln -s /srv/public/_nginx/besta.domains /etc/nginx/sites-enabled
+ln -s /srv/public/_nginx/besta.name /etc/nginx/sites-enabled
+ln -s /srv/public/_nginx/nlp.studio /etc/nginx/sites-enabled
+ln -s /srv/public/_nginx/nlp.domains /etc/nginx/sites-enabled
+ln -s /srv/public/_nginx/paulshorey.com /etc/nginx/sites-enabled
+ln -s /srv/public/_nginx/nlpthesaurus.com /etc/nginx/sites-enabled
 
 #
 # Editing over SSH
