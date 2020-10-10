@@ -93,11 +93,11 @@ body {
 }
 a {
   color: orange;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a:hover {
   color: #4bafe1;
-  text-decoration: underline;
+  text-decoration: none;
 }
 [onclick] {
   cursor: pointer;
@@ -146,7 +146,7 @@ section {
       max-width: 720px;
       margin: 0 0 1vh;
       .playpause {
-        background-image: url(../gfx/ui/play.png);
+        background-image: url(../../../src/assets/gfx/play.png);
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
@@ -177,7 +177,7 @@ section {
       position: relative;
       width: 100%;
       .playbutton {
-        background-image: url(../gfx/ui/play.svg);
+        background-image: url(../../../src/assets/gfx/play.svg);
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
