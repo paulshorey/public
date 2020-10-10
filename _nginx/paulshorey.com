@@ -4,7 +4,7 @@ server {
   server_name paulshorey.com www.paulshorey.com;
   return 301 https://$server_name$request_uri;
   #location / {
-  #  root /srv/public/paulshorey.com;
+  #  root /srv/public/ps;
   #  index index.html;
   #}
 }
@@ -18,7 +18,7 @@ server {
   ssl_certificate_key /srv/public/_certs/paulshorey.com.key;
 
   location / {
-    root /srv/public/paulshorey.com;
+    root /srv/public/ps;
     index index.html;
   }
 }
