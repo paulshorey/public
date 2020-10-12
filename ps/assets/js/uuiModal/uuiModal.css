@@ -1,0 +1,23 @@
+#uuiModal {
+  display: none;
+  position: fixed;
+  top: 10vh;
+  left: 10vw;
+  width: 80vw;
+  border: solid 1px #999;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  padding: 13px;
+  background: #fff;
+  z-index: 1000000;
+}
+#uuiModal_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000000;
+}

@@ -1,0 +1,21 @@
+.uuiCarousel {
+}
+
+.uuiCarousel .images {
+  position: relative;
+  margin: 0.5rem 0;
+  overflow: auto;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+.uuiCarousel .images img {
+  height: 8.5rem;
+  width: auto;
+  margin-right: 0.25rem;
+}
+
+.uuiCarousel .prev {
+  opacity: 0;
+  visibility: hidden;
+}

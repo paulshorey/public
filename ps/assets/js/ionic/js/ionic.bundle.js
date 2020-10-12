@@ -52758,7 +52758,7 @@ function($ionicLoadingConfig, $ionicBody, $ionicTemplateLoader, $ionicBackdrop, 
  *   }).then(function(modal) {
  *     $scope.modal = modal;
  *   });
- *   $scope.openModal = function() {
+ *   $scope.uuiModal = function() {
  *     $scope.modal.show();
  *   };
  *   $scope.closeModal = function() {
