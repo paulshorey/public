@@ -1,0 +1,32 @@
+server {
+  listen 80;
+  listen [::]:80;
+  server_name wordio.co www.wordio.co;
+  return 301 https://$server_name$request_uri;
+}
+server {
+  listen 443 ssl;
+  listen [::]:443;
+  server_name wordio.co www.wordio.co;
+
+  ssl on;
+  ssl_certificate /srv/public/_certs/wordio.co.crt;
+  ssl_certificate_key /srv/public/_certs/wordio.co.key;
+
+  # Pass to Node.js?... no, Nginx is better!
+  # location / {
+  #   proxy_pass http://localhost:9000;
+  #   proxy_http_version 1.1;
+  #   proxy_set_header Upgrade $http_upgrade;
+  #   proxy_set_header Connection 'upgrade';
+  #   proxy_set_header Host $host;
+  #   proxy_cache_bypass $http_upgrade;
+  # }
+
+  location / {
+   root /srv/public/nlp-fe;
+   index index.html;
+  }
+}
+
+
