@@ -50,7 +50,7 @@
          <div class=content>
             <h1 id="api-v1">API <code>v1</code></h1>
             <!-- ### Currently in beta testing, open to select registrars: -->
-            <p><b>Now available at: <a href="https://rapiapi.com/besta-domains/api/domain-suggestions-tlds" target="_blank">rapiapi.com</b></a> <br>Try it instantly. No contracts. No commitment. Quick signup.</p>
+            <p><b>Now available at: <a href="https://rapiapi.com/besta-domains/api/domain-suggestions-tlds" target="_blank">RapiAPI.com</b></a> <br>Try it instantly. No contracts. No commitment. Quick signup.</p>
             <p><b>Enterprise API will soon be available at</b> https://<b>api.besta.domains</b>. Our geo-routed distributed cloud will support a high volume of requests from anywhere in the world. Volume discounts available with contract. Custom development is possible. Let us know what you&#39;d like to see.</p>
             <!-- <button class="subtle_button" onClick="window.location.href='#contactform'">Request API access</button> -->
             <!-- ## Table of contents: -->
@@ -415,6 +415,8 @@
                </form>
                <a name="contactform"></a>
                <form id="submitContactForm">
+                  <div class="response">
+                  </div>
                   <h3>Say hello:</h3>
                   <div class="formContent">
                      <fieldset>
@@ -430,8 +432,6 @@
                         <img class="svg" alt="send" src="/images/icon-send.svg" />
                         <span> Send</span>
                      </button>
-                  </div>
-                  <div class="response">
                   </div>
                </form>
             </div>
@@ -497,8 +497,6 @@
             "x-rapidapi-key": "9407dfdda9msh488197632304125p1b200bjsnff4a5b2f6272",
             "useQueryString": true
          }
-         // let putUrl = 'http://142.93.251.57/v1/contacts'
-         // let putHeaders = { "content-type": "application/json", };
          let putContactData = function(captcha_response = 'any_string')
          {
             return new Promise(function(resolve)
