@@ -457,198 +457,189 @@
                document.getElementById('nav-button').click()
             }, 1200);
          }
-         {
-            // add extra anchors to title
-            let h1 = document.querySelector('#products--documentation')
-            let name_prod = document.createElement('span');
-            name_prod.setAttribute('id', 'products')
-            name_prod.setAttribute('class', 'positionHigher')
-            let name_docs = document.createElement('span');
-            name_docs.setAttribute('id', 'documentation')
-            name_docs.setAttribute('class', 'positionHigher')
-            h1.appendChild(name_prod);
-            h1.appendChild(name_docs);
-         }
       </script>
       <!--
          CONTACT FORM
       -->
       <script>
-         /*
-          * Browser support
-          */
-         if (navigator.userAgent.includes('MSIE') || navigator.appVersion.includes('Trident'))
+         setTimeout(function()
          {
-            document.writeln('<p>Sorry, these forms do not support Internet Explorer. Please email <a href="mailto:paul@besta.domains"><b>paul@besta.domains</b></a></p>')
-         }
-         /*
-          * Contact data
-          */
-         let updateContactData = function(key, value)
-         {
-            contactData[key] = value
-            if (key === 'email')
+            /*
+             * Browser support
+             */
+            if (navigator.userAgent.includes('MSIE') || navigator.appVersion.includes('Trident'))
             {
-               Array.from(document.querySelectorAll('form')).forEach(form =>
-               {
-                  form['email'].value = value
-               })
+               document.writeln('<p>Sorry, these forms do not support Internet Explorer. Please email <a href="mailto:paul@besta.domains"><b>paul@besta.domains</b></a></p>')
             }
-         }
-         let contactData = {
-            email: 'only_this_is_required@whateveHTMLr.com',
-            name: '',
-            text: '',
-            updates_product: 'true',
-         }
-         let putUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
-         let putHeaders = {
-            "content-type": "application/json",
-            "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
-            "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
-            "useQueryString": true
-         }
-         // let putUrl = 'http://142.93.251.57/v1/contacts'
-         // let putHeaders = { "content-type": "application/json", };
-         let putContactData = function(captcha_response = 'any_string')
-         {
-            return new Promise(function(resolve)
+            /*
+             * Contact data
+             */
+            let updateContactData = function(key, value)
             {
-               // request
-               axios(
+               contactData[key] = value
+               if (key === 'email')
                {
-                  method: "put",
-                  url: putUrl,
-                  headers: putHeaders,
-                  data:
+                  Array.from(document.querySelectorAll('form')).forEach(form =>
                   {
-                     contact: contactData,
-                     captcha_response: captcha_response
-                  },
-               }).then((results) =>
-               {
-                  // parse data from response
-                  // output data, NOT object with property "data"
-                  if (results.data && "data" in results.data)
-                  {
-                     resolve(results.data.data)
-                  }
-                  else
-                  {
-                     console.warn('server response did not have "data" key')
-                     resolve(results.data)
-                  }
-               }).catch((error) =>
-               {
-                  // parse error text from response
-                  // output object with property "error"
-                  let data = error.response ? error.response.data :
-                  {
-                     error: ""
-                  }
-                  data.error = data.error || error.message ? error.message : error
-                  console.log('axios error', data)
-                  resolve(data)
-               })
-            })
-         }
-         /*
-          * Submit subscribe form
-          */
-         let subscribeForm = document.getElementById('submitSubscribeForm');
-         subscribeForm.addEventListener('submit', function(e)
-         {
-            console.log('submitSubscribeForm', contactData);
-            e.preventDefault();
-            if (!contactData.email)
-            {
-               subscribeForm.querySelector('.response').innerHTML = `
-                  <p class="error">Please enter your email address.</p>
-               `;
-               return
+                     form['email'].value = value
+                  })
+               }
             }
-            grecaptcha.ready(function()
+            let contactData = {
+               email: 'only_this_is_required@whateveHTMLr.com',
+               name: '',
+               text: '',
+               updates_product: 'true',
+            }
+            let putUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
+            let putHeaders = {
+               "content-type": "application/json",
+               "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
+               "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
+               "useQueryString": true
+            }
+            // let putUrl = 'http://142.93.251.57/v1/contacts'
+            // let putHeaders = { "content-type": "application/json", };
+            let putContactData = function(captcha_response = 'any_string')
             {
-               grecaptcha.execute('6LfSN-MUAAAAAOxMUojSlBxkicjSeX1YLW8ds8C1',
+               return new Promise(function(resolve)
                {
-                  action: 'submit'
-               }).then(function(token)
-               {
-                  console.log('captcha_response', token);
-                  putContactData(token).then(function(data)
+                  // request
+                  axios(
                   {
-                     if (data.error)
+                     method: "put",
+                     url: putUrl,
+                     headers: putHeaders,
+                     data:
                      {
-                        subscribeForm.querySelector('.response').innerHTML = `
-                           <p class="error">${data.error || 'Could not send. Something went wrong.'}</p>
-                        `;
+                        contact: contactData,
+                        captcha_response: captcha_response
+                     },
+                  }).then((results) =>
+                  {
+                     // parse data from response
+                     // output data, NOT object with property "data"
+                     if (results.data && "data" in results.data)
+                     {
+                        resolve(results.data.data)
                      }
                      else
                      {
-                        subscribeForm.querySelector('.response').innerHTML = `
+                        console.warn('server response did not have "data" key')
+                        resolve(results.data)
+                     }
+                  }).catch((error) =>
+                  {
+                     // parse error text from response
+                     // output object with property "error"
+                     let data = error.response ? error.response.data :
+                     {
+                        error: ""
+                     }
+                     data.error = data.error || error.message ? error.message : error
+                     console.log('axios error', data)
+                     resolve(data)
+                  })
+               })
+            }
+            /*
+             * Submit subscribe form
+             */
+            let subscribeForm = document.getElementById('submitSubscribeForm');
+            subscribeForm.addEventListener('submit', function(e)
+            {
+               console.log('submitSubscribeForm', contactData);
+               e.preventDefault();
+               if (!contactData.email)
+               {
+                  subscribeForm.querySelector('.response').innerHTML = `
+                  <p class="error">Please enter your email address.</p>
+               `;
+                  return
+               }
+               grecaptcha.ready(function()
+               {
+                  grecaptcha.execute('6LfSN-MUAAAAAOxMUojSlBxkicjSeX1YLW8ds8C1',
+                  {
+                     action: 'submit'
+                  }).then(function(token)
+                  {
+                     console.log('captcha_response', token);
+                     putContactData(token).then(function(data)
+                     {
+                        if (data.error)
+                        {
+                           subscribeForm.querySelector('.response').innerHTML = `
+                           <p class="error">${data.error || 'Could not send. Something went wrong.'}</p>
+                        `;
+                        }
+                        else
+                        {
+                           subscribeForm.querySelector('.response').innerHTML = `
                            <p class="success">Email saved.</p>
                         `;
-                     }
-                     contactForm.querySelector('.response').innerHTML = ``
-                  })
+                        }
+                        contactForm.querySelector('.response').innerHTML = ``
+                     })
+                  });
                });
             });
-         });
-         /*
-          * Submit contact form
-          */
-         let contactForm = document.getElementById('submitContactForm');
-         contactForm.addEventListener('submit', function(e)
-         {
-            e.preventDefault();
-            if (!contactData.email)
+            /*
+             * Submit contact form
+             */
+            let contactForm = document.getElementById('submitContactForm');
+            contactForm.addEventListener('submit', function(e)
             {
-               contactForm.querySelector('.response').innerHTML = `
+               e.preventDefault();
+               if (!contactData.email)
+               {
+                  contactForm.querySelector('.response').innerHTML = `
                   <p class="error">Please enter your email address.</p>
                `;
-               return
-            }
-            else if (!contactData.text)
-            {
-               contactForm.querySelector('.response').innerHTML = `
+                  return
+               }
+               else if (!contactData.text)
+               {
+                  contactForm.querySelector('.response').innerHTML = `
                   <p class="error">Please enter a message.</p>
                `;
-               return
-            }
-            else if (!contactData.name)
-            {
-               contactForm.querySelector('.response').innerHTML = `
+                  return
+               }
+               else if (!contactData.name)
+               {
+                  contactForm.querySelector('.response').innerHTML = `
                   <p class="error">Please enter your name.</p>
                `;
-               return
-            }
-            grecaptcha.ready(function()
-            {
-               grecaptcha.execute('6LfSN-MUAAAAAOxMUojSlBxkicjSeX1YLW8ds8C1',
+                  return
+               }
+               grecaptcha.ready(function()
                {
-                  action: 'submit'
-               }).then(function(token)
-               {
-                  console.log('captcha_response', token);
-                  putContactData(token).then(function(data)
+                  grecaptcha.execute('6LfSN-MUAAAAAOxMUojSlBxkicjSeX1YLW8ds8C1',
                   {
-                     if (data.error)
+                     action: 'submit'
+                  }).then(function(token)
+                  {
+                     console.log('captcha_response', token);
+                     putContactData(token).then(function(data)
                      {
-                        contactForm.querySelector('.response').innerHTML = `
+                        if (data.error)
+                        {
+                           contactForm.querySelector('.response').innerHTML = `
                            <p class="error">${data.error || 'Could not send. Something went wrong.'}</p>
                         `;
-                     }
-                     else
-                     {
-                        contactForm.querySelector('.response').innerHTML = `
+                        }
+                        else
+                        {
+                           contactForm.querySelector('.response').innerHTML = `
                            <p class="success">Message sent. Thank you. We'll get back to you soon.</p>
                         `;
-                     }
-                     subscribeForm.querySelector('.response').innerHTML = ``
-                  })
+                        }
+                        subscribeForm.querySelector('.response').innerHTML = ``
+                     })
+                  });
                });
             });
-         });
+         }, 1000);
       </script>
       <script src="https://www.google.com/recaptcha/api.js?render=6LfSN-MUAAAAAOxMUojSlBxkicjSeX1YLW8ds8C1"></script>
       <!--      <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0097/5221.js" async="async"></script>-->
@@ -676,7 +667,7 @@
       <script>
          setTimeout(function()
          {
-            let el = document.getElementById('.eapps-link');
+            let el = document.querySelector('.eapps-link');
             if (el)
             {
                el.setAttribute('style', 'display:none', 'important')
