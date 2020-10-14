@@ -25,7 +25,7 @@ server {
 
   location / {
    root /srv/public/nlp-fe;
-   index index.html;
+   index word/index.html index.html;
   }
 }
 
