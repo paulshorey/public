@@ -34,7 +34,7 @@
             <li><a href="#contact">new product releases</a></li>
             <li><span>&nbsp;</span></li>
             <li><span>API coming soon:</span></li>
-            <li><a class="li" href="https://rapidapi.com/besta-domains/api/besta-domains" target="_blank">RapidAPI</a></li>
+            <li><a class="li" href="https://rapidapi.com/besta-domains/api/domain-suggestions-tlds" target="_blank">RapidAPI</a></li>
             <li><span>&nbsp;</span></li>
             <li><span>Try our apps:</span></li>
             <li><a href="https://besta.domains" target="_blank">besta.domains</a></li>
@@ -50,7 +50,7 @@
          <div class=content>
             <h1 id="api-v1">API <code>v1</code></h1>
             <!-- ### Currently in beta testing, open to select registrars: -->
-            <p><b>Now available at: </b><a href="https://rapiapi.com/besta-domains/api/besta-domains" target="_blank">https://<b>rapiapi.com</b>/besta-domains/api/besta-domains</a> <br>Try it instantly. No contracts. No commitment. Quick signup.</p>
+            <p><b>Now available at: <a href="https://rapiapi.com/besta-domains/api/domain-suggestions-tlds" target="_blank">rapiapi.com</b></a> <br>Try it instantly. No contracts. No commitment. Quick signup.</p>
             <p><b>Enterprise API will soon be available at</b> https://<b>api.besta.domains</b>. Our geo-routed distributed cloud will support a high volume of requests from anywhere in the world. Volume discounts available with contract. Custom development is possible. Let us know what you&#39;d like to see.</p>
             <!-- <button class="subtle_button" onClick="window.location.href='#contactform'">Request API access</button> -->
             <!-- ## Table of contents: -->
@@ -134,7 +134,7 @@
                <li>special logic if the search term is a brand/name/tech/etc</li>
                <li>reliable word breaking (parse user input without spaces)</li>
             </ul>
-            <h3 id="get-it-here-rapidapi">Get it here: <a href="https://rapidapi.com/besta-domains/api/besta-domains" target="_blank">RapidAPI</a></h3>
+            <h3 id="get-it-here-rapidapi">Get it here: <a href="https://rapidapi.com/besta-domains/api/domain-suggestions-tlds" target="_blank">RapidAPI</a></h3>
             <ul>
                <li>Subscribe and send API requests immediately</li>
                <li>Test our data with no contract</li>
@@ -196,8 +196,9 @@
                <li>check the availability of 2000+ TLDs</li>
                <li>check the expiration date for 1000+ TLDs</li>
                <li>check if a domain is listed in a marketplace</li>
+               <li><strong>check 100 domains at a time</strong></li>
             </ul>
-            <h3 id="get-it-here-rapidapi">Get it here: <a href="https://rapidapi.com/besta-domains/api/besta-domains" target="_blank">RapidAPI</a></h3>
+            <h3 id="get-it-here-rapidapi">Get it here: <a href="https://rapidapi.com/besta-domains/api/domain-availability-bulk" target="_blank">RapidAPI</a></h3>
             <ul>
                <li>Subscribe and send API requests immediately</li>
                <li>Test our data with no contract</li>
@@ -383,7 +384,7 @@
             <p>It stands for Natural Language Processing (or Neuro Linguistic Programming). A branch of AI. Paul has worked at an AI company for the last 2 years before starting this. This venture, however, is not as ambitious as most AI companies. We&#39;re not trying to change the world or create sentient software. We just want the world to have more quality UIs and APIs.</p>
             <p>The reason this happened, is because in 2019, Paul set out to make a domain name suggestions app. He was disappointed with the quality of publicly available APIs and datasets. Thesaurus resources were not reliable, or did not have an API. So, he set out to make his own. He got carried away, and accidentally made the best English thesaurus in the world.</p>
             <p>It was a great learning experience, and now we have a database of 500,000 words, about 200,000 of which have good synonyms. As a reference, a native English speaker knows from 20,000 to 35,000 words, including slang. Many of the others are medical terms. We&#39;re currently brainstorming how this can be used in medical applications - perhaps to refine search results in sites like WebMD.</p>
-            <p>We also ended up making by far the best domain name suggestion tool. Please try it: <a href="https://besta.domains">https://besta.domains</a> or <a href="https://rapidapi.com/besta-domains/api/besta-domains">use our API</a>. Our program generates hundreds of name phrases, and pairs them with the most relevant TLDs (extensions). There are currently 1000+ new TLD extensions which people don&#39;t even know exist, so this service is very useful. We then check for the status (availability) of each domain name. No more typing in one domain name at a time, and hoping that it&#39;s available. Our app gives you hundreds of similar names. Some of them turn out to be available and pretty good!</p>
+            <p>We also ended up making by far the best domain name suggestion tool. Please try it: <a href="https://besta.domains">https://besta.domains</a> or <a href="https://rapidapi.com/besta-domains/api/domain-suggestions-tlds">use our API</a>. Our program generates hundreds of name phrases, and pairs them with the most relevant TLDs (extensions). There are currently 1000+ new TLD extensions which people don&#39;t even know exist, so this service is very useful. We then check for the status (availability) of each domain name. No more typing in one domain name at a time, and hoping that it&#39;s available. Our app gives you hundreds of similar names. Some of them turn out to be available and pretty good!</p>
             <h3 id="its-improving-every-day">It&#39;s improving every day!</h3>
             <p>Our products are new and rapidly improving. If you find anything broken, <a href="#contact">please let us know</a>. If you would like a feature or have any advice for us at all, please <a href="#contact">contact us</a>.</p>
             <p>This venture is long-term. We&#39;ll continue to support it as long as we have customers. It may take a long time to become successful. That&#39;s ok. This is a labor of love.</p>
@@ -486,16 +487,16 @@
                }
             }
             let contactData = {
-               email: 'only_this_is_required@whateveHTMLr.com',
+               email: '',
                name: '',
                text: '',
                updates_product: 'true',
             }
-            let putUrl = 'https://subscribe-and-contact-form.p.rapidapi.com/v1/contacts'
+            let putUrl = 'https://manage-your-account.p.rapidapi.com/v1/contact'
             let putHeaders = {
                "content-type": "application/json",
-               "x-rapidapi-host": "subscribe-and-contact-form.p.rapidapi.com",
-               "x-rapidapi-key": "024726ac3bmsh58ecf30df1dcaa9p187c38jsnae3868b21908",
+               "x-rapidapi-host": "manage-your-account.p.rapidapi.com",
+               "x-rapidapi-key": "9407dfdda9msh488197632304125p1b200bjsnff4a5b2f6272",
                "useQueryString": true
             }
             // let putUrl = 'http://142.93.251.57/v1/contacts'
