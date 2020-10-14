@@ -409,7 +409,7 @@
                      <button class="action_button g-recaptcha" type="submit">Subscribe</button>
                   </div>
                   <div class="response">
-                     <p><sup>We include an instant "unsubscribe" link in all emails.</sup></p>
+                     <p><sup>We use Mailchimp and include an instant "unsubscribe" link in all emails.</sup></p>
                   </div>
                </form>
                <a name="contactform"></a>
@@ -673,5 +673,15 @@
       </script>
       <script src="https://apps.elfsight.com/p/platform.js" defer></script>
       <div class="elfsight-app-24c0d588-e86d-4c46-af7f-aff8a8aa1b83"></div>
+      <script>
+         setTimeout(function()
+         {
+            let el = document.getElementById('.eapps-link');
+            if (el)
+            {
+               el.setAttribute('style', 'display:none', 'important')
+            }
+         }, 2000)
+      </script>
    </body>
 </html>
