@@ -42,7 +42,7 @@
             <li><span>&nbsp;</span></li>
             <li><span><img class="side-contact-icon" alt="send" src="/images/icon-send.svg" /> Say hello:</span></li>
             <li><a href="#about">about us</a></li>
-            <li><a href="#contact">contact us</a></li>
+            <li><a href="javascript:document.querySelector('.eapps-form-floating-button').click()">contact us</a></li>
          </ul>
       </div>
       <div class=page-wrapper>
@@ -50,7 +50,7 @@
          <div class=content>
             <h1 id="api-v1">API <code>v1</code></h1>
             <!-- ### Currently in beta testing, open to select registrars: -->
-            <p><b>Now available at: <a href="https://rapiapi.com/besta-domains/api/domain-suggestions-tlds" target="_blank">RapiAPI.com</b></a> <br>Try it instantly. No contracts. No commitment. Quick signup.</p>
+            <p><b>Now available at: <a href="https://rapidapi.com/besta-domains/api/domain-suggestions-tlds" target="_blank">RapiAPI.com</a>. Beta release. Still improving daily!</b><br>Try it instantly. No contracts. No commitment. Quick signup.</p>
             <p><b>Enterprise API will soon be available at</b> https://<b>api.besta.domains</b>. Our geo-routed distributed cloud will support a high volume of requests from anywhere in the world. Volume discounts available with contract. Custom development is possible. Let us know what you&#39;d like to see.</p>
             <!-- <button class="subtle_button" onClick="window.location.href='#contactform'">Request API access</button> -->
             <!-- ## Table of contents: -->
@@ -169,7 +169,7 @@
                <li>enable or disable the &quot;word hacks&quot;, &quot;phrase hacks&quot;, &quot;domain hacks&quot;, or &quot;com&quot; suggestions (currently, you can just ignore a section if you don&#39;t like it)</li>
             </ul>
             <p>&nbsp;</p>
-            <p>All new features will be backwards compatible. <a href="#contact">Contact us</a> to learn about upcoming features, and to suggest some that are important to you.</p>
+            <p>All new features will be backwards compatible. <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">Contact us</a> to learn about upcoming features, and to suggest some that are important to you.</p>
             <h1 id="availability">Availability</h1>
             <p><code>POST /v1/availability</code></p>
             <pre class="highlight javascript"><code><span class="hljs-comment">/*
@@ -231,7 +231,7 @@
                </li>
             </ul>
             <h1 id="manage-your-tlds">Manage Your TLDs</h1>
-            <p><strong>This section is currently in development, and will be ready soon.</strong> When you sign up with us, you&#39;ll get an &quot;site_id&quot; and a &quot;secret_key&quot;. The &quot;site_id&quot; is public. You&#39;ll be able to pass it openly in any API call. It will tell our server to use your pre-defined settings. The &quot;secret_key&quot; is your password, required to modify your settings. You&#39;ll pass it to these API endpoints below, to manage your account. More options coming soon. <a href="#contact">Contact us</a> with any questions or feature requests.</p>
+            <p><strong>This section is currently in development, and will be ready soon.</strong> When you sign up with us, you&#39;ll get an &quot;site_id&quot; and a &quot;secret_key&quot;. The &quot;site_id&quot; is public. You&#39;ll be able to pass it openly in any API call. It will tell our server to use your pre-defined settings. The &quot;secret_key&quot; is your password, required to modify your settings. You&#39;ll pass it to these API endpoints below, to manage your account. More options coming soon. <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">Contact us</a> with any questions or feature requests.</p>
             <h2 id="tlds-supported">TLDs Supported</h2>
             <p><code>POST /v1/set_tlds_supported</code></p>
             <pre class="highlight javascript"><code><span class="hljs-comment">/*
@@ -261,7 +261,7 @@
             <p><strong>This step is optional.</strong> If you skip it, we&#39;ll just return ALL relevant TLDs. You can then filter out ones you don&#39;t support on your own end.</p>
             <h3 id="request">Request</h3>
             <p><strong>POST</strong> to <code>/v1/set_tlds_supported</code>, a JSON array of tlds.</p>
-            <p>&nbsp; <br><strong>More info <a href="#contact">coming soon</a></strong>. This is not yet available. <br>&nbsp;</p>
+            <p>&nbsp; <br><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong>. This is not yet available. <br>&nbsp;</p>
             <h2 id="tlds-promoted">TLDs Promoted</h2>
             <p><code>POST /v1/set_tlds_promoted</code></p>
             <pre class="highlight javascript"><code><span class="hljs-comment">/*
@@ -304,7 +304,7 @@
             <p>Ignore the values in the code example. We already correct for words that appear too often or not enough. <strong>Just set a high or low number based on how much YOU want to promote or demote each TLD.</strong> Zero (0) is neutral and is the default value. 5 will promote a TLD approximately 5 positions higher than one rated 0. 10 will promote 10 places higher/lower, etc. It&#39;s not exactly one for one, but this is a good starting point. Feel free to be more agressive and use an extreme value like +-1000 when you want something to go all the way to the top or all the way to the bottom.</p>
             <h3 id="request-1">Request</h3>
             <p><strong>POST</strong> to <code>/v1/set_tlds_promoted</code>, an object of key/value pairs, where the key is the TLD (without the leading dot), and the value is the rating you want to give it (usually &lt; 10 to promote and &gt; -10 to demote). Zero (0) has no effect. So, don&#39;t bother setting values for TLDs you neither wish to promote or demote.</p>
-            <p>&nbsp; <br><strong>More info <a href="#contact">coming soon</a></strong>. This is not yet available. <br>&nbsp;</p>
+            <p>&nbsp; <br><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong>. This is not yet available. <br>&nbsp;</p>
             <h2 id="default-tlds">Default TLDs</h2>
             <p><code>POST /v1/set_tlds_default</code></p>
             <pre class="highlight javascript"><code><span class="hljs-comment">/*
@@ -340,7 +340,7 @@
             <p><strong>This is optional.</strong> We have our own lists of default TLDs. If you skip this part, we&#39;ll use our own lists. You only have to set <a href="#tlds-supported">which TLDs you support</a>. We&#39;ll ignore the ones you don&#39;t support.</p>
             <h3 id="request-2">Request</h3>
             <p><strong>POST</strong> to <code>/v1/set_tlds_default</code>, lists of tlds, by category. See code example.</p>
-            <p>&nbsp; <br><strong>More info <a href="#contact">coming soon</a></strong>. This is not yet available. <br>&nbsp;</p>
+            <p>&nbsp; <br><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong>. This is not yet available. <br>&nbsp;</p>
             <h1 id="text-analysis">Text Analysis</h1>
             <h2 id="parse-domain-name-string-string-breaking-word-chunking">Parse domain name string (string breaking, word chunking)</h2>
             <p><code>GET /v1/word_break</code></p>
@@ -348,7 +348,7 @@
             <p>By default, this uses Microsoft Bing Spellcheck. You can turn off spell-check to get your response a few hundred milliseconds faster.</p>
             <p><strong>This functionality is included</strong> as part of the domain <a href="#suggestions">suggestions</a> API.</p>
             <p>&nbsp; <br><strong>Demo: <a href="https://besta.domains">besta.domains</a></strong> Enter a long domain name with no spaces. We&#39;ll parse it into individual words, then suggest TLDs, related phrases, and word hacks based on those words. Click the green &quot;lightning bolt&quot; icon on the right of the search (desktop only). It will give you a &quot;behind the scenes&quot; peek into what words we parsed and what synonyms/TLDs we found for each word.</p>
-            <p><strong>More info <a href="#contact">coming soon</a></strong> <br>&nbsp;</p>
+            <p><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong> <br>&nbsp;</p>
             <h2 id="synonyms">Synonyms</h2>
             <p><code>GET /v1/synonyms</code></p>
             <p>Find related words for any word or short phrase in the English language, <br>and a few in other languages commonly understood in English speaking countries (like &quot;haus&quot; or &quot;casa&quot;).</p>
@@ -359,7 +359,7 @@
                <li>prefer shorter words. Sort intelligently by both length and relevance</li>
             </ul>
             <p>&nbsp; <br><strong>Demo: <a href="https://wordio.co">NLPThesaurus.com</a></strong></p>
-            <p><strong>More info <a href="#contact">coming soon</a></strong> <br>&nbsp;</p>
+            <p><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong> <br>&nbsp;</p>
             <h2 id="word-info">Word info</h2>
             <p><code>GET /v1/word_info</code></p>
             <ul>
@@ -368,71 +368,47 @@
                <li>sentiment analysis (positive or negative connotation)</li>
             </ul>
             <p>&nbsp; <br><strong>Demo: <a href="https://wordio.co">NLPThesaurus.com</a></strong></p>
-            <p><strong>More info <a href="#contact">coming soon</a></strong> <br>&nbsp;</p>
+            <p><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong> <br>&nbsp;</p>
             <h1 id="about">About</h1>
             <h2 id="our-infrastructure">Our infrastructure</h2>
             <p>Building websites for 12 years now, we&#39;ve developed a state-of-the-art infrastructure and codebase. Our APIs are currently hosted in the USA East region, near NYC, for fast access to North America and Europe. We manage a cloud of load-balanced servers, ready to scale at any time. Coming soon, we will upgrade to a world-wide geo-distributed network - to be as close as possible to your servers and users - to provide the fastest and most reliable service!</p>
             <h2 id="who-we-are">Who we are</h2>
-            <p>A husband and wife team, based in Kansas City, MO (USA). 👨🏼‍💻👩🏽‍💼 Combining our talents, we were able to make the world&#39;s best English language thesaurus. Paul built some advanced custom admin tools. Samira used them to comb through and edit thousands of words. <a href="#contact">Contact us</a> for a demo.</p>
+            <p>A husband and wife team, based in Kansas City, MO (USA). 👨🏼‍💻👩🏽‍💼 Combining our talents, we were able to make the world&#39;s best English language thesaurus. Paul built some advanced custom admin tools. Samira used them to comb through and edit thousands of words. <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">Contact us</a> for a demo.</p>
             <p><img src="/images/aboutus.jpg" alt="We met in Utah. Love those mountains and sunsets!"> ⬆ We met in Utah. Love those mountains and sunsets!</p>
             <p><strong>Paul Shorey</strong> (<a href="https://paulshorey.com">paulshorey.com</a>) has been making websites and apps for 12 years. JavaScript, UI design, front-end, back-end, systems and databases. Paul has a BFA in fine art, but has embraced software development as his medium of choice. Programming is creative, and very powerful. You can create something from nothing! When not coding, he enjoys building light fixtures, growing microgreens, and doing adventure sports.</p>
             <p><strong>Samira Ali</strong> has a Bachelors in Sociology. She has worked at several non-profits, and has started many of her own initiatives. She has worked in tech and medicine as well. She speaks several languages, and has been a part of a very diverse range of cultures. Samira has been instrumental in editing the thesaurus, including adding positive synonyms for traditionally negative words like &quot;black&quot;. She also flagged many culturally negative and insensitive words which IBM&#39;s and our own AI algorithms have missed.</p>
             <!-- She is now starting medical school, to be a doctor and heal people! But she will still be around to give guidance and direction in the areas of language, user perception, and design. -->
             <p>We&#39;re both inspired by this crazy adventure that is life. Paul successfully immigrated from Russia, and Samira is a refugee from Africa. We&#39;re thankful for where we are now, and are moving toward securing a prosperous future through hard work and the pursuit of excellence. Looking forward to meeting you.</p>
-            <p><a href="#contact">Let&#39;s get in touch</a> (<a href="#contact">contact us</a>). Currently looking for partners, mentors, and ofcourse clients.</p>
+            <p><a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">Let&#39;s get in touch</a> (<a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">contact us</a>). Currently looking for partners, mentors, and ofcourse clients.</p>
             <h2 id="why-nlp">Why NLP?</h2>
             <p>It stands for Natural Language Processing (or Neuro Linguistic Programming). A branch of AI. Paul has worked at an AI company for the last 2 years before starting this. This venture, however, is not as ambitious as most AI companies. We&#39;re not trying to change the world or create sentient software. We just want the world to have more quality UIs and APIs.</p>
             <p>The reason this happened, is because in 2019, Paul set out to make a domain name suggestions app. He was disappointed with the quality of publicly available APIs and datasets. Thesaurus resources were not reliable, or did not have an API. So, he set out to make his own. He got carried away, and accidentally made the best English thesaurus in the world.</p>
             <p>It was a great learning experience, and now we have a database of 500,000 words, about 200,000 of which have good synonyms. As a reference, a native English speaker knows from 20,000 to 35,000 words, including slang. Many of the others are medical terms. We&#39;re currently brainstorming how this can be used in medical applications - perhaps to refine search results in sites like WebMD.</p>
             <p>We also ended up making by far the best domain name suggestion tool. Please try it: <a href="https://besta.domains">https://besta.domains</a> or <a href="https://rapidapi.com/besta-domains/api/domain-suggestions-tlds">use our API</a>. Our program generates hundreds of name phrases, and pairs them with the most relevant TLDs (extensions). There are currently 1000+ new TLD extensions which people don&#39;t even know exist, so this service is very useful. We then check for the status (availability) of each domain name. No more typing in one domain name at a time, and hoping that it&#39;s available. Our app gives you hundreds of similar names. Some of them turn out to be available and pretty good!</p>
             <h3 id="its-improving-every-day">It&#39;s improving every day!</h3>
-            <p>Our products are new and rapidly improving. If you find anything broken, <a href="#contact">please let us know</a>. If you would like a feature or have any advice for us at all, please <a href="#contact">contact us</a>.</p>
+            <p>Our products are new and rapidly improving. If you find anything broken, <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">please let us know</a>. If you would like a feature or have any advice for us at all, please <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">contact us</a>.</p>
             <p>This venture is long-term. We&#39;ll continue to support it as long as we have customers. It may take a long time to become successful. That&#39;s ok. This is a labor of love.</p>
             <p>Please try our APIs, and compare to other providers. You will not be disappointed.</p>
-            <p>If our APIs are not as good as what you&#39;re currently using, <a href="#contact">please let us know</a>. It will help us improve. Sometimes it may be a simple configuration which dramatically lowers or improves results for a particular use case. Thank you for your support and feedback!</p>
+            <p>If our APIs are not as good as what you&#39;re currently using, <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">please let us know</a>. It will help us improve. Sometimes it may be a simple configuration which dramatically lowers or improves results for a particular use case. Thank you for your support and feedback!</p>
             <h1 id="contact">Contact</h1>
+            <p> More about us: <a href="https://besta.domains/about" target="_blank">besta.domains/about</a>
+            </p>
             <p>
                <script>
-                  document.write('<sup>Email: <a href="mailto:paul@besta.domains">paul@besta.domains</a> &nbsp; &nbsp; <br />' + 'Call Paul: <a href="tel:13857706789">385.770.6789</a></sup>')
+                  document.write('<sup>Email: <a href="mailto:paul@besta.domains" target="_blank">paul@besta.domains</a> &nbsp; &nbsp; <br />' + 'Call Paul: <a href="tel:13857706789" target="_blank">385.770.6789</a></sup>')
                </script>
             </p>
             <!--
             begin CONTACT FORM
             -->
             <div class="contactContent">
-               <a name="newsletter"></a>
-               <form id="submitSubscribeForm">
-                  <h3>Stay informed about major product releases:</h3>
-                  <div class="formContent">
-                     <fieldset>
-                        <input type="text" name="email" placeholder="Your email..." onchange="updateContactData('email',this.value)" />
-                     </fieldset>
-                     <button class="action_button g-recaptcha" type="submit">Subscribe</button>
-                  </div>
-                  <div class="response">
-                     <p><sup>We use Mailchimp and include an instant "unsubscribe" link in all emails.</sup></p>
-                  </div>
-               </form>
                <a name="contactform"></a>
                <form id="submitContactForm">
-                  <div class="response">
-                  </div>
-                  <h3>Say hello:</h3>
-                  <div class="formContent">
-                     <fieldset>
-                        <input type="text" name="email" placeholder="Your email..." onchange="updateContactData('email',this.value)" />
-                     </fieldset>
-                     <fieldset>
-                        <input type="text" name="name" placeholder="Your name..." onchange="updateContactData('name',this.value)" />
-                     </fieldset>
-                     <fieldset>
-                        <textarea name="text" placeholder="Your message..." onchange="updateContactData('text',this.value)"></textarea>
-                     </fieldset>
-                     <button class="action_button g-recaptcha" type="submit">
-                        <img class="svg" alt="send" src="/images/icon-send.svg" />
-                        <span> Send</span>
-                     </button>
-                  </div>
+                  <button class="action_button g-recaptcha" type="button" onclick="document.querySelector('.eapps-form-floating-button').click()">
+                     <img class="svg" alt="send" src="/images/icon-send.svg" />
+                     <span> open contact-form</span>
+                  </button>
+                  <p>&nbsp;</p>
                </form>
             </div>
             <!--
@@ -659,7 +635,7 @@
          });
       </script>
       <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-      <div class="elfsight-app-24c0d588-e86d-4c46-af7f-aff8a8aa1b83"></div>
+      <div class="elfsight-app-bcf06b3b-b3f9-47c0-a7f0-11e2e4a2418f"></div>
       <script>
          setTimeout(function()
          {
