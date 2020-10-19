@@ -1,5 +1,5 @@
 // setTimeout(function () {
-$(document).ready(function () {
+  $(document).ready(function () {
   $(".uuiCarousel").each(function () {
     let $carousel = $(this)
     let $prev = $carousel.find(".prev")
@@ -15,7 +15,8 @@ $(document).ready(function () {
         {
           scrollLeft: $images.scrollLeft() + $images.width()
         },
-        500
+        500,
+        "linear"
       )
     })
     $prev.click(function () {
@@ -23,9 +24,10 @@ $(document).ready(function () {
         {
           scrollLeft: $images.scrollLeft() - $images.width()
         },
-        500
+        500,
+        "linear"
       )
     })
   })
-})
+  })
 // }, 3000)
