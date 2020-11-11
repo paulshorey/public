@@ -70,7 +70,7 @@
             <h1 id="suggestions">Suggestions</h1>
             <p><code>POST /v1/suggestions</code></p>
             <pre class="highlight javascript"><code><span class="hljs-comment">/*
- * GET or POST to /v1/domain_suggestions
+ * GET or POST to /v1/suggestions
  */</span>
 <span class="hljs-keyword">let</span> requestData = {
   <span class="hljs-attr">str</span>: <span class="hljs-string">&#x27;helloworld&#x27;</span>, <span class="hljs-comment">// required</span>
@@ -173,30 +173,87 @@
             <h1 id="availability">Availability</h1>
             <p><code>POST /v1/availability</code></p>
             <pre class="highlight javascript"><code><span class="hljs-comment">/*
+ * Status code legend:
+    -1 = unknown, not able to check
+    0 = new, did not check
+    1 = unavailable
+    2 = available
+    3 = registry premium (buy it now for higher price than such TLD normally sells for)
+    4 = aftermarket premium (buy it now or make an offer, also could be in an auction)
+    5 = registry super-premium (must submit offer, more expensive than regular premium SLDs)
+    6 = unavailable, but expiring soon
+ */</span>
+
+<span class="hljs-comment">/*
  * POST to /v1/availability:
  */</span>
 <span class="hljs-keyword">let</span> postData = {
-    <span class="hljs-string">&quot;domains&quot;</span>: [
-      <span class="hljs-string">&quot;unavailable.co&quot;</span>,
-      <span class="hljs-string">&quot;premium.net&quot;</span>,
-      <span class="hljs-string">&quot;availableasffd.io&quot;</span>
-    ]
+  <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;domainr&quot;</span>,
+  <span class="hljs-string">&quot;domains&quot;</span>: [
+    <span class="hljs-string">&quot;premium.net&quot;</span>,
+    <span class="hljs-string">&quot;besta.domains&quot;</span>,
+    <span class="hljs-string">&quot;greata.domains&quot;</span>,
+    <span class="hljs-string">&quot;perfect.domains&quot;</span>,
+    <span class="hljs-string">&quot;true.domains&quot;</span>,
+    <span class="hljs-string">&quot;best.domains&quot;</span>,
+    <span class="hljs-string">&quot;new.domains&quot;</span>
+  ]
 }
 
 <span class="hljs-comment">/*
- * RESPONSE is a status code to each of your domains:
+ * RESPONSE DATA (use Domainr.com API)
+ * We have engineered an abstration layer on top of Domainr.com.
+ * Our server checks many domains in parallel, instead of
+ * one by one. So, get results upto 100 times faster!
  */</span>
 {
-    <span class="hljs-string">&quot;unavailable.co&quot;</span>: <span class="hljs-number">10</span>,
-    <span class="hljs-string">&quot;premium.net&quot;</span>: <span class="hljs-number">31459</span>,
-    <span class="hljs-string">&quot;availableasffd.io&quot;</span>: <span class="hljs-number">1</span>
+  <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;domainr&quot;</span>,
+  <span class="hljs-string">&quot;status&quot;</span>: {
+    <span class="hljs-string">&quot;premium.net&quot;</span>: <span class="hljs-number">4</span>, <span class="hljs-comment">// aftermarket</span>
+    <span class="hljs-string">&quot;besta.domains&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// not available</span>
+    <span class="hljs-string">&quot;greata.domains&quot;</span> <span class="hljs-number">2</span>, <span class="hljs-comment">// available</span>
+    <span class="hljs-string">&quot;perfect.domains&quot;</span>: <span class="hljs-number">3</span>, <span class="hljs-comment">// registry premium</span>
+    <span class="hljs-string">&quot;true.domains&quot;</span>: <span class="hljs-number">4</span>, <span class="hljs-comment">// aftermarket</span>
+    <span class="hljs-string">&quot;best.domains&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// not available</span>
+    <span class="hljs-string">&quot;new.domains&quot;</span>: <span class="hljs-number">5</span> <span class="hljs-comment">// registry super-premium</span>
+  }
 }
-</code></pre>
+
+<span class="hljs-comment">/*
+ * RESPONSE DATA (use whois/nameservers) (COMING SOON)
+ * This will be able to find which aftermarket service the
+ * domain is listed in. Also, most reliable at telling if the
+ * domain is listed in an aftermarket. Also, it can tell if
+ * a domain name is expiring soon, and return the expiry date.
+ * Unfortunately, it can NOT reliably tell if a domain is
+ * simply &quot;available to register&quot;.
+ */</span>
+{
+  <span class="hljs-string">&quot;method&quot;</span>: <span class="hljs-string">&quot;whois/nameservers&quot;</span>,
+  <span class="hljs-string">&quot;status&quot;</span>: {
+    <span class="hljs-string">&quot;premium.net&quot;</span>: <span class="hljs-number">4</span>, <span class="hljs-comment">// aftermarket</span>
+    <span class="hljs-string">&quot;besta.domains&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-comment">// not available</span>
+    <span class="hljs-string">&quot;greata.domains&quot;</span> <span class="hljs-number">-1</span>, <span class="hljs-comment">// unknown</span>
+    <span class="hljs-string">&quot;perfect.domains&quot;</span>: <span class="hljs-number">3</span>, <span class="hljs-comment">// registry premium</span>
+    <span class="hljs-string">&quot;true.domains&quot;</span>: <span class="hljs-number">4</span>, <span class="hljs-comment">// aftermarket</span>
+    <span class="hljs-string">&quot;best.domains&quot;</span>: <span class="hljs-number">4</span>, <span class="hljs-comment">// aftermarket</span>
+    <span class="hljs-string">&quot;new.domains&quot;</span>: <span class="hljs-number">5</span> <span class="hljs-comment">// registry super-premium</span>
+  },
+  <span class="hljs-string">&quot;aftermarket&quot;</span>: {
+    <span class="hljs-string">&quot;premium.net&quot;</span>: <span class="hljs-string">&quot;sedo.com&quot;</span>,
+    <span class="hljs-string">&quot;true.domains&quot;</span>: <span class="hljs-string">&quot;auctions.godaddy.com&quot;</span>,
+    <span class="hljs-string">&quot;best.domains&quot;</span>: <span class="hljs-string">&quot;dan.com&quot;</span>,
+    <span class="hljs-string">&quot;new.domains&quot;</span>: <span class="hljs-string">&quot;name.com&quot;</span>,
+  }
+  <span class="hljs-string">&quot;expiration&quot;</span>: {
+    <span class="hljs-comment">// if a domain is expiring soon, it will be</span>
+    <span class="hljs-comment">// included here just like data.aftermarket</span>
+  }
+}</code></pre>
             <ul>
-               <li>check the availability of 2000+ TLDs</li>
-               <li>check the expiration date for 1000+ TLDs</li>
-               <li>check if a domain is listed in a marketplace</li>
-               <li><strong>check 100 domains at a time</strong></li>
+               <li>check all valid TLDs (generic, new, cc, etc)</li>
+               <li>check if a domain is available, unavailable, premium (set by registry), or premium (listed in aftermarket)</li>
+               <li><strong>check 100 domains at a time</strong>, or upto 500 with contract</li>
             </ul>
             <h3 id="get-it-here-rapidapi">Get it here: <a href="https://rapidapi.com/besta-domains/api/domain-availability-bulk" target="_blank">RapidAPI</a></h3>
             <ul>
@@ -211,25 +268,22 @@
             </ul>
             <h3 id="request">Request:</h3>
             <p><strong>POST</strong> to <code>http://api.besta.domains/v1/availability</code>, using <code>content-type=&quot;application/json&quot;</code>.</p>
-            <h3 id="data">Data:</h3>
+            <h3 id="send-data">Send Data:</h3>
             <ul>
-               <li>&quot;<strong>domains</strong>&quot; {array} - is the only required variable. It should be an array of domain names. Up to 100 items at a time.</li>
+               <li>&quot;<strong>method</strong>&quot; {string} - Which method to use, to check availability. Default value is &quot;domainr&quot;. Other options are experimental.</li>
+               <li>&quot;<strong>domains</strong>&quot; {array} - It should be an array of domain names. Up to 100 items at a time, or upto 500 with contract.</li>
             </ul>
             <h3 id="response">Response:</h3>
-            <p>See code sample above/right for a short example. You send an array of domains. We return an object/dictionary of key/value pairs. Key is the domain.</p>
-            <p><strong>Value for each domain is one of these codes:</strong> <br><strong>0</strong>: not checked, unknown<br><strong>1-9</strong>: not available<br><strong>10</strong>: available to purchase!<br><strong>100-9,999,999</strong>: premium or aftermarket. Code = purchase price.<br><strong>10,000,000</strong>: listed in aftermarket, but asking price is unknown<br><strong>100,000,000+</strong>: not available, not listed, but expiring soon! Code = expiration date, as Unix timestamp.</p>
-            <p>Currently, the API is good at telling if the domain is available, listed in aftermarket, or not available. It will occasionally return the purchase price or expiration date... but do not expect these values to be usually returned, until the &quot;coming soon&quot; option below is finished...</p>
+            <p>See code sample above/right for an example response. You send an array of domains. We return the same domains, in an object. Value = status code.</p>
+            <p><strong>Value for each domain is one of these codes:</strong> <br><strong>-1</strong>: <strong>unknown</strong>, not able to check<br><strong>0</strong>: <strong>new</strong>, did not check<br><strong>1</strong>: <strong>unavailable</strong><br><strong>2</strong>: <strong>available</strong><br><strong>3</strong>: <strong>registry</strong> premium (buy it now for higher price than such TLD normally sells for)<br><strong>4</strong>: <strong>aftermarket</strong> premium (buy it now or make an offer, also could be in an auction)<br><strong>5</strong>: <strong>registry</strong> premium marketed (must submit offer, more expensive than regular premium SLDs)<br><strong>6</strong>: <strong>unavailable</strong>, but expiring soon (includes expiration date - check data.expiration)</p>
+            <p>-1: unknown, not able to check 0: new, did not check 1: unavailable 2: available 3: registry premium (buy it now for higher price than such TLD normally sells for) 4: aftermarket premium (buy it now or make an offer, also could be in an auction) 5: registry premium marketed (must submit offer, more expensive than regular premium SLDs) 6: unavailable, but expiring soon (includes expiration date - check data.expiration)</p>
             <h3 id="more-options-coming-soon">More options coming soon:</h3>
-            <ul>
-               <li>
-                  <p>specify which strategy you&#39;d like to use to check availability:</p>
-                  <ol>
-                     <li>NameServers - (default) fast, reliable availability, and best way to check if a domain is listed for sale in an aftermarkets - however, it does not return expiration date or price</li>
-                     <li>WHOIS - slow, less reliable availability, but is able to check the expiration date - so you may use this to find which domains are expiring soon - it does not return the price or availability in the aftermarket</li>
-                     <li>EPP (Extensible Provisioning Protocol) - fast, most reliable, but not available yet - more info coming soon as we get accredited with enough registries</li>
-                  </ol>
-               </li>
-            </ul>
+            <p>Specify the &quot;method&quot;, which strategy to use, to check availability:</p>
+            <ol>
+               <li>&quot;domainr&quot; - (default) Domainr.com API. Fastest. We have engineered an abstration layer on top of the excellent Domainr.com API. Our server checks many domains in parallel, instead of one by one. So, you get results upto 100 times faster!</li>
+               <li>&quot;whois/nameservers&quot; - (in development, not ready) Fast. Most reliable at telling if the domain is listed in an aftermarket. It can actually tell you which aftermarket! For most domains it can check if expiring soon and return the date of expiration. Unfortunately, it can NOT reliably tell if a domain is simply &quot;available to register&quot;. So, it must be used in conjunction with another method.</li>
+               <li>&quot;registry/epp&quot; - (coming in the future) Slower. Currently getting accredited and registered with various registries. This is coming soon. We&#39;ll be able to use the same tools which registrars use.</li>
+            </ol>
             <h1 id="manage-your-tlds">Manage Your TLDs</h1>
             <p><strong>This section is currently in development, and will be ready soon.</strong> When you sign up with us, you&#39;ll get an &quot;site_id&quot; and a &quot;secret_key&quot;. The &quot;site_id&quot; is public. You&#39;ll be able to pass it openly in any API call. It will tell our server to use your pre-defined settings. The &quot;secret_key&quot; is your password, required to modify your settings. You&#39;ll pass it to these API endpoints below, to manage your account. More options coming soon. <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">Contact us</a> with any questions or feature requests.</p>
             <h2 id="tlds-supported">TLDs Supported</h2>
