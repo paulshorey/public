@@ -282,6 +282,7 @@
             <ul>
                <li>&quot;<strong>method</strong>&quot; {string} - Which method to use, to check availability. Default value is &quot;domainr&quot;. Other options are experimental.</li>
                <li>&quot;<strong>domains</strong>&quot; {array} - It should be an array of domain names. Up to 100 items at a time, or upto 500 with contract.</li>
+               <li>&quot;<strong>show_metadata</strong>&quot; {boolean} - Default is &quot;false&quot;. If &quot;true&quot;, will show information about each status, if available. If using Domainr API, will include a &quot;domainr&quot; dictionary, with their &quot;status&quot; message for each of the requested domains. When using WHOIS/NameServer option (coming soon), will show nameserver, aftermarket, and expiration dates when available.</li>
             </ul>
             <h3 id="response">Response:</h3>
             <p>See code sample above/right for an example response. You send an array of domains. We return the same domains, in an object. Value = status code.</p>
