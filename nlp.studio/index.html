@@ -121,6 +121,16 @@
             <span class="hljs-string">&quot;get hellowrld .eco&quot;</span>,
             <span class="hljs-string">&quot;my hellowrld .app&quot;</span>,
             <span class="hljs-string">&quot;hellowrld online .com&quot;</span>
+        ],
+        <span class="hljs-string">&quot;all&quot;</span>: [
+            <span class="hljs-string">&quot;hellowrld .fyi&quot;</span>,
+            <span class="hljs-string">&quot;hola society .com&quot;</span>,
+            <span class="hljs-string">&quot;worlda .eco&quot;</span>,
+            <span class="hljs-string">&quot;get hellowrld .eco&quot;</span>,
+            <span class="hljs-string">&quot;hellowrld .earth&quot;</span>,
+            <span class="hljs-string">&quot;howdy .earth&quot;</span>,
+            <span class="hljs-string">&quot;planet .io&quot;</span>,
+            <span class="hljs-string">&quot;my hellowrld .app&quot;</span>,
         ]
     }
 }
@@ -161,7 +171,7 @@
                <li><strong>tlds_num</strong> {number} - (optional, default=30) define how many TLD suggestions are returned, and used to make name suggestions. TLDs at the top of the list are most relevant. Toward the bottom they get less relevant. So, you decide if you&#39;d like more &quot;quantity&quot; or &quot;quality&quot;. This list of TLDs is also used by our script to generate the domain names. So, if you specify a low number, we&#39;ll only use the most relevant few TLDs in the suggestions results. Or you may choose a higher number to feature a greater variety of TLDs.</li>
             </ul>
             <h3 id="response">Response:</h3>
-            <p>See code example to the top/right. It is a shortened example of response data for input <code>?str=helloworld&amp;tld=com</code> or <code>?str=helloworld.com</code>.</p>
+            <p>See code example to the top/right. It is a shortened example of response data for input <code>?str=helloworld&amp;tld=com</code> or <code>?str=helloworld.com</code>. The suggestions are grouped by category inside response <code>data.domains</code>. You may mix together the categories yourself, or use our aggregated <code>data.domains.all</code> list. To get simply a list of suggested TLDs, use <code>data.tlds</code>.</p>
             <h3 id="more-options-coming-soon">More options coming soon:</h3>
             <ul>
                <li>make the suggested names <strong>shorter</strong> (more catchy, but less likely to be available) or <strong>longer</strong> (more keywords, and more likely to be available)</li>
