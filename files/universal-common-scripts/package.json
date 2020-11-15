@@ -1,0 +1,9 @@
+{
+  "name": "universal-common-scripts",
+  "version": "0.0.13",
+  "type": "module",
+  "description": "Local module, import as a node module path. Install with `npm link ./path/to/here`",
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {}
+}
