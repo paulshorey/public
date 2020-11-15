@@ -1,9 +1,0 @@
-{
-  "name": "colorful-console-logger",
-  "type": "module",
-  "version": "0.0.3",
-  "description": "Local module, import as a node module path. Install with `npm link ./path/to/here`",
-  "private": false,
-  "dependencies": {},
-  "devDependencies": {}
-}
