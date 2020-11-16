@@ -1,11 +1,10 @@
 // setTimeout(function () {
-  $(document).ready(function () {
+$(document).ready(function () {
   $(".uuiCarousel").each(function () {
-    let $carousel = $(this)
+    let $carousel = this
     let $prev = $carousel.find(".prev")
     let $next = $carousel.find(".next")
-    let $images = $($carousel.find(".images"))
-    window.$prev = $prev
+    let $images = $carousel.find(".images")
     $next.click(function () {
       setTimeout(function () {
         $prev.css("opacity", "1")
@@ -29,5 +28,5 @@
       )
     })
   })
-  })
+})
 // }, 3000)
