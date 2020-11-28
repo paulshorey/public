@@ -3,10 +3,6 @@ server {
   listen [::]:80;
   server_name paulshorey.com www.paulshorey.com;
   return 301 https://$server_name$request_uri;
-  #location / {
-  #  root /srv/public/ps;
-  #  index index.html;
-  #}
 }
 server {
   listen 443 ssl;

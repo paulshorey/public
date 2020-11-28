@@ -1,1 +1,0 @@
-document.write('<div id="ad_1"></div>');
