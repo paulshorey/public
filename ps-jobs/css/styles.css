@@ -1,0 +1,213 @@
+body {
+  font-family: serif;
+  min-width: 380px;
+  background: #fffdfa; }
+  body > div:first-child {
+    overflow: auto;
+    height: 100vh;
+    width: 100vw; }
+  body img,
+  body video,
+  body iframe {
+    max-width: 100%; }
+
+.radioInput {
+  cursor: pointer; }
+  .radioInput * {
+    vertical-align: middle;
+    display: inline-block; }
+  .radioInput .radio {
+    height: 1rem;
+    line-height: 1rem; }
+    .radioInput .radio > *.radioChecked {
+      box-shadow: 0 2px 3px rgba(128, 128, 128, 0.5);
+      background: orange;
+      box-sizing: border-box;
+      border: solid 0.2rem transparent;
+      border-radius: 50%;
+      width: 0.9rem;
+      height: 0.9rem;
+      margin: 0;
+      position: relative;
+      top: -0.1rem; }
+    .radioInput .radio > *.radioUnchecked {
+      border: solid 1px #999;
+      border-radius: 50%;
+      width: 0.7rem;
+      height: 0.7rem;
+      margin: 0 0.1rem; }
+  .radioInput .radioLabel {
+    margin: 0.1rem 0.75rem 0.1rem 0.25rem;
+    height: 1.1rem;
+    line-height: 1.1rem; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: 600;
+  font-size: 75%;
+  background: #edeae8;
+  padding: 0.2rem 0.4rem;
+  margin-right: 0.1rem;
+  margin-left: 0.1rem;
+  border-radius: 0.2rem; }
+
+.eapps-form-floating-button,
+.eapps-form-floating-button-visible,
+.eapps-form-floating-button-position-right.eapps-form-floating-button-visible {
+  background-color: #f49d06 !important; }
+
+.pageProjectsForClients .uuiCarousel img {
+  height: 8rem; }
+
+.pageProjectsForClients .uuiCarousel .arrows {
+  display: none; }
+
+.clickable {
+  cursor: pointer; }
+
+.content {
+  position: relative;
+  width: 80%;
+  min-width: 600px;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (max-width: 1099px) {
+    .content {
+      width: 90%; } }
+  @media (max-width: 699px) {
+    .content {
+      width: calc(100% - 3rem);
+      min-width: calc(100% - 3rem);
+      margin-right: 0;
+      margin-left: 1.5rem; } }
+  .content.full {
+    width: calc(100% - 3rem);
+    max-width: 1420px;
+    margin-left: auto;
+    margin-right: auto; }
+  @media (max-width: 599px) {
+    .content {
+      width: calc(100% - 2rem) !important;
+      min-width: calc(100% - 2rem) !important;
+      margin-right: 0 !important;
+      margin-left: 1rem !important; } }
+
+.uui-icon {
+  position: relative;
+  top: 2px;
+  padding: 0 2px; }
+
+form input {
+  padding: 0.125rem 0.25rem;
+  line-height: 1.25rem;
+  border: solid 1px #999;
+  border-radius: 2px;
+  margin-left: 0.125rem;
+  margin-right: 0.25rem; }
+
+form button {
+  padding: 0.125rem 0.25rem;
+  line-height: 1.25rem;
+  border: solid 1px #999;
+  border-radius: 4px;
+  margin-right: 0.125rem; }
+
+form.inline {
+  display: inline; }
+  form.inline * {
+    display: inline;
+    line-height: 1rem; }
+
+p,
+.p {
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.15px;
+  line-height: 1.3rem;
+  font-size: 1rem;
+  color: #38312e; }
+
+a,
+.link {
+  color: orange;
+  text-decoration: underline; }
+
+a:hover,
+.link:hover {
+  color: #4bafe1;
+  text-decoration: none; }
+
+hr {
+  display: block;
+  height: 1px;
+  background: #ccc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: none; }
+
+h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75rem; }
+  h2 .icon {
+    display: inline-block;
+    width: 1.5rem; }
+
+h3 {
+  line-height: 1.33rem;
+  font-size: 1.33rem;
+  margin: 0;
+  padding: 0; }
+  h3 sup {
+    top: auto;
+    line-height: 1;
+    position: static;
+    vertical-align: 0.125rem; }
+
+/*
+ * EFFECTS
+ */
+@-webkit-keyframes playGlow {
+  0% {
+    box-shadow: 0 0 5px 0 orange; }
+  40% {
+    box-shadow: 0 0 25px 0 orange; }
+  100% {
+    box-shadow: 0 0 5px 0 orange; } }
+
+@keyframes playGlow {
+  0% {
+    box-shadow: 0 0 5px 0 orange; }
+  40% {
+    box-shadow: 0 0 25px 0 orange; }
+  100% {
+    box-shadow: 0 0 5px 0 orange; } }
+
+/*
+ * CHEESY EFFECT - forget what it does
+*/
+.h-hidden {
+  transition: opacity 1s linear 10s;
+  opacity: 0; }
+
+.h-visible {
+  transition: opacity 1s linear 10s;
+  opacity: 1; }
+
+body.ready .h-hidden {
+  opacity: 1; }
+
+body.ready .h-visible {
+  opacity: 0; }
+
+/*
+ * Classes
+ */
+.flex {
+  display: flex; }
+  .flex .flex-grow {
+    flex-grow: 1; }
+
+input::placeholder {
+  color: #ccc; }
