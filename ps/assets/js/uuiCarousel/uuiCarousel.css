@@ -9,10 +9,12 @@
   scroll-behavior: smooth;
 }
 
+.uuiCarousel .images > * {
+  margin-right: 0.25rem;
+}
 .uuiCarousel .images img {
   height: 8rem;
   width: auto;
-  margin-right: 0.25rem;
 }
 
 .uuiCarousel .prev {
