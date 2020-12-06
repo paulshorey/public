@@ -6,7 +6,6 @@
       let element = document.querySelector(".eapps-form-floating-button")
       if (element) {
         clearInterval(int_elfColor)
-        console.log("ready!", element)
         element.setAttribute("style", "background-color:hsl(38deg 95% 49%)")
       }
     }

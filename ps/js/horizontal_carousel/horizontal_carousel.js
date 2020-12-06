@@ -130,6 +130,10 @@
       images.addEventListener("scroll", function (e) {
         debounce(fix_arrows.bind({ carousel }), 100)()
       })
+      // and on window resize, also fix arrows
+      window.addEventListener("resize", function (e) {
+        debounce(fix_arrows.bind({ carousel }), 200)()
+      })
     }
   }
 
