@@ -4,7 +4,7 @@
 .horizontal_carousel .slides {
   position: relative;
   height: 9rem;
-  margin: 0.5rem 0;
+  margin: 0;
   overflow: auto;
   display: flex;
   scroll-behavior: smooth;
