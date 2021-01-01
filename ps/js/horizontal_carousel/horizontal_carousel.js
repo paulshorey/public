@@ -146,11 +146,11 @@
     <div class="arrows">
       <svg class="prev" viewBox="8 8 192 512">
         <defs><filter id="shadow"><feDropShadow dx="5" dy="10" stdDeviation="5" flood-color="black" /></filter></defs>
-        <path style="filter:url(#shadow);" fill="currentColor" stroke="white" stroke-width="18" d="M192 127.338v257.324c0 17.818-21.543 26.741-34.142 14.142L29.196 270.142c-7.81-7.81-7.81-20.474 0-28.284l128.662-128.662c12.599-12.6 34.142-3.676 34.142 14.142z"></path>
+        <path fill="currentColor" stroke="white" stroke-width="18" d="M192 127.338v257.324c0 17.818-21.543 26.741-34.142 14.142L29.196 270.142c-7.81-7.81-7.81-20.474 0-28.284l128.662-128.662c12.599-12.6 34.142-3.676 34.142 14.142z"></path>
       </svg>
       <svg class="next" viewBox="-8 -8 192 512"
         <defs><filter id="shadow"><feDropShadow dx="5" dy="10" stdDeviation="5" flood-color="black" /></filter></defs>
-        <path style="filter:url(#shadow);" fill="currentColor" stroke="white" stroke-width="18" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path>
+        <path fill="currentColor" stroke="white" stroke-width="18" d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"></path>
       </svg>
     </div>
     `
