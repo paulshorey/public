@@ -3,7 +3,6 @@
 
 .horizontal_carousel .slides {
   position: relative;
-  height: 9rem;
   margin: 0;
   overflow: auto;
   display: flex;
@@ -12,13 +11,11 @@
 
 .horizontal_carousel .slides > * {
   position: relative;
-  height: 100%;
   margin-right: 0.25rem;
 }
 
 .horizontal_carousel .slides img {
   position: relative;
-  height: 100%;
   width: auto;
 }
 
