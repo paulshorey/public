@@ -48,27 +48,16 @@
       <div class=page-wrapper>
          <div class=dark-box></div>
          <div class=content>
-            <h1 id="api-v1">API <code>v1</code></h1>
-            <!-- ### Currently in beta testing, open to select registrars: -->
-            <p><b>Now available at: <a href="https://rapidapi.com/besta-domains/api/domain-suggestions-tlds" target="_blank">RapiAPI.com</a>. Beta release. Still improving daily!</b><br>Try it instantly. No contracts. No commitment. Quick signup.</p>
-            <p><b>Enterprise API will soon be available at</b> https://<b>api.besta.domains</b>. Our geo-routed distributed cloud will support a high volume of requests from anywhere in the world. Volume discounts available with contract. Custom development is possible. Let us know what you&#39;d like to see.</p>
-            <!-- <button class="subtle_button" onClick="window.location.href='#contactform'">Request API access</button> -->
-            <!-- ## Table of contents: -->
-            <!-- ### Domain Search: -->
-            <!-- [Suggestions](#domain-name-suggestions) - search a word, phrase, or domain - generate many alternative and available domain names, and most relevant TLDs \ -->
-            <!-- [Availability - EPP/WHOIS based](#domain-name-availability) - check if domain is availabile or expiring soon (returns Unix timestamp of expiry date). \ -->
-            <!-- [Availability - Nameserver based](#domain-name-availability) - check if domain is available or listed for sale. If Nameserver belongs to an aftermarket company like sedo.com or dan.com, it will be returned. This is the most reliable way to check if a domain is listed for sale somewhere. \ -->
-            <!-- [Aftermarket price](#domain-name-availability) - search the domain name across all aftermarkets, return listing price and marketplace. -->
-            <!-- ### Manage your TLDs: -->
-            <!-- [TLDs supported](#tlds-supported) - which TLDs you support, sort from most to least popular \ -->
-            <!-- [TLDs promoted](#tlds-promoted) - which TLDs you own, and which you want to promote (or demote)\ -->
-            <!-- [Default TLDs](#default-tlds) - when input is not a brand, name or tech -->
-            <!-- ### Text Analysis: -->
-            <!-- [String breaking (chunking, parsing)](#string-breaking-chunking-parsing) - parse a long string of characters without spaces \ -->
-            <!-- [Synonyms](#thesaurus) - synonyms for a word or short phrase - organized by part-of-speech\ -->
-            <!-- [Word info](#word-info) - root word, plural or synonym derivation, abbreviation, acronym, syllable count, sentiment -->
-            <h1 id="suggestions">Suggestions</h1>
-            <p><code>POST /v1/suggestions</code> &nbsp;<span style="position:relative;top:-1.22rem;"><a href="/images/openAPI/v1-suggestions.json" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a> </span></p>
+            <h1 id="text-analysis">Text Analysis</h1>
+            <p>Access the largest thesaurus database + a growing collection of natural-language-processing tools. Explore the endpoints: <a href="https://wordio.co">https://wordio.co</a></p>
+            <h3 id="spellcheck--tokenization--wordbreak">Spellcheck + Tokenization + Wordbreak</h3>
+            <p>Break up a long string of characters into words. Get parts-of-speech and synonyms about each token. Optionally, perform spellcheck using Microsoft AND Google. This adds a few hundred milliseconds.</p>
+            <p><strong><a href="https://rapidapi.com/wordio/api/spellcheck-tokenization-wordbreak">Get it at RapidAPI</a></strong> | <a href="/openAPI/v1-spellcheck-tokenization-wordbreak.yaml" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a></p>
+            <h3 id="synonyms--word-info">Synonyms + Word info</h3>
+            <p>Get accurate information about a word or phrase. Synonyms, sentiment analysis, parts of speech, root words, acronyms, abbreviations, before/after, domains, etc.</p>
+            <p><strong><a href="https://rapidapi.com/wordio/api/synonyms-word-info">Get it at RapidAPI</a></strong> | <a href="/openAPI/v1-synonyms-word-info.yaml" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a></p>
+            <h1 id="domain-suggestions">Domain Suggestions</h1>
+            <p><code>POST /v1/domain_suggestions</code> &nbsp;<span style="position:relative;top:-1.22rem;"><a href="/openAPI/v1-domain-suggestions.yaml" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a> </span></p>
             <pre class="highlight javascript"><code><span class="hljs-comment">/*
  * GET or POST to /v1/suggestions
  */</span>
@@ -144,13 +133,13 @@
                <li>special logic if the search term is a brand/name/tech/etc</li>
                <li>reliable word breaking (parse user input without spaces)</li>
             </ul>
-            <h3 id="get-it-here-rapidapi">Get it here: <a href="https://rapidapi.com/besta-domains/api/domain-suggestions-tlds" target="_blank">RapidAPI</a></h3>
+            <h3 id="get-it-at-rapidapi"><a href="https://rapidapi.com/besta-domains/api/domain-suggestions-tlds">Get it at RapidAPI</a></h3>
             <ul>
                <li>Subscribe and send API requests immediately</li>
                <li>Test our data with no contract</li>
                <li>API documentation and code samples</li>
             </ul>
-            <h3 id="demo-our-app-bestadomains"><strong>Demo our app: <a href="https://besta.domains" target="_top">Besta.Domains</a></strong></h3>
+            <h3 id="demo-at-bestadomains"><a href="https://besta.domains">Demo at Besta.Domains</a></h3>
             <ul>
                <li>Use it to find an available domain name for your business</li>
                <li>See our data/algorithms in action, without getting technical</li>
@@ -180,8 +169,8 @@
             </ul>
             <p>&nbsp;</p>
             <p>All new features will be backwards compatible. <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">Contact us</a> to learn about upcoming features, and to suggest some that are important to you.</p>
-            <h1 id="availability">Availability</h1>
-            <p><code>POST /v1/availability</code> &nbsp;<span style="position:relative;top:-1.22rem;"><a href="/images/openAPI/v1-availability.json" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a> </span></p>
+            <h1 id="domain-availability">Domain Availability</h1>
+            <p><code>POST /v1/domain_availability</code> &nbsp;<span style="position:relative;top:-1.22rem;"><a href="/openAPI/v1-domain-availability.yaml" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a> </span></p>
             <pre class="highlight javascript"><code><span class="hljs-comment">/*
  * Status code legend:
     -1 = unknown, not able to check
@@ -265,13 +254,13 @@
                <li>check if a domain is available, unavailable, premium (set by registry), or premium (listed in aftermarket)</li>
                <li><strong>check 100 domains at a time</strong>, or upto 500 with contract</li>
             </ul>
-            <h3 id="get-it-here-rapidapi">Get it here: <a href="https://rapidapi.com/besta-domains/api/domain-availability-bulk" target="_blank">RapidAPI</a></h3>
+            <h3 id="get-it-at-rapidapi"><a href="https://rapidapi.com/besta-domains/api/domain-availability-bulk">Get it at RapidAPI</a></h3>
             <ul>
                <li>Subscribe and send API requests immediately</li>
                <li>Test our data with no contract</li>
                <li>API documentation and code samples</li>
             </ul>
-            <h3 id="demo-our-app-bestadomains"><strong>Demo our app: <a href="https://besta.domains" target="_top">Besta.Domains</a></strong></h3>
+            <h3 id="demo-at-bestadomains"><a href="https://besta.domains">Demo at Besta.Domains</a></h3>
             <ul>
                <li>Use it to find an available domain name for your business</li>
                <li>See our data/algorithms in action, without getting technical</li>
@@ -295,145 +284,6 @@
                <li>&quot;whois/nameservers&quot; - (in development, not ready) Fast. Most reliable at telling if the domain is listed in an aftermarket. It can actually tell you which aftermarket! For most domains it can check if expiring soon and return the date of expiration. Unfortunately, it can NOT reliably tell if a domain is simply &quot;available to register&quot;. So, it must be used in conjunction with another method.</li>
                <li>&quot;registry/epp&quot; - (coming in the future) Slower. Currently getting accredited and registered with various registries. This is coming soon. We&#39;ll be able to use the same tools which registrars use.</li>
             </ol>
-            <h1 id="manage-your-tlds">Manage Your TLDs</h1>
-            <p><strong>This section is currently in development, and will be ready soon.</strong> When you sign up with us, you&#39;ll get an &quot;site_id&quot; and a &quot;secret_key&quot;. The &quot;site_id&quot; is public. You&#39;ll be able to pass it openly in any API call. It will tell our server to use your pre-defined settings. The &quot;secret_key&quot; is your password, required to modify your settings. You&#39;ll pass it to these API endpoints below, to manage your account. More options coming soon. <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">Contact us</a> with any questions or feature requests.</p>
-            <h2 id="tlds-supported">TLDs Supported</h2>
-            <p><code>POST /v1/set_tlds_supported</code></p>
-            <pre class="highlight javascript"><code><span class="hljs-comment">/*
- * POST to /v1/set_tlds_supported:
- */</span>
-<span class="hljs-keyword">let</span> postData = {
-    <span class="hljs-attr">site_id</span>: <span class="hljs-string">&quot;YOUR-SITE-ID&quot;</span>,
-    <span class="hljs-attr">secret_key</span>: <span class="hljs-string">&quot;YOUR-PASSWORD&quot;</span>,
-    <span class="hljs-attr">tlds</span>: [
-        <span class="hljs-string">&quot;com&quot;</span>, <span class="hljs-string">&quot;net&quot;</span>, <span class="hljs-string">&quot;info&quot;</span>, <span class="hljs-string">&quot;us&quot;</span>, <span class="hljs-string">&quot;biz&quot;</span>, <span class="hljs-string">&quot;co&quot;</span>,
-        ...
-        <span class="hljs-string">&quot;online&quot;</span>, <span class="hljs-string">&quot;app&quot;</span>, <span class="hljs-string">&quot;website&quot;</span>, <span class="hljs-string">&quot;haus&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>, <span class="hljs-string">&quot;dog&quot;</span>,
-        ...
-        <span class="hljs-string">&quot;cyou&quot;</span>, <span class="hljs-string">&quot;ph&quot;</span>, <span class="hljs-string">&quot;jp&quot;</span>, <span class="hljs-string">&quot;gmbh&quot;</span>
-    ]
-}
-<span class="hljs-comment">/*
- * RESPONSE::
- */</span>
-{
-    <span class="hljs-attr">status</span>: <span class="hljs-string">&quot;success&quot;</span>,
-    <span class="hljs-attr">message</span>: <span class="hljs-string">&quot;successfully updated your list of supported TLDs&quot;</span>
-}</code></pre>
-            <p>You tell us which TLDs to enable by sending us the full list of TLDs you support. Our <a href="#domain-name-suggestions">Domain Name Suggestions</a> API will be limited to only these TLDs you have specified.</p>
-            <p>You arrange your list of TLDs from most desirable to least desirable. We&#39;ll sort our suggestions based on this order, and also by the scores you set in the <a href="#tlds-promoted">TLDs Promoted list</a>.</p>
-            <!--To generate our name suggestions, we'll use this list. We'll include many names with TLDs from the front of the list. TLDs towards the back of the list will be included in our suggested names less frequently. Finally, with our [Domain Name Suggestions](#domain-name-suggestions) API, you may pass a variable "tlds_num", to specify how long this list should be. We'll cut off the list of suggested TLDs, and ignore the excess.-->
-            <p><strong>This step is optional.</strong> If you skip it, we&#39;ll just return ALL relevant TLDs. You can then filter out ones you don&#39;t support on your own end.</p>
-            <h3 id="request">Request</h3>
-            <p><strong>POST</strong> to <code>/v1/set_tlds_supported</code>, a JSON array of tlds.</p>
-            <p>&nbsp; <br><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong>. This is not yet available. <br>&nbsp;</p>
-            <h2 id="tlds-promoted">TLDs Promoted</h2>
-            <p><code>POST /v1/set_tlds_promoted</code></p>
-            <pre class="highlight javascript"><code><span class="hljs-comment">/*
- * POST to /v1/set_tlds_promoted:
- */</span>
-<span class="hljs-keyword">let</span> postData = {
-    <span class="hljs-attr">site_id</span>: <span class="hljs-string">&quot;YOUR-SITE-ID&quot;</span>,
-    <span class="hljs-attr">secret_key</span>: <span class="hljs-string">&quot;YOUR-PASSWORD&quot;</span>,
-    <span class="hljs-attr">tlds</span>: {
-        <span class="hljs-attr">design</span>: <span class="hljs-number">500</span>,
-        <span class="hljs-attr">wiki</span>: <span class="hljs-number">100</span>,
-        <span class="hljs-attr">ink</span>: <span class="hljs-number">75</span>,
-        <span class="hljs-attr">gay</span>: <span class="hljs-number">50</span>,
-        ...
-        store: <span class="hljs-number">5</span>,
-        <span class="hljs-attr">ai</span>: <span class="hljs-number">5</span>,
-        <span class="hljs-attr">org</span>: <span class="hljs-number">5</span>,
-        <span class="hljs-attr">app</span>: <span class="hljs-number">5</span>,
-        <span class="hljs-attr">fun</span>: <span class="hljs-number">4</span>,
-        ...
-        computer: <span class="hljs-number">-4</span>,
-        <span class="hljs-attr">edu</span>: <span class="hljs-number">-4</span>,
-        <span class="hljs-attr">tel</span>: <span class="hljs-number">-5</span>,
-        <span class="hljs-attr">diet</span>: <span class="hljs-number">-5</span>,
-        <span class="hljs-attr">army</span>: <span class="hljs-number">-10</span>,
-        <span class="hljs-attr">airforce</span>: <span class="hljs-number">-10</span>,
-    }
-}
-
-<span class="hljs-comment">/*
- * RESPONSE::
- */</span>
-{
-    <span class="hljs-attr">status</span>: <span class="hljs-string">&quot;success&quot;</span>,
-    <span class="hljs-attr">message</span>: <span class="hljs-string">&quot;successfully updated your list of promoted TLDs&quot;</span>
-}</code></pre>
-            <p><strong>This step is optional.</strong> Specify which TLDs you wish to promote or demote. Specify how aggressively you&#39;d like to promote each TLD by giving each a score.</p>
-            <p>We will use the values in this list to sort our list of TLD suggestions. TLDs with a higher score will be sorted towards the top of the list, and used more frequently. Low scores will be sorted towards the end of the list, and used less frequently.</p>
-            <p><strong>Example: the company TopLevel.Design would promote &quot;wiki, ink, design, and gay&quot; by giving each tld a rating of 10 or higher.</strong> Thus, whenever these are even slightly relevant to the user&#39;s search term, they will be used and promoted towards the top of the list. They will be promoted intelligently, by relevance, not necessarily to the very top, but sometimes to the middle of the list if they&#39;re not very relevant to the search term. To always promote to the very top, whenever slightly relevant, set an super high value like 10000.</p>
-            <p>Ignore the values in the code example. We already correct for words that appear too often or not enough. <strong>Just set a high or low number based on how much YOU want to promote or demote each TLD.</strong> Zero (0) is neutral and is the default value. 5 will promote a TLD approximately 5 positions higher than one rated 0. 10 will promote 10 places higher/lower, etc. It&#39;s not exactly one for one, but this is a good starting point. Feel free to be more agressive and use an extreme value like +-1000 when you want something to go all the way to the top or all the way to the bottom.</p>
-            <h3 id="request-1">Request</h3>
-            <p><strong>POST</strong> to <code>/v1/set_tlds_promoted</code>, an object of key/value pairs, where the key is the TLD (without the leading dot), and the value is the rating you want to give it (usually &lt; 10 to promote and &gt; -10 to demote). Zero (0) has no effect. So, don&#39;t bother setting values for TLDs you neither wish to promote or demote.</p>
-            <p>&nbsp; <br><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong>. This is not yet available. <br>&nbsp;</p>
-            <h2 id="default-tlds">Default TLDs</h2>
-            <p><code>POST /v1/set_tlds_default</code></p>
-            <pre class="highlight javascript"><code><span class="hljs-comment">/*
- * POST to /v1/set_tlds_default:
- */</span>
-<span class="hljs-keyword">let</span> postData = {
-    <span class="hljs-attr">site_id</span>: <span class="hljs-string">&quot;YOUR-SITE-ID&quot;</span>,
-    <span class="hljs-attr">secret_key</span>: <span class="hljs-string">&quot;YOUR-PASSWORD&quot;</span>,
-    <span class="hljs-attr">tech</span>: [
-      <span class="hljs-string">&quot;app&quot;</span>, <span class="hljs-string">&quot;dev&quot;</span>, <span class="hljs-string">&quot;ai&quot;</span>, <span class="hljs-string">&quot;wiki&quot;</span>, <span class="hljs-string">&quot;io&quot;</span>, <span class="hljs-string">&quot;co&quot;</span>, ...
-    ],
-    <span class="hljs-attr">name</span>: [
-      <span class="hljs-string">&quot;me&quot;</span>, <span class="hljs-string">&quot;moi&quot;</span>, <span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;works&quot;</span>, <span class="hljs-string">&quot;studio&quot;</span>, ...
-    ],
-    <span class="hljs-attr">brand</span>: [
-      <span class="hljs-string">&quot;online&quot;</span>, <span class="hljs-string">&quot;solutions&quot;</span>, <span class="hljs-string">&quot;llc&quot;</span>, <span class="hljs-string">&quot;best&quot;</span>, <span class="hljs-string">&quot;co&quot;</span>, ...
-    ],
-    <span class="hljs-attr">default</span>: [
-      <span class="hljs-string">&quot;com&quot;</span>, <span class="hljs-string">&quot;co&quot;</span>, <span class="hljs-string">&quot;net&quot;</span>, <span class="hljs-string">&quot;us&quot;</span>, <span class="hljs-string">&quot;biz&quot;</span>, <span class="hljs-string">&quot;info&quot;</span>, ...
-    ]
-}
-
-<span class="hljs-comment">/*
- * RESPONSE::
- */</span>
-{
-    <span class="hljs-attr">status</span>: <span class="hljs-string">&quot;success&quot;</span>,
-    <span class="hljs-attr">message</span>: <span class="hljs-string">&quot;successfully updated your default TLDs&quot;</span>
-}</code></pre>
-            <p>Specify which TLDs you&#39;d like to use by default, if the search term was too obscure to match any synonym-based results.</p>
-            <p>We detect if the user&#39;s search term mentions a category. Our list of categories is growing, and will be updated here in the future. This feature is still being developed, but is already very useful - better than not having it. You can specify the default list of TLDs to use for each category of keyword - &quot;tech term&quot;, &quot;brand name&quot;, &quot;person&#39;s name&quot;, &quot;food&quot;, or &quot;a place or destination&quot;.</p>
-            <p>This is also useful if our system comes up with very few TLDs. Then, we&#39;ll use the relevant TLDs we found first. Then, we&#39;ll mix in these default values to finish the list. We have to use something, because if we generate phrases, we&#39;ll have to pair them with TLDs. Can&#39;t just rely on &quot;.com&quot;s anymore.</p>
-            <p><strong>This is optional.</strong> We have our own lists of default TLDs. If you skip this part, we&#39;ll use our own lists. You only have to set <a href="#tlds-supported">which TLDs you support</a>. We&#39;ll ignore the ones you don&#39;t support.</p>
-            <h3 id="request-2">Request</h3>
-            <p><strong>POST</strong> to <code>/v1/set_tlds_default</code>, lists of tlds, by category. See code example.</p>
-            <p>&nbsp; <br><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong>. This is not yet available. <br>&nbsp;</p>
-            <h1 id="text-analysis">Text Analysis</h1>
-            <h2 id="parse-domain-name-string-string-breaking-word-chunking">Parse domain name string (string breaking, word chunking)</h2>
-            <p><code>GET /v1/word_break</code></p>
-            <p><strong>Break a long string of characters with no spaces - into individual words separated by spaces</strong>, with info about each word, part of speech, root, singular/plural, and sentiment analysis score.</p>
-            <p>By default, this uses Microsoft Bing Spellcheck. You can turn off spell-check to get your response a few hundred milliseconds faster.</p>
-            <p><strong>This functionality is included</strong> as part of the domain <a href="#suggestions">suggestions</a> API.</p>
-            <p>&nbsp; <br><strong>Demo: <a href="https://besta.domains">besta.domains</a></strong> Enter a long domain name with no spaces. We&#39;ll parse it into individual words, then suggest TLDs, related phrases, and word hacks based on those words. Click the green &quot;lightning bolt&quot; icon on the right of the search (desktop only). It will give you a &quot;behind the scenes&quot; peek into what words we parsed and what synonyms/TLDs we found for each word.</p>
-            <p><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong> <br>&nbsp;</p>
-            <h2 id="synonyms">Synonyms</h2>
-            <p><code>GET /v1/synonyms</code></p>
-            <p>Find related words for any word or short phrase in the English language, <br>and a few in other languages commonly understood in English speaking countries (like &quot;haus&quot; or &quot;casa&quot;).</p>
-            <h3 id="options">Options:</h3>
-            <ul>
-               <li>group by part of speech, both parts of speech and words sorted by relevance</li>
-               <li>prefer &quot;positive&quot; words, with good connotations. Omit negative or offensive words</li>
-               <li>prefer shorter words. Sort intelligently by both length and relevance</li>
-            </ul>
-            <p>&nbsp; <br><strong>Demo: <a href="https://wordio.co">NLPThesaurus.com</a></strong></p>
-            <p><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong> <br>&nbsp;</p>
-            <h2 id="word-info">Word info</h2>
-            <p><code>GET /v1/word_info</code></p>
-            <ul>
-               <li>synonyms grouped by part of speech, or as a flat list by relevance</li>
-               <li>root, plural, singular, proper, conjunction, acronyms, abbreviations</li>
-               <li>sentiment analysis (positive or negative connotation)</li>
-            </ul>
-            <p>&nbsp; <br><strong>Demo: <a href="https://wordio.co">NLPThesaurus.com</a></strong></p>
-            <p><strong>More info <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">coming soon</a></strong> <br>&nbsp;</p>
             <h1 id="about">About</h1>
             <h2 id="our-infrastructure">Our infrastructure</h2>
             <p>Building websites for 12 years now, we&#39;ve developed a state-of-the-art infrastructure and codebase. Our APIs are currently hosted in the USA East region, near NYC, for fast access to North America and Europe. We manage a cloud of load-balanced servers, ready to scale at any time. Coming soon, we will upgrade to a world-wide geo-distributed network - to be as close as possible to your servers and users - to provide the fastest and most reliable service!</p>
@@ -456,29 +306,53 @@
             <p>Please try our APIs, and compare to other providers. You will not be disappointed.</p>
             <p>If our APIs are not as good as what you&#39;re currently using, <a href="javascript:document.querySelector(&#39;.eapps-form-floating-button&#39;).click()">please let us know</a>. It will help us improve. Sometimes it may be a simple configuration which dramatically lowers or improves results for a particular use case. Thank you for your support and feedback!</p>
             <h1 id="contact">Contact</h1>
-            <p> More about us: <a href="https://besta.domains/about" target="_blank">besta.domains/about</a>
+            <p>
+               <b>More about us: <a href="https://wordio.co/about" target="_blank">wordio.co/about</a></b>
             </p>
             <p>
                <script>
-                  document.write('<sup>Email: <a href="mailto:paul@besta.domains" target="_blank">paul@besta.domains</a> &nbsp; &nbsp; <br />' + 'Call Paul: <a href="tel:13857706789" target="_blank">385.770.6789</a></sup>')
+                  document.write('<sup>Email: <a href="mailto:hello@wordio.co" target="_blank">hello@wordio.co</a> &nbsp; &nbsp; <br />' + 'Call <a href="tel:13857706789" target="_blank">385.770.6789</a></sup>')
                </script>
             </p>
-            <!--
-            begin CONTACT FORM
-            -->
-            <div class="contactContent">
-               <a name="contactform"></a>
-               <form id="submitContactForm">
-                  <button class="action_button g-recaptcha" type="button" onclick="document.querySelector('.eapps-form-floating-button').click()">
-                     <img class="svg" alt="send" src="/images/icon-send.svg" />
-                     <span> open contact-form</span>
-                  </button>
-                  <p>&nbsp;</p>
-               </form>
-            </div>
-            <!--
-            end CONTACT FORM
-            -->
+            <p>
+               <button class="action_button g-recaptcha" type="button" onclick="document.querySelector('.eapps-form-floating-button').click()">
+                  <img class="svg" alt="send" src="/images/icon-send.svg" />
+                  <span> open contact-form</span>
+               </button>
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <!--           &lt;!&ndash;-->
+            <!--            begin CONTACT FORM-->
+            <!--            &ndash;&gt;-->
+            <!--            <div class="contactContent">-->
+            <!--                <a name="contactform"></a>-->
+            <!--                <form id="submitContactForm">-->
+            <!--                     <button class="action_button g-recaptcha" type="button" onclick="document.querySelector('.eapps-form-floating-button').click()">-->
+            <!--                        <img class="svg" alt="send" src="/images/icon-send.svg" />-->
+            <!--                        <span> open contact-form</span>-->
+            <!--                     </button>-->
+            <!--                  <p>&nbsp;</p>-->
+            <!--                </form>-->
+            <!--            </div>-->
+            <!--           &lt;!&ndash;-->
+            <!--            end CONTACT FORM-->
+            <!--            &ndash;&gt;-->
          </div>
          <div class=dark-box>
             <div class=lang-selector>
@@ -699,17 +573,18 @@
             // }
          });
       </script>
+      <!--
+        ELFSIGHT CONTACT FORM
+      -->
       <script src="https://apps.elfsight.com/p/platform.js" defer></script>
       <div class="elfsight-app-bcf06b3b-b3f9-47c0-a7f0-11e2e4a2418f"></div>
-      <script>
-         setTimeout(function()
-         {
-            let el = document.querySelector('.eapps-link');
-            if (el)
-            {
-               el.setAttribute('style', 'display:none', 'important')
-            }
-         }, 2000)
-      </script>
+      <!--      <script>-->
+      <!--        setTimeout(function() {-->
+      <!--          let el = document.querySelector('.eapps-link');-->
+      <!--          if (el) {-->
+      <!--            el.setAttribute('style', 'display:none', 'important')-->
+      <!--          }-->
+      <!--        },2000)-->
+      <!--      </script>-->
    </body>
 </html>
