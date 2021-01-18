@@ -48,14 +48,6 @@
       <div class=page-wrapper>
          <div class=dark-box></div>
          <div class=content>
-            <h1 id="text-analysis">Text Analysis</h1>
-            <p>Access the largest thesaurus database + a growing collection of natural-language-processing tools. Explore the endpoints: <a href="https://wordio.co">https://wordio.co</a></p>
-            <h3 id="spellcheck--tokenization--wordbreak">Spellcheck + Tokenization + Wordbreak</h3>
-            <p>Break up a long string of characters into words. Get parts-of-speech and synonyms about each token. Optionally, perform spellcheck using Microsoft AND Google. This adds a few hundred milliseconds.</p>
-            <p><strong><a href="https://rapidapi.com/wordio/api/spellcheck-tokenization-wordbreak">Get it at RapidAPI</a></strong> | <a href="/openAPI/v1-spellcheck-tokenization-wordbreak.yaml" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a></p>
-            <h3 id="synonyms--word-info">Synonyms + Word info</h3>
-            <p>Get accurate information about a word or phrase. Synonyms, sentiment analysis, parts of speech, root words, acronyms, abbreviations, before/after, domains, etc.</p>
-            <p><strong><a href="https://rapidapi.com/wordio/api/synonyms-word-info">Get it at RapidAPI</a></strong> | <a href="/openAPI/v1-synonyms-word-info.yaml" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a></p>
             <h1 id="domain-suggestions">Domain Suggestions</h1>
             <p><code>POST /v1/domain_suggestions</code> &nbsp;<span style="position:relative;top:-1.22rem;"><a href="/openAPI/v1-domain-suggestions.yaml" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a> </span></p>
             <pre class="highlight javascript"><code><span class="hljs-comment">/*
@@ -284,6 +276,14 @@
                <li>&quot;whois/nameservers&quot; - (in development, not ready) Fast. Most reliable at telling if the domain is listed in an aftermarket. It can actually tell you which aftermarket! For most domains it can check if expiring soon and return the date of expiration. Unfortunately, it can NOT reliably tell if a domain is simply &quot;available to register&quot;. So, it must be used in conjunction with another method.</li>
                <li>&quot;registry/epp&quot; - (coming in the future) Slower. Currently getting accredited and registered with various registries. This is coming soon. We&#39;ll be able to use the same tools which registrars use.</li>
             </ol>
+            <h1 id="text-analysis">Text Analysis</h1>
+            <p>Access the largest thesaurus database + a growing collection of natural-language-processing tools. Explore the endpoints: <a href="https://wordio.co">https://wordio.co</a></p>
+            <h3 id="spellcheck--tokenization--wordbreak">Spellcheck + Tokenization + Wordbreak</h3>
+            <p>Break up a long string of characters into words. Get parts-of-speech and synonyms about each token. Optionally, perform spellcheck using Microsoft AND Google. This adds a few hundred milliseconds.</p>
+            <p><strong><a href="https://rapidapi.com/wordio/api/spellcheck-tokenization-wordbreak">Get it at RapidAPI</a></strong> | <a href="/openAPI/v1-spellcheck-tokenization-wordbreak.yaml" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a></p>
+            <h3 id="synonyms--word-info">Synonyms + Word info</h3>
+            <p>Get accurate information about a word or phrase. Synonyms, sentiment analysis, parts of speech, root words, acronyms, abbreviations, before/after, domains, etc.</p>
+            <p><strong><a href="https://rapidapi.com/wordio/api/synonyms-word-info">Get it at RapidAPI</a></strong> | <a href="/openAPI/v1-synonyms-word-info.yaml" download>OpenAPI <sub><img class="side-contact-icon" alt="download openAPI file" src="/images/openAPI/file-download.svg" /></sub></a></p>
             <h1 id="about">About</h1>
             <h2 id="our-infrastructure">Our infrastructure</h2>
             <p>Building websites for 12 years now, we&#39;ve developed a state-of-the-art infrastructure and codebase. Our APIs are currently hosted in the USA East region, near NYC, for fast access to North America and Europe. We manage a cloud of load-balanced servers, ready to scale at any time. Coming soon, we will upgrade to a world-wide geo-distributed network - to be as close as possible to your servers and users - to provide the fastest and most reliable service!</p>
