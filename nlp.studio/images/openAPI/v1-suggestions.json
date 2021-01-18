@@ -1,0 +1,436 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Domain Suggestions TLDs",
+    "version": "1.0",
+    "contact": {
+      "name": "Paul Shorey",
+      "url": "https://paulshorey.com"
+    },
+    "description": "Return 100s of relevant domain name suggestions + related TLDs, ordered by relevance. Many of them will be available and valuable. You can choose which TLDs to use, promote, or demote. Use our other API suite to \"manage your account\" to configure your site preferences (coming soon). Also see our \"Domain Availability Bulk\" API. Read more at https://besta.domains/api",
+    "termsOfService": "https://besta.domains/terms"
+  },
+  "servers": [
+    {
+      "url": "http://142.93.251.57"
+    }
+  ],
+  "paths": {
+    "/v1/suggestions": {
+      "get": {
+        "summary": "100s of domain name suggestions + related TLDs",
+        "operationId": "GET/v1/Suggestions",
+        "responses": {
+          "200": {
+            "description": "Returns JSON data. See data.domains for suggestions. They are grouped by type. See data.domains.name for our featured product - new generated phrases from relevant words and TLDs. See related TLDs at data.tlds - ordered by relevance.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "string_original": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "tld": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "string": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "tlds": {
+                      "type": "array",
+                      "items": {
+                        "properties": {}
+                      }
+                    },
+                    "domains": {
+                      "type": "object",
+                      "properties": {
+                        "tld": {
+                          "type": "array",
+                          "items": {
+                            "properties": {}
+                          }
+                        },
+                        "name": {
+                          "type": "array",
+                          "items": {
+                            "properties": {}
+                          }
+                        },
+                        "word hack": {
+                          "type": "array",
+                          "items": {
+                            "properties": {}
+                          }
+                        },
+                        "phrase hack": {
+                          "type": "array",
+                          "items": {
+                            "properties": {}
+                          }
+                        }
+                      },
+                      "required": [
+                        "tld",
+                        "name",
+                        "word hack",
+                        "phrase hack"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "string_original",
+                    "tld",
+                    "string",
+                    "tlds",
+                    "domains"
+                  ]
+                },
+                "examples": {
+                  "?str=hellowrld": {
+                    "value": {
+                      "string_original": "hellowrld",
+                      "tld": "com",
+                      "string": "hello world",
+                      "tlds": [
+                        "world",
+                        "fyi",
+                        "earth",
+                        "info",
+                        "global",
+                        "travel",
+                        "international",
+                        "us",
+                        "eco"
+                      ],
+                      "domains": {
+                        "tld": [
+                          "hellowrld .fyi",
+                          "hellowrld .earth",
+                          "hellowrld .info",
+                          "hellowrld .global"
+                        ],
+                        "name": [
+                          "hola society .com",
+                          "howdy .earth",
+                          "well hello .world",
+                          "shalom .travel",
+                          "earth .eco",
+                          "hello there .earth",
+                          "society .space"
+                        ],
+                        "word hack": [
+                          "worlda .eco",
+                          "planet .io",
+                          "orbus .org"
+                        ],
+                        "phrase hack": [
+                          "get hellowrld .eco",
+                          "my hellowrld .app",
+                          "hellowrld online .com"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "100s of domain name suggestions + related TLDs. More options (Query Params / POST data) will be added as soon as they are available and tested. Please check back soon. Also see our Availability API. More options and features coming soon. All changes will be backward compatible. Read more about this API and future improvements at https://besta.domains/api",
+        "tags": [
+          "v1"
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 2
+            },
+            "in": "query",
+            "name": "domain",
+            "description": "The domain you are searching for, with or without the TLD. Spaces are allowed, and encouraged! Keeping spaces helps us decide where to break the words. But we usually break the word just fine even without spaces. Try it a few times! Please let us know how it goes.\n\nNOTE: When testing on RapidAPI.com, wait a second after typing before hitting \"Enter\". RapidAPI input fields have a lag, and may cut off your text if submitted too fast.",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "tld",
+            "description": "(optional) (default=\"com\") The TLD you wish to use. No spaces, no quotes, NO dot. Must be a valid TLD. We do not check validity of TLD you send. If you specify a TLD as part of the domain, then this value will be ignored."
+          },
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "tlds_use",
+            "description": "(optional) (experimental) (default=[\"com\"]) Use multiple TLDs, ordered by importance. First TLD will be considered much more important than others. We will also find other relevant TLDs whether you send this value or not, as part of our suggestions. However, this list will be used first. Then, our relevant TLD suggestions will be added after this.\n\nFor your convenience, you may send either: 1) JSON Array 2) or \"comma, separated, string\" with no quotes. TLD must be included. Spaces are allowed. If you specify a TLD as part of the \"domain\", or specify a \"tld\", then this value will be ignored."
+          },
+          {
+            "schema": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 30
+            },
+            "in": "query",
+            "name": "num_tlds",
+            "description": "(optional) (default=30) How many related TLDs should we find, including the ones you specified and \".com\"? We return relevant TLDs in data.tlds. However, we also use them in data.domains. So, if you specify a small number, you will also have fewer name suggestions. However, they may be more relevant, because you'd be using only the most relevant TLDs."
+          },
+          {
+            "schema": {
+              "type": "boolean",
+              "default": "true"
+            },
+            "in": "query",
+            "name": "use_generic_tlds",
+            "description": "(coming soon) (optional) (default=true) Besides related relevant TLDs which we find according to similarity to keywords - we also mix in some generic TLDs to create name suggestions. These are \"com\", \"net\", \"info\", \"biz\", etc. Set this to falce to disable this."
+          },
+          {
+            "schema": {
+              "type": "boolean",
+              "default": "false"
+            },
+            "in": "query",
+            "name": "all_in_one_list",
+            "description": "(coming soon) Currently, suggestions are returned in several lists - grouped by type of manipulation. Set this to true, to return all suggestions mixed into one list. We're still deciding the best strategy to mix and sort the different types of suggestions. Please tell us your thoughts: https://besta.domains/contact"
+          }
+        ]
+      },
+      "post": {
+        "summary": "100s of domain name suggestions + related TLDs",
+        "operationId": "POST/v1/Suggestions",
+        "responses": {
+          "200": {
+            "description": "Returns JSON data. See data.domains for suggestions. They are grouped by type. See data.domains.name for our featured product - new generated phrases from relevant words and TLDs. See related TLDs at data.tlds - ordered by relevance.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "string_original": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "tld": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "string": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "tlds": {
+                          "type": "array",
+                          "items": {
+                            "required": [],
+                            "properties": {}
+                          }
+                        },
+                        "domains": {
+                          "type": "object",
+                          "properties": {
+                            "tld": {
+                              "type": "array",
+                              "items": {
+                                "required": [],
+                                "properties": {}
+                              }
+                            },
+                            "name": {
+                              "type": "array",
+                              "items": {
+                                "required": [],
+                                "properties": {}
+                              }
+                            },
+                            "word hack": {
+                              "type": "array",
+                              "items": {
+                                "required": [],
+                                "properties": {}
+                              }
+                            },
+                            "phrase hack": {
+                              "type": "array",
+                              "items": {
+                                "required": [],
+                                "properties": {}
+                              }
+                            }
+                          },
+                          "required": [
+                            "tld",
+                            "name",
+                            "word hack",
+                            "phrase hack"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "string_original",
+                        "tld",
+                        "string",
+                        "tlds",
+                        "domains"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "data"
+                  ]
+                },
+                "examples": {
+                  "?str=hellowrld": {
+                    "value": {
+                      "data": {
+                        "string_original": "hellowrld",
+                        "tld": "com",
+                        "string": "hello world",
+                        "tlds": [
+                          "world",
+                          "fyi",
+                          "earth",
+                          "info",
+                          "global",
+                          "travel",
+                          "international",
+                          "us",
+                          "eco"
+                        ],
+                        "domains": {
+                          "tld": [
+                            "hellowrld .fyi",
+                            "hellowrld .earth",
+                            "hellowrld .info",
+                            "hellowrld .global"
+                          ],
+                          "name": [
+                            "hola society .com",
+                            "howdy .earth",
+                            "well hello .world",
+                            "shalom .travel",
+                            "earth .eco",
+                            "hello there .earth",
+                            "society .space"
+                          ],
+                          "word hack": [
+                            "worlda .eco",
+                            "planet .io",
+                            "orbus .org"
+                          ],
+                          "phrase hack": [
+                            "get hellowrld .eco",
+                            "my hellowrld .app",
+                            "hellowrld online .com"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "100s of domain name suggestions + related TLDs. More options (Query Params / POST data) will be added as soon as they are available and tested. Please check back soon. Also see our Availability API. More options and features coming soon. All changes will be backward compatible. Read more about this API and future improvements at https://besta.domains/api",
+        "tags": [
+          "v1"
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "minLength": 2
+            },
+            "in": "query",
+            "name": "str",
+            "description": "The domain you are searching for, with or without the TLD. Spaces are allowed, and encouraged! Keeping spaces helps us decide where to break the words. But we usually break the word just fine even without spaces. Try it a few times! Please let us know how it goes.\n\nNOTE: When testing on RapidAPI.com, wait a second after typing before hitting \"Enter\". RapidAPI input fields have a lag, and may cut off your text if submitted too fast.",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "tld",
+            "description": "(optional) (default=\"com\") The TLD you wish to use. No spaces, no quotes, NO dot. Must be a valid TLD. We do not check validity of TLD you send. "
+          },
+          {
+            "schema": {
+              "type": "array"
+            },
+            "in": "query",
+            "name": "tlds_use",
+            "description": "(optional) (experimental) (default=[\"com\"]) Use multiple TLDs, ordered by importance. First TLD will be considered much more important than others. We will also find other relevant TLDs whether you send this value or not, as part of our suggestions. However, this list will be used first. Then, our relevant TLD suggestions will be added after this.\n\nFor your convenience, you may send either: 1) JSON Array 2) or \"comma, separated, string\" with no quotes. TLD must be included. Spaces are allowed. If you specify a TLD as part of the \"domain\", or specify a \"tld\", then this value will be ignored."
+          },
+          {
+            "schema": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 30
+            },
+            "in": "query",
+            "name": "num_tlds",
+            "description": "(optional) (default=30) How many related TLDs should we find, including the ones you specified and \".com\"? We return relevant TLDs in data.tlds. However, we also use them in data.domains. So, if you specify a small number, you will also have fewer name suggestions. However, they may be more relevant, because you'd be using only the most relevant TLDs."
+          },
+          {
+            "schema": {
+              "type": "boolean",
+              "default": "true"
+            },
+            "in": "query",
+            "name": "use_generic_tlds",
+            "description": "(coming soon) (optional) (default=true) Besides related relevant TLDs which we find according to similarity to keywords - we also mix in some generic TLDs to create name suggestions. These are \"com\", \"net\", \"info\", \"biz\", etc. Set this to falce to disable this."
+          },
+          {
+            "schema": {
+              "type": "boolean",
+              "default": "false"
+            },
+            "in": "query",
+            "name": "all_in_one_list",
+            "description": "(coming soon) Currently, suggestions are returned in several lists - grouped by type of manipulation. Set this to true, to return all suggestions mixed into one list. We're still deciding the best strategy to mix and sort the different types of suggestions. Please tell us your thoughts: https://besta.domains/contact"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          },
+          "description": "POST data uses same keys/values as Query Params. Please refer to Query Params for descriptions. If using POST request, you may choose to send some variables as POST data, and others as Query Params. If both are sent for the same key, Query Params will be preferred. More options coming soon. To learn more, please see https://besta.domains/api."
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  },
+  "tags": [
+    {
+      "name": "v1"
+    }
+  ]
+}
