@@ -1,0 +1,74 @@
+openapi: 3.0.0
+info:
+  title: Synonyms + Word Info
+  version: '1.0'
+  contact:
+    name: Paul Shorey
+    url: paulshorey.com
+    email: hello@wordio.co
+  description: 'Thesaurus for AI. Get sentiment score, root, singular, abbr., parts of speech, acronyms, synonyms, etc. Lemmatization. Most accurate word info API. See also our spell-check, word-breaking, tokenization APIs. DOCUMENTATION at https://wordio.co/api'
+  termsOfService: 'https://wordio.co/terms'
+servers:
+  - url: 'http://142.93.251.57'
+paths:
+  /v1/synonyms:
+    get:
+      summary: Synonyms - grouped by part of speech and sentiment
+      operationId: GET/v1/synonyms
+      responses:
+        '200':
+          description: OK
+      description: |-
+        Returns synonyms and related words about a morpheme (any word, short phrase, or abbreviation). DOCUMENTATION: https://wordio.co/api
+
+        type:
+        best_by_pos, all_by_pos, all_by_relevance,all_by_relevance
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: str
+          description: 'Word or short phrase like "doctor" or "medical doctor". Short or long: "i" or "water under the bridge". Small words, especially single letter are experimental.'
+          required: true
+      tags:
+        - v1
+    parameters: []
+  /v1/word-info:
+    get:
+      summary: 'Root, Plural, Abbreviation, Acronym, Parts of Speech, Sentiment'
+      operationId: GET/v1/word-info
+      responses:
+        '200':
+          description: OK
+      description: 'Returns information about a word - is it plural, singular, conjunction? - its root form, abbreviations, acronyms - parts of speech - sentiment analysis score (positive/neutral or negative). DOCUMENTATION at https://wordio.co/api'
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: str
+          description: 'Word or short phrase like "doctor" or "medical doctor". Short or long: "i" or "water under the bridge". Small words, especially single letter are experimental.'
+      tags:
+        - v1
+    parameters: []
+  /v1/word:
+    get:
+      summary: All info we have about a word. Includes content from both `/v1/synonyms` and `/v1/word-info`
+      operationId: GET/v1/word
+      responses:
+        '200':
+          description: OK
+      description: 'Returns synonyms grouped by part-of-speech and by sentiment. Returns information about a word - is it plural, singular, conjunction? - its root form, abbreviations, acronyms - parts of speech - sentiment analysis score (positive/neutral or negative). DOCUMENTATION at https://wordio.co/api'
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: str
+          description: 'Word or short phrase like "doctor" or "medical doctor". Short or long: "i" or "water under the bridge". Small words, especially single letter are experimental.'
+          required: true
+      tags:
+        - v1
+    parameters: []
+components:
+  schemas: {}
+tags:
+  - name: v1

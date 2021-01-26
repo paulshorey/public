@@ -1,0 +1,162 @@
+openapi: 3.0.0
+info:
+  title: Domain Availability Bulk
+  version: '1.0'
+  description: 'Check availability of 100 domain names at a time! This also returns if the domain is listed in the aftermarket marketplaces. Coming soon: expiration date and price. Also see our "Domain Suggestions TLDs" API "https://rapidapi.com/besta-domains/api/domain-suggestions-tlds". Please read more at https://besta.domains/api.'
+  contact:
+    url: paulshorey.com
+    name: Paul Shorey
+    email: hello@wordio.co
+  termsOfService: 'https://besta.domains/terms'
+servers:
+  - url: 'http://142.93.251.57'
+paths:
+  /v1/availability:
+    get:
+      summary: 'Check 100 domain names at a time! Find which are available, aftermarket, expiring, invalid, etc.'
+      tags:
+        - v1
+      responses:
+        '200':
+          description: |-
+            Returns data object. Within that object is another object called "domains". It contains key/value pairs. Key is the domain name which you sent. Value is a status code. Codes:
+            -1: unknown, not able to check
+            0: new, did not check
+            1: unavailable
+            2: available
+            3: registry premium (buy it now for higher price than such TLD normally sells for)
+            4: aftermarket premium (buy it now or make an offer, also could be in an auction)
+            5: registry super-premium (must submit offer, more expensive than regular premium SLDs)
+            6: unavailable, but expiring soon (may include expiration date in respnose: check data.expiration)
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      method:
+                        type: string
+                      status:
+                        type: object
+                      note:
+                        type: object
+                      ns:
+                        type: object
+              examples:
+                'premium.net, greata.domains, perfect.domains':
+                  value:
+                    method: domainr
+                    status:
+                      premium.net: 4
+                      besta.domains: 1
+                      greata.domains: 2
+                      perfect.domains: 3
+                      true.domains: 4
+                      best.domains: 1
+                      new.domains: 5
+      operationId: GET/v1/Availability
+      description: 'Check 100 domain names at a time. Find which are available, aftermarket, expiring, invalid, etc. Availability/aftermarket detection are already work reliably/accurately and very fast. Coming soon: option to check expiration date, validity, and price. Also see our "Domain Suggestions" API. Read more at https://besta.domains/api. Try the demo app: https://besta.domains'
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: domains
+          description: |-
+            Your choice: send a comma separated string without quotes (one.co, two.com, three.io) via Query Params. Or a JSON Array (["one.co","two.com"]) via POST data.
+
+            This API accepts both GET or POST requests, for your convenience. Both are treated as a request for data. We recommend you use POST.
+        - schema:
+            type: boolean
+          in: query
+          name: show_metadata
+          description: 'Optional. Default is "false". If "true", will show a "note" about each domain. If using Domainr API, the note will be their original "status" message for each of the requested domains. When using WHOIS/NameServer method (coming soon), will show nameserver, aftermarket, and expiration dates when available.'
+        - schema:
+            type: string
+          in: query
+          name: method
+          description: 'Optional. Default is "domainr". Coming soon, specify new ways to discover domain info. Read more at https://besta.domains/api'
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              description: ''
+              type: object
+              properties:
+                domains:
+                  type: array
+                  items: {}
+        description: 'POST data uses same keys/values as Query Params. Please refer to Query Params for descriptions. If using POST request, you may choose to send some variables as POST data, and others as Query Params. If both are sent for the same key, Query Params will be preferred. More options coming soon. To learn more, please see https://besta.domains/api.'
+      summary: 'Check 100 domain names at a time! Find which are available, aftermarket, expiring, invalid, etc.'
+      tags:
+        - v1
+      responses:
+        '200':
+          description: |-
+            Returns data object. Within that object is another object called "domains". It contains key/value pairs. Key is the domain name which you sent. Value is a status code. Codes:
+            -1: unknown, not able to check
+            0: new, did not check
+            1: unavailable
+            2: available
+            3: registry premium (buy it now for higher price than such TLD normally sells for)
+            4: aftermarket premium (buy it now or make an offer, also could be in an auction)
+            5: registry super-premium (must submit offer, more expensive than regular premium SLDs)
+            6: unavailable, but expiring soon (may include expiration date in respnose: check data.expiration)
+          content:
+            application/json:
+              schema:
+                description: ''
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      method:
+                        type: string
+                      status:
+                        type: object
+                      note:
+                        type: object
+                      ns:
+                        type: object
+              examples:
+                'premium.net, greata.domains, perfect.domains':
+                  value:
+                    method: domainr
+                    status:
+                      premium.net: 4
+                      besta.domains: 1
+                      greata.domains: 2
+                      perfect.domains: 3
+                      true.domains: 4
+                      best.domains: 1
+                      new.domains: 5
+      operationId: POST/v1/Availability
+      description: 'Check 100 domain names at a time. Find which are available, aftermarket, expiring, invalid, etc. Availability/aftermarket detection are already work reliably/accurately and very fast. Coming soon: option to check expiration date, validity, and price. Also see our "Domain Suggestions" API. Read more at https://besta.domains/api. Try the demo app: https://besta.domains'
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: domains
+          description: |-
+            Your choice: send a comma separated string without quotes (one.co, two.com, three.io) via Query Params. Or a JSON Array (["one.co","two.com"]) via POST data.
+
+            This API accepts both GET or POST requests, for your convenience. Both are treated as a request for data. We recommend you use POST.
+        - schema:
+            type: boolean
+          in: query
+          name: show_metadata
+          description: 'Optional. Default is "false". If "true", will show a "note" about each domain. If using Domainr API, the note will be their original "status" message for each of the requested domains. When using WHOIS/NameServer method (coming soon), will show nameserver, aftermarket, and expiration dates when available.'
+        - schema:
+            type: string
+          in: query
+          name: method
+          description: 'Optional. Default is "domainr". Coming soon, specify new ways to discover domain info. Read more at https://besta.domains/api'
+components:
+  schemas: {}
+  securitySchemes: {}
+tags:
+  - name: v1
