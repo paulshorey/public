@@ -30,6 +30,10 @@ npm install --prune
 ##
 # serve files
 # this is done by nginx
+ln -s /srv/public/_nginx/paulshorey.com /etc/nginx/sites-enabled
+ln -s /srv/public/_nginx/jobs.paulshorey.com /etc/nginx/sites-enabled
+ln -s /srv/public/_nginx/files.paulshorey.com /etc/nginx/sites-enabled
+ln -s /srv/public/_nginx/spiral.paulshorey.com /etc/nginx/sites-enabled
 
 
 ####
