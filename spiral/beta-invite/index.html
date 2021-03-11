@@ -4,118 +4,127 @@
   html,
   body,
   div {
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
+	  margin: 0;
+	  padding: 0;
+	  font-family: "Helvetica Neue-Regular", Helvetica, sans-serif;
+	  line-height: 150%;
+  }
+  @media (min-width: 700px) {
+	  html, body, div {
+		  font-size: 20px;
+	  }
   }
   h1 {
-    font-weight: normal;
-    font-size: 200%;
-    line-height: 150%;
+	  font-weight: normal;
+	  font-size: 200%;
+	  line-height: 150%;
   }
   h2 {
-    font-weight: normal;
-    font-size: 150%;
-    line-height: 133%;
+	  font-weight: normal;
+	  font-size: 150%;
+	  line-height: 150%;
   }
   h3 {
-    font-weight: bold;
-    font-size: 125%;
-    line-height: 125%;
+	  font-weight: bold;
+	  font-size: 125%;
+	  line-height: 150%;
   }
   img {
-    height: auto;
-    display: inline-block;
+	  height: auto;
+	  display: inline-block;
   }
   .article {
-    display: inline-block;
-    background: #ffffff;
-    text-align: left;
-    max-width: 450px;
-    padding-top: 50px;
-    padding-bottom: 35px;
+	  display: inline-block;
+	  background: #ffffff;
+	  text-align: left;
+	  max-width: 450px;
+	  padding-top: 50px;
+	  padding-bottom: 35px;
   }
   .article > * {
-    padding-left: 35px;
-    padding-right: 35px;
+	  padding-left: 35px;
+	  padding-right: 35px;
   }
   .article img {
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0 auto;
-    max-width: 100%;
+	  padding-left: 0;
+	  padding-right: 0;
+	  margin: 0 auto;
+	  max-width: 100%;
   }
   section {
-    display: block;
-    margin: 35px auto;
-    max-width: 350px;
+	  display: block;
+	  margin: 35px auto;
+	  max-width: 350px;
   }
   section.first {
-    margin-bottom: 45px;
+	  margin-bottom: 45px;
   }
   p {
-    color: #333;
-    margin: 15px 0;
-    line-height: 25px;
+	  color: #333;
+	  margin: 15px 0;
+	  line-height: 150%;
   }
   p.fyi {
-    font-size: 85%;
-    margin: 25px 0;
-    line-height: 20px;
-    color: #999;
+	  display: block;
+	  font-size: 85%;
+	  margin: 25px auto;
+	  max-width: 300px;
+	  line-height: 20px;
+	  color: #999;
+	  text-align: center;
   }
   .footer {
-    margin: 20px 30px;
-    text-align: center;
+	  margin: 20px 30px;
+	  text-align: center;
   }
   .footer p {
-    font-size: 85%;
-    margin: 25px 0;
-    line-height: 20px;
-    color: #999;
+	  font-size: 85%;
+	  margin: 25px 0;
+	  line-height: 20px;
+	  color: #999;
   }
   .footer a {
-    color: inherit !important;
+	  color: inherit !important;
   }
   .footer a:visited,
   .footer a:hover {
-    color: inherit !important;
+	  color: inherit !important;
   }
   section.social {
-    display: flex;
-    justify-content: space-between;
   }
   section.social a {
-    text-decoration: none;
-    margin: 0 10px;
+	  text-decoration: none;
+	  margin: 0 10px;
   }
   section.social a:first-child {
-    margin-left: 0;
+	  margin-left: 0;
   }
   section.social a:last-child {
-    margin-right: 0;
+	  margin-right: 0;
   }
 
   .center {
-    text-align: center;
+	  text-align: center;
   }
   .pink {
-    color: #d83275;
+	  color: #d83275;
   }
   .b {
-    font-weight: bold;
+	  font-weight: bold;
   }
 </style>
 <div style="background: #f0f0f0; text-align: center; padding: 25px">
-  <div class="article">
+  <div class="article" style="background: #ffffff">
     <img
       src="https://cdn.animaapp.com/projects/60483de6621edf992df34f58/releases/604a7a1a46a905cf3ced937d/img/logo-header@2x.png"
     />
     <h1 class="center">Wecome to the Spiral Beta program!</h1>
 
     <section class="first">
-      <p>Thank you for participating in our BETA testing program.</p>
-      <p>
+      <p class="center">
+        Thank you for participating in our BETA testing program.
+      </p>
+      <p class="center">
         To become a Spiral Beta customer, first you will need to install an app
         named TestFlight on your phone, this will unlock your abillity to join
         our beta program.
@@ -127,21 +136,21 @@
       <p>
         <span class="pink b">A. </span
         ><span
-          >Please locate an email invitation from “TestFlight” in your
+      >Please locate an email invitation from “TestFlight” in your
           inbox</span
-        >
+      >
       </p>
       <p>
         <span class="pink b">B. </span
         ><span
-          >In that email, click the blue button named “View in TestFlight”</span
-        >
+      >In that email, click the blue button named “View in TestFlight”</span
+      >
       </p>
       <p>
         <span class="pink b">C. </span
         ><span
-          >We will redirect you to the App Store, to install TestFlight</span
-        >
+      >We will redirect you to the App Store, to install TestFlight</span
+      >
       </p>
       <img
         src="https://cdn.animaapp.com/projects/60483de6621edf992df34f58/releases/604a813f2c66c27c7a70a42d/img/group-2@1x.png"
@@ -160,9 +169,9 @@
       <p>
         <span class="pink b">B. </span
         ><span
-          >In the “Testflight” app Click the install button to install the
+      >In the “Testflight” app Click the install button to install the
           Spiral app on your iphone</span
-        >
+      >
       </p>
       <img
         src="https://cdn.animaapp.com/projects/60483de6621edf992df34f58/releases/604a813f2c66c27c7a70a42d/img/group-4@1x.png"
@@ -198,8 +207,8 @@
     </section>
     <section>
       <h3 class="b">
-        And thats it!  We are so excited to have you join us in creating the
-        future of eathical banking!
+        And thats it! We are so excited to have you join us in creating the
+        future of ethical banking!
       </h3>
     </section>
   </div>
@@ -251,7 +260,7 @@
         York, NY 10001. Toll Free 888.888.8075. We respect your right to
         privacy.
         <a href="https://spiral.us/privacy/" target="_blank"
-          >View our Privacy Policy</a
+        >View our Privacy Policy</a
         >
       </p>
       <p class="center">(&copy;) 2020 Spiral. All rights reserved.</p>
