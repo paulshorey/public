@@ -1,315 +1,771 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
-    <meta name="og:type" content="website" />
-    <meta name="twitter:card" content="photo" />
-    <link rel="stylesheet" type="text/css" href="css/experimental-format-for-email.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Roboto:700,500");
+<style>
+  /* screen - experimental-format-for-email */
 
-      @font-face {
-        font-family: "Helvetica Neue-Regular";
-        font-style: normal;
-        font-weight: 400;
-        src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
-      }
-
-      @font-face {
-        font-family: "Helvetica Neue-Medium";
-        font-style: normal;
-        font-weight: 500;
-        src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
-      }
-
-      @font-face {
-        font-family: "Helvetica Neue-Bold";
-        font-style: normal;
-        font-weight: 700;
-        src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
-      }
-
-      .component-wrapper a,
-      .screen a {
-        text-decoration: none;
-        display: contents;
-      }
-
-      .full-width-a {
-        width: 100%;
-      }
-
-      .full-height-a {
-        height: 100%;
-      }
-
-      .screen textarea:focus,
-      .screen input:focus {
-        outline: none;
-      }
-
-      .screen *,
-      .component-wrapper * {
-        box-sizing: border-box;
-      }
-
-      .screen div {
-        -webkit-text-size-adjust: none;
-      }
-
-      .container-center-vertical,
-      .container-center-horizontal {
-        pointer-events: none;
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-        margin: 0;
-      }
-
-      .container-center-vertical {
-        align-items: center;
-        height: 100%;
-      }
-
-      .container-center-horizontal {
-        justify-content: center;
-        width: 100%;
-      }
-
-      .container-center-vertical > *,
-      .container-center-horizontal > * {
-        pointer-events: auto;
-        flex-shrink: 0;
-      }
-
-      .component-wrapper,
-      .screen {
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        word-break: break-all;
-        word-break: break-word;
-      }
-
-      .auto-animated div {
-        opacity: 0;
-        position: absolute;
-        --z-index: -1;
-      }
-
-      .auto-animated .container-center-vertical,
-      .auto-animated .container-center-horizontal {
-        opacity: 1;
-      }
-
-      .overlay {
-        position: absolute;
-        opacity: 0;
-        display: none;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-      }
-
-      .animate-appear {
-        opacity: 0;
-        display: block;
-        animation: reveal 0.3s ease-in-out 1 normal forwards;
-      }
-
-      .animate-disappear {
-        opacity: 1;
-        display: block;
-        animation: reveal 0.3s ease-in-out 1 reverse forwards;
-      }
-
-      .animate-nodelay {
-        animation-delay: 0s;
-      }
-
-      @keyframes reveal {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      .align-self-flex-start {
-        align-self: flex-start;
-      }
-      .align-self-flex-end {
-        align-self: flex-end;
-      }
-      .align-self-flex-center {
-        align-self: center;
-      }
-      .valign-text-middle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .valign-text-bottom {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
-      input:focus {
-        outline: none;
-      }
-      .component-wrapper,
-      .component-wrapper * {
-        pointer-events: none;
-      }
-
-      .component-wrapper a *,
-      .component-wrapper a,
-      .component-wrapper input,
-      .component-wrapper video,
-      .component-wrapper iframe,
-      .listeners-active,
-      .listeners-active * {
-        pointer-events: auto;
-      }
-
-      .hidden,
-      .hidden * {
-        visibility: hidden;
-        pointer-events: none;
-      }
-
-      .smart-layers-pointers,
-      .smart-layers-pointers * {
-        pointer-events: auto;
-        visibility: visible;
-      }
-
-      .component-wrapper.not-ready,
-      .component-wrapper.not-ready * {
-        visibility: hidden !important;
-      }
-
-      .listeners-active-click,
-      .listeners-active-click * {
-        cursor: pointer;
-      }
-    </style>
-    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
-  </head>
-  <body style="margin: 0; background: rgba(240, 240, 240, 1)">
-    <input type="hidden" id="anPageName" name="page" value="experimental-format-for-email" />
-    <div class="experimental-format-for-email screen">
-      <div class="footer-grey-color-overlay-C61RwL">
-        <div class="footer-text-0xqxx4">
-          <div class="social-buttons-xLqQBE">
-            <img class="twitter-J0os4Z" src="img/twitter@1x.png" />
-            <img class="linkedin-J0os4Z" src="img/linkedin@1x.png" />
-            <img class="instagram-J0os4Z" src="img/instagram@1x.png" />
-            <img class="facebook-J0os4Z" src="img/facebook@1x.png" />
-          </div>
-          <div class="footer-text-xLqQBE helveticaneue-regular-normal-delta-13px">
-            * All deposit accounts are issued by nbkc bank, Member FDIC.
-          </div>
-          <div class="footer-text-pAbfe2 helveticaneue-regular-normal-delta-13px">
-            This email was sent to: [insert email address of recipient]. You are receiving this message because you
-            signed up to be on our private email list. If you prefer not to receive marketing emails, you can
-            Unsubscribe. Please allow up to ten (10) business days for your request to be completed.<br /><br />This
-            email was sent by Spiral Financial, Inc. 31 Hudson yards, fl 11 New York, NY 10001. Toll Free 888.888.8075.
-            We respect your right to privacy. <br />View our Privacy Policy.
-          </div>
-          <div class="footer-text-5h9QEr helveticaneue-regular-normal-delta-13px">
-            (©) 2020 Spiral . All rights reserved.
-          </div>
-        </div>
+  .experimental-format-for-email {
+    background-color: rgba(240, 240, 240, 1);
+    height: 100vh;
+    margin: 0px;
+    min-height: 4705px;
+    min-width: 654px;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .experimental-format-for-email .arrow-3-24sS1v {
+    background-color: transparent;
+    height: 43.31%;
+    left: 43.4%;
+    position: absolute;
+    top: 57.57%;
+    width: 40.97%;
+  }
+  .experimental-format-for-email .arrow-3-goX1IU {
+    background-color: transparent;
+    height: 40.32%;
+    left: calc(50% - 44px);
+    position: absolute;
+    top: 60.89%;
+    width: 34px;
+  }
+  .experimental-format-for-email .arrow-4-AnKCw1 {
+    background-color: transparent;
+    height: 0px;
+    left: 63.31%;
+    position: absolute;
+    top: 39.17%;
+    width: 0.25%;
+  }
+  .experimental-format-for-email .arrow-pointer-Beyjxh {
+    background-color: transparent;
+    height: 33.42%;
+    left: calc(50% + 8px);
+    position: absolute;
+    top: 18.6%;
+    width: 79px;
+  }
+  .experimental-format-for-email .arrow-pointer-Zjjsew {
+    background-color: transparent;
+    height: 38.07%;
+    left: 22.17%;
+    position: absolute;
+    top: 7.77%;
+    width: 31.3%;
+  }
+  .experimental-format-for-email .container-f0gZC7 {
+    background-color: transparent;
+    height: 40px;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 100%;
+  }
+  .experimental-format-for-email .ellipse-1-24sS1v {
+    background-color: transparent;
+    height: 50.7%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+  .experimental-format-for-email .ellipse-1-goX1IU {
+    background-color: transparent;
+    height: 58.06%;
+    left: calc(50% - 33px);
+    position: absolute;
+    top: 0px;
+    width: 72px;
+  }
+  .experimental-format-for-email .facebook-J0os4Z {
+    background-color: transparent;
+    height: 49px;
+    left: calc(50% - 128px);
+    position: absolute;
+    top: 0px;
+    width: 49px;
+  }
+  .experimental-format-for-email .footer-grey-color-overlay-C61RwL {
+    background-color: transparent;
+    height: 463px;
+    left: calc(50% - 146px);
+    position: absolute;
+    top: calc(50% + 1756px);
+    width: 292px;
+  }
+  .experimental-format-for-email .footer-text-0xqxx4 {
+    background-color: transparent;
+    height: 463px;
+    left: calc(50% - 146px);
+    position: relative;
+    top: calc(50% - 232px);
+    width: 292px;
+  }
+  .experimental-format-for-email .footer-text-5h9QEr {
+    background-color: transparent;
+    height: auto;
+    left: calc(50% - 146px);
+    letter-spacing: 0px;
+    line-height: 22.1px;
+    position: absolute;
+    text-align: center;
+    top: 430px;
+    white-space: nowrap;
+    width: 294px;
+  }
+  .experimental-format-for-email .footer-text-pAbfe2 {
+    background-color: transparent;
+    height: auto;
+    left: calc(50% - 143px);
+    letter-spacing: 0px;
+    line-height: 22.1px;
+    position: absolute;
+    text-align: left;
+    top: 127px;
+    width: 289px;
+  }
+  .experimental-format-for-email .footer-text-xLqQBE {
+    background-color: transparent;
+    height: auto;
+    left: calc(50% - 143px);
+    letter-spacing: 0px;
+    line-height: 22.1px;
+    position: absolute;
+    text-align: center;
+    top: 66px;
+    width: 288px;
+  }
+  .experimental-format-for-email .hi-paul-welcome-to-C61RwL {
+    background-color: transparent;
+    height: 3.57%;
+    left: calc(50% - 146px);
+    letter-spacing: 0px;
+    line-height: 28px;
+    position: absolute;
+    top: 71.07%;
+    width: 294px;
+  }
+  .experimental-format-for-email .hi-paul-welcome-to-Fy8XbI {
+    background-color: transparent;
+    color: rgba(51, 51, 51, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    height: 63.68%;
+    left: 0px;
+    letter-spacing: 0px;
+    line-height: 30px;
+    position: absolute;
+    text-align: left;
+    top: 36.32%;
+    width: 100.68%;
+  }
+  .experimental-format-for-email .hi-paul-welcome-to-VMr6Om {
+    background-color: transparent;
+    height: 7.14%;
+    left: calc(50% - 146px);
+    letter-spacing: 0px;
+    line-height: 28px;
+    position: absolute;
+    top: 13.18%;
+    width: 294px;
+  }
+  .experimental-format-for-email .image-1-C61RwL {
+    background-color: transparent;
+    height: 371px;
+    left: calc(50% - 129px);
+    position: absolute;
+    top: 3537px;
+    width: 240px;
+  }
+  .experimental-format-for-email .image-1-VMr6Om {
+    background-color: transparent;
+    height: 373px;
+    left: calc(50% - 115px);
+    position: absolute;
+    top: 2921px;
+    width: 230px;
+  }
+  .experimental-format-for-email .image-1-mzXdH9 {
+    background-color: transparent;
+    height: 376px;
+    left: calc(50% - 103px);
+    position: absolute;
+    top: 1535px;
+    width: 206px;
+  }
+  .experimental-format-for-email .image-11-AnKCw1 {
+    background-color: transparent;
+    height: 3.64%;
+    left: 66.52%;
+    object-fit: cover;
+    position: absolute;
+    top: 25.56%;
+    width: 18.21%;
+  }
+  .experimental-format-for-email .image-2-Beyjxh {
+    background-color: transparent;
+    height: 371px;
+    left: calc(50% - 102px);
+    position: absolute;
+    top: 0px;
+    width: 203px;
+  }
+  .experimental-format-for-email .image-2-C61RwL {
+    background-color: transparent;
+    height: 371px;
+    left: calc(50% - 102px);
+    position: absolute;
+    top: 2046px;
+    width: 203px;
+  }
+  .experimental-format-for-email .image-3-C61RwL {
+    background-color: transparent;
+    height: 366px;
+    left: calc(50% - 101px);
+    position: absolute;
+    top: 981px;
+    width: 202px;
+  }
+  .experimental-format-for-email .instagram-J0os4Z {
+    background-color: transparent;
+    height: 49px;
+    left: calc(50% - 59px);
+    position: absolute;
+    top: 0px;
+    width: 49px;
+  }
+  .experimental-format-for-email .intro-header-C61RwL {
+    background-color: transparent;
+    height: 424px;
+    left: calc(50% - 146px);
+    position: absolute;
+    top: calc(50% - 2206px);
+    width: 292px;
+  }
+  .experimental-format-for-email .linkedin-J0os4Z {
+    background-color: transparent;
+    height: 49px;
+    left: calc(50% + 10px);
+    position: absolute;
+    top: 0px;
+    width: 49px;
+  }
+  .experimental-format-for-email .logo-header-C61RwL {
+    background-color: transparent;
+    height: 40px;
+    left: calc(50% - 167px);
+    position: absolute;
+    top: calc(50% - 2274px);
+    width: 335px;
+  }
+  .experimental-format-for-email .rectangle-12-AnKCw1 {
+    background-color: rgba(255, 255, 255, 1);
+    height: 5.72%;
+    left: 66.67%;
+    position: absolute;
+    top: 23.98%;
+    width: 18.91%;
+  }
+  .experimental-format-for-email .social-buttons-xLqQBE {
+    background-color: transparent;
+    height: 49px;
+    left: 18px;
+    position: absolute;
+    top: 0px;
+    width: 256px;
+  }
+  .experimental-format-for-email .span0-4x4zGM {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span0-M0YBIv {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span0-NgiGbx {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span0-P78DKE {
+    font-style: normal;
+    line-height: 16px;
+  }
+  .experimental-format-for-email .span0-RXQxsx {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span0-mSf5OP {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span0-q23GK0 {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span1-4x4zGM {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span1-M0YBIv {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span1-NgiGbx {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span1-P78DKE {
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  .experimental-format-for-email .span1-RXQxsx {
+    color: rgba(51, 51, 51, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span1-mSf5OP {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span1-q23GK0 {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span2-4x4zGM {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span2-M0YBIv {
+    color: rgba(51, 51, 51, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span2-NgiGbx {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span2-mSf5OP {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span3-M0YBIv {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span3-NgiGbx {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span4-M0YBIv {
+    color: rgba(51, 51, 51, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span4-NgiGbx {
+    color: rgba(0, 0, 0, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span5-M0YBIv {
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .span6-M0YBIv {
+    color: rgba(51, 51, 51, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .experimental-format-for-email .test-flight-app-i66881493-AnKCw1 {
+    background-color: transparent;
+    color: rgba(22, 117, 210, 1);
+    font-family: "Roboto", Helvetica;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    height: 7.63%;
+    left: 16.42%;
+    letter-spacing: 0px;
+    line-height: 28px;
+    position: absolute;
+    text-align: left;
+    top: 9.81%;
+    white-space: nowrap;
+    width: 28.35%;
+  }
+  .experimental-format-for-email .text-1-C61RwL {
+    background-color: transparent;
+    color: rgba(216, 50, 117, 1);
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    height: 0.6%;
+    left: calc(50% - 146px);
+    letter-spacing: 0px;
+    line-height: 28px;
+    position: absolute;
+    text-align: left;
+    top: 57.45%;
+    white-space: nowrap;
+    width: 294px;
+  }
+  .experimental-format-for-email .text-1-VMr6Om {
+    background-color: transparent;
+    height: 2.4%;
+    left: calc(50% - 146px);
+    letter-spacing: 0px;
+    line-height: 28px;
+    position: absolute;
+    top: 29.69%;
+    width: 294px;
+  }
+  .experimental-format-for-email .text-2-C61RwL {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Roboto", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    height: 2.38%;
+    left: calc(50% - 146px);
+    letter-spacing: 0px;
+    line-height: 28px;
+    position: absolute;
+    text-align: center;
+    top: 83.59%;
+    width: 294px;
+  }
+  .experimental-format-for-email .text-2-VMr6Om {
+    background-color: transparent;
+    height: 1.81%;
+    left: calc(50% - 146px);
+    letter-spacing: 0px;
+    line-height: 28px;
+    position: absolute;
+    top: 41.15%;
+    width: 294px;
+  }
+  .experimental-format-for-email .text-3-C61RwL {
+    background-color: transparent;
+    height: 1.21%;
+    left: calc(50% - 146px);
+    letter-spacing: 0px;
+    line-height: 28px;
+    position: absolute;
+    top: 60.43%;
+    width: 294px;
+  }
+  .experimental-format-for-email .text-4-C61RwL {
+    background-color: transparent;
+    height: 1.21%;
+    left: calc(50% - 146px);
+    letter-spacing: 0px;
+    line-height: 28px;
+    position: absolute;
+    top: 58.64%;
+    width: 294px;
+  }
+  .experimental-format-for-email .text-redeem-code-C61RwL {
+    background-color: transparent;
+    color: rgba(153, 153, 153, 1);
+    font-family: "Helvetica Neue-Medium", Helvetica;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    height: 4.59%;
+    left: calc(50% - 146px);
+    letter-spacing: 0px;
+    line-height: 24px;
+    position: absolute;
+    top: 51.84%;
+    width: 294px;
+  }
+  .experimental-format-for-email .twitter-J0os4Z {
+    background-color: transparent;
+    height: 49px;
+    left: calc(50% + 79px);
+    position: absolute;
+    top: 0px;
+    width: 49px;
+  }
+  .experimental-format-for-email .vector-Y4bgVk {
+    background-color: transparent;
+    height: 65%;
+    left: 37.31%;
+    position: absolute;
+    top: 17.5%;
+    width: 25.67%;
+  }
+  .experimental-format-for-email .welcome-to-the-jungl-Fy8XbI {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 1);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    height: auto;
+    left: 0px;
+    letter-spacing: 0px;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: calc(50% - 212px);
+    width: 100.68%;
+  }
+  .experimental-format-for-email .white-clay-i-ph-ockuuups-studio-AnKCw1 {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 100.4%;
+  }
+  .experimental-format-for-email .white-clay-i-ph-ockuuups-studio-Zjjsew {
+    background-color: transparent;
+    height: 100%;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 88.7%;
+  }
+  .helveticaneue-bold-white-20px {
+    color: transparent;
+    font-family: "Helvetica Neue-Bold", Helvetica;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+  }
+  .helveticaneue-regular-normal-delta-13px {
+    color: var(--delta);
+    font-family: "Helvetica Neue-Regular", Helvetica;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  :root {
+    --delta: rgba(163, 163, 163, 1);
+  }
+</style>
+<div class="experimental-format-for-email screen">
+  <div class="footer-grey-color-overlay-C61RwL">
+    <div class="footer-text-0xqxx4">
+      <div class="social-buttons-xLqQBE">
+        <img class="twitter-J0os4Z" src="https://spiral.paulshorey.com/beta-invite/img/twitter@1x.png" />
+        <img class="linkedin-J0os4Z" src="https://spiral.paulshorey.com/beta-invite/img/linkedin@1x.png" />
+        <img class="instagram-J0os4Z" src="https://spiral.paulshorey.com/beta-invite/img/instagram@1x.png" />
+        <img class="facebook-J0os4Z" src="https://spiral.paulshorey.com/beta-invite/img/facebook@1x.png" />
       </div>
-      <div class="hi-paul-welcome-to-C61RwL helveticaneue-bold-white-20px">
-        <span class="span0-mSf5OP">Step 4:<br /></span><span class="span1-mSf5OP"><br /></span
-        ><span class="span2-mSf5OP"
-          >Once inside the Spiral app simply hit the join now button to sign up and become an amazing Spiral early
-          adopter!!</span
-        >
+      <div class="footer-text-xLqQBE helveticaneue-regular-normal-delta-13px">
+        * All deposit accounts are issued by nbkc bank, Member FDIC.
       </div>
-      <img class="image-1-C61RwL" src="img/image-1@1x.png" />
-      <div class="text-2-C61RwL valign-text-middle">
-        And thats it!  We are so excited to have you join us in creating the future of eathical banking!
+      <div class="footer-text-pAbfe2 helveticaneue-regular-normal-delta-13px">
+        This email was sent to: [insert email address of recipient]. You are
+        receiving this message because you signed up to be on our private email
+        list. If you prefer not to receive marketing emails, you can
+        Unsubscribe. Please allow up to ten (10) business days for your request
+        to be completed.<br /><br />This email was sent by Spiral Financial,
+        Inc. 31 Hudson yards, fl 11 New York, NY 10001. Toll Free 888.888.8075.
+        We respect your right to privacy. <br />View our Privacy Policy.
       </div>
-      <div class="text-1-C61RwL">Step 3:</div>
-      <div class="text-4-C61RwL helveticaneue-bold-white-20px">
-        <span class="span0-4x4zGM">A.</span><span class="span1-4x4zGM">&nbsp;</span
-        ><span class="span2-4x4zGM">Wait for the Spiral app to download on your phone</span>
-      </div>
-      <div class="text-3-C61RwL helveticaneue-bold-white-20px">
-        <span class="span0-q23GK0">B.</span
-        ><span class="span1-q23GK0"> Locate the Spiral app on your phone and open it</span>
-      </div>
-      <div class="image-1-VMr6Om">
-        <img
-          class="white-clay-i-ph-ockuuups-studio-Zjjsew"
-          src="img/white-clay-iphone-x-mockup--front---mockuuups-studio-@2x.png"
-        />
-        <div class="arrow-pointer-Zjjsew">
-          <img class="ellipse-1-24sS1v" src="img/ellipse-1@2x.png" />
-          <img class="arrow-3-24sS1v" src="img/arrow-3@2x.png" />
-        </div>
-      </div>
-      <div class="text-1-VMr6Om helveticaneue-bold-white-20px">
-        <span class="span0-NgiGbx">Step 2:<br /></span><span class="span1-NgiGbx"><br /></span
-        ><span class="span2-NgiGbx">A.</span><span class="span3-NgiGbx">&nbsp;</span
-        ><span class="span4-NgiGbx">Locate and open the TestFlight app on your phone</span>
-      </div>
-      <img class="image-1-mzXdH9" src="img/image-1-1@1x.png" />
-      <div class="text-2-VMr6Om helveticaneue-bold-white-20px">
-        <span class="span0-RXQxsx">B.</span
-        ><span class="span1-RXQxsx">
-          In the “Testflight” app Click the install button to install the Spiral app on your iphone</span
-        >
-      </div>
-      <div class="image-2-C61RwL">
-        <div class="image-2-Beyjxh">
-          <img
-            class="white-clay-i-ph-ockuuups-studio-AnKCw1"
-            src="img/white-clay-iphone-x-mockup--front---mockuuups-studio--1@2x.png"
-          />
-          <img class="arrow-4-AnKCw1" src="img/arrow-4@2x.png" />
-          <div class="test-flight-app-i66881493-AnKCw1 valign-text-middle">TestFlight App:</div>
-          <div class="rectangle-12-AnKCw1"></div>
-          <img class="image-11-AnKCw1" src="img/image-11@2x.png" />
-        </div>
-        <div class="arrow-pointer-Beyjxh">
-          <img class="ellipse-1-goX1IU" src="img/ellipse-1-1@2x.png" />
-          <img class="arrow-3-goX1IU" src="img/arrow-3-1@2x.png" />
-        </div>
-      </div>
-      <div class="text-redeem-code-C61RwL">
-        <span class="span0-P78DKE"
-          >Incase you do NOT see the Spiral app inside TestFlight and the screen is empty, please do the following:<br /><br /></span
-        ><span class="span1-P78DKE"
-          >Locate the invitation code in the email from TestFlight<br /><br />In the test flight app Click “Redeem” on
-          the top right and enter that code.</span
-        >
-      </div>
-      <div class="logo-header-C61RwL">
-        <div class="container-f0gZC7"><img class="vector-Y4bgVk" src="img/vector@2x.png" /></div>
-      </div>
-      <div class="hi-paul-welcome-to-VMr6Om helveticaneue-bold-white-20px">
-        <span class="span0-M0YBIv">Step 1:<br /><br /></span><span class="span1-M0YBIv">A.</span
-        ><span class="span2-M0YBIv"> Please locate an email invitation from “TestFlight” in your inbox<br /><br /></span
-        ><span class="span3-M0YBIv">B.</span
-        ><span class="span4-M0YBIv"> In that email, click the blue button named “View in TestFlight”<br /><br /></span
-        ><span class="span5-M0YBIv">C.</span
-        ><span class="span6-M0YBIv"> We will redirect you to the <br />App Store, to install TestFlight</span>
-      </div>
-      <img class="image-3-C61RwL" src="img/image-1-2@1x.png" />
-      <div class="intro-header-C61RwL">
-        <div class="welcome-to-the-jungl-Fy8XbI">Wecome to the Spiral Beta <br />program!</div>
-        <div class="hi-paul-welcome-to-Fy8XbI">
-          Thank you for participating in our BETA testing program.<br /><br />To become a Spiral Beta customer, first
-          you will need to install an app named TestFlight on your phone, this will unlock your abillity to join our
-          beta program.
-        </div>
+      <div class="footer-text-5h9QEr helveticaneue-regular-normal-delta-13px">
+        (©) 2020 Spiral . All rights reserved.
       </div>
     </div>
-  </body>
-</html>
+  </div>
+  <div class="hi-paul-welcome-to-C61RwL helveticaneue-bold-white-20px">
+    <span class="span0-mSf5OP">Step 4:<br /></span
+    ><span class="span1-mSf5OP"><br /></span
+    ><span class="span2-mSf5OP"
+      >Once inside the Spiral app simply hit the join now button to sign up and
+      become an amazing Spiral early adopter!!</span
+    >
+  </div>
+  <img class="image-1-C61RwL" src="https://spiral.paulshorey.com/beta-invite/img/image-1@1x.png" />
+  <div class="text-2-C61RwL valign-text-middle">
+    And thats it!  We are so excited to have you join us in creating the future
+    of eathical banking!
+  </div>
+  <div class="text-1-C61RwL">Step 3:</div>
+  <div class="text-4-C61RwL helveticaneue-bold-white-20px">
+    <span class="span0-4x4zGM">A.</span><span class="span1-4x4zGM">&nbsp;</span
+    ><span class="span2-4x4zGM"
+      >Wait for the Spiral app to download on your phone</span
+    >
+  </div>
+  <div class="text-3-C61RwL helveticaneue-bold-white-20px">
+    <span class="span0-q23GK0">B.</span
+    ><span class="span1-q23GK0">
+      Locate the Spiral app on your phone and open it</span
+    >
+  </div>
+  <div class="image-1-VMr6Om">
+    <img
+      class="white-clay-i-ph-ockuuups-studio-Zjjsew"
+      src="https://spiral.paulshorey.com/beta-invite/img/white-clay-iphone-x-mockup--front---mockuuups-studio-@2x.png"
+    />
+    <div class="arrow-pointer-Zjjsew">
+      <img class="ellipse-1-24sS1v" src="https://spiral.paulshorey.com/beta-invite/img/ellipse-1@2x.png" />
+      <img class="arrow-3-24sS1v" src="https://spiral.paulshorey.com/beta-invite/img/arrow-3@2x.png" />
+    </div>
+  </div>
+  <div class="text-1-VMr6Om helveticaneue-bold-white-20px">
+    <span class="span0-NgiGbx">Step 2:<br /></span
+    ><span class="span1-NgiGbx"><br /></span><span class="span2-NgiGbx">A.</span
+    ><span class="span3-NgiGbx">&nbsp;</span
+    ><span class="span4-NgiGbx"
+      >Locate and open the TestFlight app on your phone</span
+    >
+  </div>
+  <img class="image-1-mzXdH9" src="https://spiral.paulshorey.com/beta-invite/img/image-1-1@1x.png" />
+  <div class="text-2-VMr6Om helveticaneue-bold-white-20px">
+    <span class="span0-RXQxsx">B.</span
+    ><span class="span1-RXQxsx">
+      In the “Testflight” app Click the install button to install the Spiral app
+      on your iphone</span
+    >
+  </div>
+  <div class="image-2-C61RwL">
+    <div class="image-2-Beyjxh">
+      <img
+        class="white-clay-i-ph-ockuuups-studio-AnKCw1"
+        src="https://spiral.paulshorey.com/beta-invite/img/white-clay-iphone-x-mockup--front---mockuuups-studio--1@2x.png"
+      />
+      <img class="arrow-4-AnKCw1" src="https://spiral.paulshorey.com/beta-invite/img/arrow-4@2x.png" />
+      <div class="test-flight-app-i66881493-AnKCw1 valign-text-middle">
+        TestFlight App:
+      </div>
+      <div class="rectangle-12-AnKCw1"></div>
+      <img class="image-11-AnKCw1" src="https://spiral.paulshorey.com/beta-invite/img/image-11@2x.png" />
+    </div>
+    <div class="arrow-pointer-Beyjxh">
+      <img class="ellipse-1-goX1IU" src="https://spiral.paulshorey.com/beta-invite/img/ellipse-1-1@2x.png" />
+      <img class="arrow-3-goX1IU" src="https://spiral.paulshorey.com/beta-invite/img/arrow-3-1@2x.png" />
+    </div>
+  </div>
+  <div class="text-redeem-code-C61RwL">
+    <span class="span0-P78DKE"
+      >Incase you do NOT see the Spiral app inside TestFlight and the screen is
+      empty, please do the following:<br /><br /></span
+    ><span class="span1-P78DKE"
+      >Locate the invitation code in the email from TestFlight<br /><br />In the
+      test flight app Click “Redeem” on the top right and enter that code.</span
+    >
+  </div>
+  <div class="logo-header-C61RwL">
+    <div class="container-f0gZC7">
+      <img class="vector-Y4bgVk" src="https://spiral.paulshorey.com/beta-invite/img/vector@2x.png" />
+    </div>
+  </div>
+  <div class="hi-paul-welcome-to-VMr6Om helveticaneue-bold-white-20px">
+    <span class="span0-M0YBIv">Step 1:<br /><br /></span
+    ><span class="span1-M0YBIv">A.</span
+    ><span class="span2-M0YBIv">
+      Please locate an email invitation from “TestFlight” in your inbox<br /><br /></span
+    ><span class="span3-M0YBIv">B.</span
+    ><span class="span4-M0YBIv">
+      In that email, click the blue button named “View in TestFlight”<br /><br /></span
+    ><span class="span5-M0YBIv">C.</span
+    ><span class="span6-M0YBIv">
+      We will redirect you to the <br />App Store, to install TestFlight</span
+    >
+  </div>
+  <img class="image-3-C61RwL" src="https://spiral.paulshorey.com/beta-invite/img/image-1-2@1x.png" />
+  <div class="intro-header-C61RwL">
+    <div class="welcome-to-the-jungl-Fy8XbI">
+      Wecome to the Spiral Beta <br />program!
+    </div>
+    <div class="hi-paul-welcome-to-Fy8XbI">
+      Thank you for participating in our BETA testing program.<br /><br />To
+      become a Spiral Beta customer, first you will need to install an app named
+      TestFlight on your phone, this will unlock your abillity to join our beta
+      program.
+    </div>
+  </div>
+</div>
