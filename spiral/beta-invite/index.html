@@ -41,6 +41,11 @@
     height: auto;
     display: inline-block;
   }
+  .container {
+    background: #f0f0f0;
+    text-align: center;
+    padding: 25px;
+  }
   .article {
     display: inline-block;
     background: #ffffff;
@@ -59,12 +64,12 @@
     margin: 0 auto;
     max-width: 100%;
   }
-  section {
+  .section {
     display: block;
     margin: 35px auto;
     max-width: 350px;
   }
-  section.first {
+  .section.first {
     margin-bottom: 45px;
   }
   p {
@@ -92,23 +97,24 @@
     color: #999;
   }
   .footer a {
+    text-decoration: none;
     color: inherit !important;
   }
   .footer a:visited,
   .footer a:hover {
     color: inherit !important;
   }
-  section.social {
+  .section.social {
     max-width: 1000px;
   }
-  section.social a {
+  .section.social a {
     text-decoration: none;
     margin: 0 8px;
   }
-  section.social a:first-child {
+  .section.social a:first-child {
     margin-left: 0;
   }
-  section.social a:last-child {
+  .section.social a:last-child {
     margin-right: 0;
   }
 
@@ -122,14 +128,14 @@
     font-weight: bold;
   }
 </style>
-<div style="background: #f0f0f0; text-align: center; padding: 25px">
-  <div class="article" style="background: #ffffff">
+<div class="container">
+  <div class="article">
     <img
       src="https://cdn.animaapp.com/projects/60483de6621edf992df34f58/releases/604a7a1a46a905cf3ced937d/img/logo-header@2x.png"
     />
     <h1 class="center">Wecome to the Spiral Beta program!</h1>
 
-    <section class="first">
+    <div class="section first">
       <p class="center">
         Thank you for participating in our BETA testing program.
       </p>
@@ -138,9 +144,9 @@
         named TestFlight on your phone, this will unlock your abillity to join
         our beta program.
       </p>
-    </section>
+    </div>
 
-    <section>
+    <div class="section">
       <p class="pink b">Step 1:</p>
       <p>
         <span class="pink b">A. </span
@@ -164,9 +170,9 @@
       <img
         src="https://cdn.animaapp.com/projects/60483de6621edf992df34f58/releases/604a813f2c66c27c7a70a42d/img/group-2@1x.png"
       />
-    </section>
+    </div>
 
-    <section>
+    <div class="section">
       <p class="pink b">Step 2:</p>
       <p>
         <span class="pink b">A. </span
@@ -196,8 +202,8 @@
         In the test flight app Click “Redeem” on the top right and enter that
         code.
       </p>
-    </section>
-    <section>
+    </div>
+    <div class="section">
       <p class="pink b">Step 3:</p>
       <p>
         <span class="pink b">A. </span
@@ -213,16 +219,16 @@
       <img
         src="https://cdn.animaapp.com/projects/60483de6621edf992df34f58/releases/604a813f2c66c27c7a70a42d/img/group-6@1x.png"
       />
-    </section>
-    <section>
+    </div>
+    <div class="section">
       <h3 class="b">
         And thats it! We are so excited to have you join us in creating the
         future of ethical banking!
       </h3>
-    </section>
+    </div>
   </div>
   <div class="footer">
-    <section class="social">
+    <div class="social">
       <a href="https://www.facebook.com/Spiral-115441083646834" target="_blank">
         <img
           src="https://cdn.animaapp.com/projects/60483de6621edf992df34f58/releases/60496e76e54ff7067aa13367/img/facebook@1x.png"
@@ -251,8 +257,8 @@
           width="49"
         />
       </a>
-    </section>
-    <section>
+    </div>
+    <div class="section">
       <p class="center">
         * All deposit accounts are issued by nbkc bank, Member FDIC.
       </p>
@@ -273,6 +279,6 @@
         >
       </p>
       <p class="center">(&copy;) 2020 Spiral. All rights reserved.</p>
-    </section>
+    </div>
   </div>
 </div>
