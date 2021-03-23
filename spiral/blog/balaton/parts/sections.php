@@ -31,14 +31,143 @@ function weart_section( $args = array() ){
   // always show at top of homepage:
   if($layout==='layout_1') {
   ?>
+<style>
+	
+#newsletterForm {
+	display:flex;
+	padding: 0;
+	margin: 0;
+	min-height: 342px;
+	/*background: url('https://www.lemonade.com/blog/wp-content/uploads/2020/06/BlogSkyline.jpg');*/
+	background-size:cover;justify-content:center;color:#080808;font-size:16px;
+}
+#nf_form {
+	margin: 26px 42px 22px; /* 74px */
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    width: 360px;
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+}
+	.image_left,
+	.image_right {
+		background-size: contain !important;
+		background-position: center center !important;
+		background-repeat: no-repeat !important;
+	}
+	.image_left {
+		background: url('https://spiral.paulshorey.com/blog/images/giving.png');
+		margin-right: 0px;
+		margin-left: 1.8%;
+		width: 28%;
+		margin-top: 26px;
+	}
+	.image_right {
+		background: url('https://spiral.paulshorey.com/blog/images/lady-card.png');
+		margin-left: 15px;
+		width: 30%;
+		margin-top: 5px;
+	}
+	@media (max-width: 699px) {	
+		.image_left,
+		.image_right {
+			display:none !important;
+		}
+	}
+	
+#nf_form label.error,
+#nf_submit_error {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 3px 15px;
+    border-radius: 0;
+	color: #080808;
+    background: #efefef;
+}
+	#nf_submit_error {
+		background: #DA2E76;
+		color: white;
+		font-family: HelveticaNeue, Helvetica, sans-serif;
+	}
+
+#nf_form a {color:#DA2E76;text-shadow: 0 0 30px white;}
+
+#nf_title {
+	color:#DA2E76;text-shadow: 0 0 60px white;font-size:33px;line-height: 50px;margin-top: 33px;
+	font-family: HelveticaNeue-Light, Helvetica, sans-serif;
+}
+
+#nf_caption {
+	margin: 17px 1px;
+	font-family: HelveticaNeue-Light, Helvetica, sans-serif;
+}
+#nf_caption a {
+	font-family: HelveticaNeue, Helvetica, sans-serif;
+	text-shadow: 0 0 30px white;
+}
+
+#nf_top_fieldset {}
+#nf_bottom_fieldset {}
+
+#newsletterForm input {
+    padding: 5px 15px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #d92e76;
+    border-radius: 9px;
+    font-family: HelveticaNeue-Light,Helvetica,sans-serif;
+    font-size: 18px;
+    color: #000;
+    background: #fff;
+    -webkit-appearance: none;
+}
+#newsletterForm input[name="email"] {
+    width: 100%;
+		margin: 3px 0 7px;
+}
+#newsletterForm input[name="firstname"] {
+	    width: calc(50% - 3px);
+}
+#newsletterForm input[name="lastname"] {
+	    width: calc(50% - 2px);
+}
+#newsletterForm button {
+	padding: 8px 0 10px;
+	border: 0;
+	border-radius: 26.5px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	font-family: HelveticaNeue-Light,Helvetica,sans-serif;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	text-transform: none;
+	background: #d92e76;
+	cursor: pointer;
+}
+
+#nf_submit_success {white-space:normal !important;}
+#nf_submit_success p b { font-size: 1.5rem;}
+#nf_submit_success p {font-size: 1.125em;}	
+#nf_submit_success p.tan { color: #bf9d7a; }
+</style>
 <form id="newsletterForm" style="display:none;">
-	<div>
+	<div id="nf_submit_success" style="display:none;">
+		<p><b>Congratulations! You are on the list.</b></p>
+		<p class="tan">We just sent you a confirmation email with your early access information</p>
+	</div>
+	<div class="image_left"></div>
+	<div id="nf_form">
 		<div id="nf_submit_error" style="display:none;">Server error</div>
-		<div id="nf_submit_success" style="display:none;">Server error</div>
 		
 		<h5 id="nf_title">Banking that gives!</h5>
 
-		<div id="nf_top_fieldset" style="max-width:260px;max-height:0;overflow:hidden;transition:max-height 0.3s, max-width 0.15s;">
+		<div id="nf_top_fieldset" style="max-width:260px;max-height:0;overflow:hidden;transition:max-height 0.3s, max-width 0.15s, overflow 0s linear 0.3s;">
 			<input id="nf_firstname" name="firstname" type="text" value="" placeholder="First name" />
 			<input id="nf_lastname" name="lastname" type="text" value="" placeholder="Last name" />
 		</div>
@@ -53,6 +182,7 @@ function weart_section( $args = array() ){
 		<div id="nf_caption">Learn more at <a href="https://spiral.us">spiral.us</a></div>
 		
 	</div>
+	<div class="image_right"></div>
 </form>
 <script>
 	let $ = jQuery;
@@ -61,9 +191,10 @@ function weart_section( $args = array() ){
 		if (!!$('#nf_email').val()){
 			$('#nf_top_fieldset').css('max-height','50px');
 			$('#nf_top_fieldset').css('max-width','540px');
+			$('#nf_top_fieldset').css('overflow','visible');
 			setTimeout(function(){
 				$('#newsletterForm button').attr('type','submit');
-			},100);
+			},1500);
 		}
 	})
 </script>
@@ -87,23 +218,25 @@ function weart_section( $args = array() ){
 		submitHandler: function(form) {
 			let data = {
 				email: form.email.value,
-				firstname: form.firstname.value,
-				lastname: form.lastname.value,
+				first: form.firstname.value,
+				last: form.lastname.value,
 				id: nf_makeid(40)
 			};
-			console.log('SUBMIT', data);
 			nf_sendEmail(data);
 		}
 	});
 
 	function nf_sendEmail(data) {
+		console.log('SEND', data);
 		$.ajax({
 			type: 'POST',
-			url: 'https://prod-api.spiral.us/register/wait',
-			dataType: 'json',
-			data: data,
+			url: 'https://staging-api.spiral.us/register/wait',
+			headers: {"Content-Type": "application/json"},
+			contentType:"application/json; charset=utf-8",
+			dataType: "json",
+			data: JSON.stringify(data),
 			success: function(token){
-				alert('Success!');
+				$('#nf_form').hide();
 				$('#nf_submit_success').show();
 			},
 			error: function(errMsg) {

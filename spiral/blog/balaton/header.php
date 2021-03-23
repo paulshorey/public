@@ -80,15 +80,14 @@
         <div class="w-logoline">
           <!-- logo -->
             <div class="logo f-meta l-black pt-3 px-3 p-lg-0" itemscope itemtype="https://schema.org/Organization">
-                <?php  if ( has_custom_logo() ) { ?>
-                <div itemscope itemtype="https://schema.org/ImageObject">
-                  <?php the_custom_logo(); ?>
-                </div>
-              <?php } else{ ?>
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                  <?php bloginfo( 'name' ); ?>
+
+                <a href="https://spiral.us">
+                  <img src="https://spiral.paulshorey.com/blog/logo.png" alt="Spiral Logo" />
                 </a>
-              <?php } ?>
+				<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                  <?php bloginfo( 'name' ); ?>
+                </a> -->
+
               <meta itemprop="name" content="<?php bloginfo( 'name' ); ?>">
             </div>
           <!-- end -->
@@ -152,15 +151,11 @@
           <div class="d-flex c-black l-black lh-1 f-meta border-bottom minus " id="w-menu">
 
             <div class="logo-inner logo f-meta l-black mx-3" itemscope itemtype="https://schema.org/Organization">
-                <?php  if ( has_custom_logo() ) { ?>
-                <div itemscope itemtype="https://schema.org/ImageObject">
-                  <?php the_custom_logo(); ?>
-                </div>
-              <?php } else{ ?>
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                  <?php bloginfo( 'name' ); ?>
+                
+				<a href="https://spiral.us">
+                  <img src="https://spiral.paulshorey.com/blog/logo.png" alt="Spiral Logo" />
                 </a>
-              <?php } ?>
+				
               <meta itemprop="name" content="<?php bloginfo( 'name' ); ?>">
             </div>
 
